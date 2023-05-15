@@ -1,0 +1,6 @@
+---
+page-title: "Material"
+listing:
+  contents: resources
+  type: default
+---

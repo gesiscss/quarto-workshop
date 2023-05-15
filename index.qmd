@@ -1,0 +1,59 @@
+---
+title: Automated Reports & Co with Quarto and Markdown
+subtitle: "GESIS training Workshop<br>19.06.2023 + 20.06.2023 (online)"
+description: |
+    Creating professionally looking scientific reports and papers are recurring tasks for social scientists - and often time-consuming. This workshop introduces Quarto and the associated Markdown-based systems for generating automated reports using literate programming techniques to facilitate this process.
+section-divs: false
+toc: false
+title-block-banner: "#58748F"
+title-block-banner-color: "white"
+---
+
+
+
+## Lecturers
+
+### David Schoch
+Team lead for “Transparent Social Analytics” in the Department for Computational Social Science at GESIS in Cologne
+
+[{{< fa house size=2x >}}](https://mr.schochastics.net)
+[{{< fa brands github size=2x >}}](https://github.com/schochastics)
+
+
+### Chung-hong Chan
+Senior Researcher in the team "Transparent Social Analytics" in the Department for Computational Social Science at GESIS in Cologne
+
+ [{{< fa house size=2x >}}](https://chainsawriot.com/)
+ [{{< fa brands github size=2x >}}](https://github.com/chainsawriot)
+
+## About the course
+
+Creating professionally looking scientific reports and papers are recurring tasks for social scientists - and often time-consuming. This workshop introduces Quarto and the associated Markdown-based systems for generating automated reports using literate programming techniques to facilitate this process. Literate programming is the paradigm of combining code, its output, and its interpretation in a single document. For example, one can embed scripts for data analysis in R or Python in a Quarto file to generate tables and figures reproducibly. This allows to create fully reproducible, beautiful documents with little effort. In this course, we will cover the basics of writing automated reports with Quarto, as well as academic-specific topics such as bibliography generation and collaborative writing with non-technical individuals. Additionally, we will cover how Quarto can be used to create high-quality presentations and webpages, such as a personal page or for a project. 
+
+## Schedule
+
+**day 1**:  
+
+    • 09:00 – 10:30: Introduction to literate programming and setting up Quarto
+    • 10:30 – 10:45: Coffee break
+    • 10:45 – 12:15: Writing your first Quarto document: Introduction to Markdown Syntax
+    • 12:15 – 13:45: Lunch break
+    • 13:45 – 15:15: Literate programming: Combining Markdown and R / Python
+    • 15:15 – 15:30: Coffee break
+    • 15:30 – 17:00: Exporting to different formats
+
+**day 2**:  
+
+    • 09:00 – 10:30: Let’s make a presentation with Quarto
+    • 10:30 – 10:45: Coffee break
+    • 10:45 – 12:15: Let’s make a website with Quarto
+    • 12:15 – 13:45: Lunch break
+    • 13:45 – 15:15: Let’s write an academic paper with Quarto
+    • 15:15 – 15:30: Coffee break
+    • 15:30 – 17:00: Q&A
+
+## Software
+
+- A text editor, e.g. RStudio, VS Code
+- R
+- [Quarto](https://quarto.org)

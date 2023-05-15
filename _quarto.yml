@@ -1,0 +1,29 @@
+project:
+  type: website
+
+website:
+  title: "Automated Reports & Co with Quarto and Markdown"
+  search: false
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: material.qmd
+        text: Material
+    right:
+      - text: GESIS training
+        href: https://training.gesis.org/?site=pDetails&child=full&pID=0x8298CEAADF6C457B8FBE9EE3FC092E47
+  page-footer:
+    left: "by David Schoch and Chung-hong Chan 2023"
+    right: "powered by [Quarto](https://quarto.org)"
+
+format:
+  html:
+    theme: 
+      - yeti
+      - custom.scss
+    css: styles.css
+    toc: true
+    
+execute: 
+  freeze: auto
