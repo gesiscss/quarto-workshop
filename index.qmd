@@ -34,23 +34,23 @@ Creating professionally looking scientific reports and papers are recurring task
 
 **day 1**:  
 
-    • 09:00 – 10:30: Introduction to literate programming and setting up Quarto
+    • 09:00 – 10:30: Introduction to literate programming and setting up Quarto (David)
     • 10:30 – 10:45: Coffee break
-    • 10:45 – 12:15: Writing your first Quarto document: Introduction to Markdown Syntax
+    • 10:45 – 12:15: Writing your first Quarto document: Introduction to Markdown Syntax (Hong)
     • 12:15 – 13:45: Lunch break
-    • 13:45 – 15:15: Literate programming: Combining Markdown and R / Python
+    • 13:45 – 15:15: Literate programming: Combining Markdown and R / Python (Hong)
     • 15:15 – 15:30: Coffee break
-    • 15:30 – 17:00: Exporting to different formats
+    • 15:30 – 17:00: Exporting to different formats (David)
 
 **day 2**:  
 
-    • 09:00 – 10:30: Let’s make a presentation with Quarto
+    • 09:00 – 10:30: Let’s make a presentation with Quarto (David)
     • 10:30 – 10:45: Coffee break
-    • 10:45 – 12:15: Let’s make a website with Quarto
+    • 10:45 – 12:15: Let’s make a website with Quarto (David)
     • 12:15 – 13:45: Lunch break
-    • 13:45 – 15:15: Let’s write an academic paper with Quarto
+    • 13:45 – 15:15: Let’s write an academic paper with Quarto (Hong)
     • 15:15 – 15:30: Coffee break
-    • 15:30 – 17:00: Q&A
+    • 15:30 – 17:00: Q&A (Hong)
 
 ## Software
 
