@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Automated Reports & Co with Quarto and Markdown",
+    "section": "",
+    "text": "Lecturers\nDavid Schoch\nTeam lead for “Transparent Social Analytics” in the Department for Computational Social Science at GESIS in Cologne\n \nChung-hong Chan\nSenior Researcher in the team “Transparent Social Analytics” in the Department for Computational Social Science at GESIS in Cologne\n \nAbout the course\nCreating professionally looking scientific reports and papers are recurring tasks for social scientists - and often time-consuming. This workshop introduces Quarto and the associated Markdown-based systems for generating automated reports using literate programming techniques to facilitate this process. Literate programming is the paradigm of combining code, its output, and its interpretation in a single document. For example, one can embed scripts for data analysis in R or Python in a Quarto file to generate tables and figures reproducibly. This allows to create fully reproducible, beautiful documents with little effort. In this course, we will cover the basics of writing automated reports with Quarto, as well as academic-specific topics such as bibliography generation and collaborative writing with non-technical individuals. Additionally, we will cover how Quarto can be used to create high-quality presentations and webpages, such as a personal page or for a project.\nSchedule\nday 1:\n• 09:00 – 10:30: Introduction to literate programming and setting up Quarto\n• 10:30 – 10:45: Coffee break\n• 10:45 – 12:15: Writing your first Quarto document: Introduction to Markdown Syntax\n• 12:15 – 13:45: Lunch break\n• 13:45 – 15:15: Literate programming: Combining Markdown and R / Python\n• 15:15 – 15:30: Coffee break\n• 15:30 – 17:00: Exporting to different formats\nday 2:\n• 09:00 – 10:30: Let’s make a presentation with Quarto\n• 10:30 – 10:45: Coffee break\n• 10:45 – 12:15: Let’s make a website with Quarto\n• 12:15 – 13:45: Lunch break\n• 13:45 – 15:15: Let’s write an academic paper with Quarto\n• 15:15 – 15:30: Coffee break\n• 15:30 – 17:00: Q&A\nSoftware\n\nA text editor, e.g. RStudio, VS Code\nR\nQuarto"
+  },
+  {
+    "objectID": "material.html",
+    "href": "material.html",
+    "title": "Automated Reports & Co with Quarto and Markdown",
+    "section": "",
+    "text": "No matching items"
+  }
+]
