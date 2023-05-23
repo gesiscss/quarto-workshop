@@ -2,10 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://github.com/gesiscss/quarto-workshop/material.html</loc>
-    <lastmod>2023-05-15T21:01:31.478Z</lastmod>
+    <lastmod>2023-05-23T20:43:32.217Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/gesiscss/quarto-workshop/index.html</loc>
-    <lastmod>2023-05-15T21:01:32.410Z</lastmod>
+    <lastmod>2023-05-23T20:43:32.917Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/gesiscss/quarto-workshop/resources/01_introduction/index.html</loc>
+    <lastmod>2023-05-23T20:43:34.257Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/gesiscss/quarto-workshop/resources/05_presentations/index.html</loc>
+    <lastmod>2023-05-23T20:43:34.553Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/gesiscss/quarto-workshop/resources/06_websites/index.html</loc>
+    <lastmod>2023-05-23T20:43:34.793Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/gesiscss/quarto-workshop/resources/04_exporting/index.html</loc>
+    <lastmod>2023-05-23T20:43:35.037Z</lastmod>
   </url>
 </urlset>
