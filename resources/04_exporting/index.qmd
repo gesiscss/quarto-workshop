@@ -1,0 +1,17 @@
+---
+title: "Exporting to different formats"
+author: "David Schoch"
+format: 
+  revealjs:
+    theme: white
+---
+
+## Getting up
+
+- Turn off alarm
+- Get out of bed
+
+## Going to sleep
+
+- Get in bed
+- Count sheep

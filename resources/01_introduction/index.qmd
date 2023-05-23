@@ -1,0 +1,17 @@
+---
+title: "Introduction to literate programming and setting up Quarto"
+author: "David Schoch"
+format: 
+  revealjs:
+    theme: white
+---
+
+## Getting up
+
+- Turn off alarm
+- Get out of bed
+
+## Going to sleep
+
+- Get in bed
+- Count sheep
