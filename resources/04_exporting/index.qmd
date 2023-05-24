@@ -1,6 +1,7 @@
 ---
 title: "Exporting to different formats"
 author: "David Schoch"
+lesson: 4
 format: 
   revealjs:
     theme: white
