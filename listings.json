@@ -2,8 +2,8 @@
   {
     "listing": "/material.html",
     "items": [
-      "/resources/04_exporting/index.html",
       "/resources/01_introduction/index.html",
+      "/resources/04_exporting/index.html",
       "/resources/05_presentations/index.html",
       "/resources/06_websites/index.html"
     ]
