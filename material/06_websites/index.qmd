@@ -2,9 +2,12 @@
 title: "Let's make a website with Quarto"
 author: "David Schoch"
 lesson: 6
-format: 
-  revealjs:
-    theme: white
+institute: GESIS
+date: "2023-06-20"
+date-format: "YYYY-MM-DD"
+footer: "@gesis_org"
+embed-resources: true
+format: fakegesis-revealjs
 ---
 
 ## Getting up

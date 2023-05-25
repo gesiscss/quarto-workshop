@@ -1,0 +1,21 @@
+---
+title: "Let's make a presentation with Quarto"
+author: "David Schoch"
+lesson: 5
+institute: GESIS
+date: "2023-06-20"
+date-format: "YYYY-MM-DD"
+footer: "@gesis_org"
+embed-resources: true
+format: fakegesis-revealjs
+---
+
+## Introductions
+
+Quarto supports different formats for creating presentations:
+
+- `revealjs` - revealjs (HTML)
+- `pptx` - PowerPoint (MS Office)
+- `beamer` - Beamer (LaTeX/PDF)
+
+ most capable format by far is `revealjs`.  

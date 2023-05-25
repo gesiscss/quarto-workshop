@@ -2,9 +2,12 @@
 title: "Exporting to different formats"
 author: "David Schoch"
 lesson: 4
-format: 
-  revealjs:
-    theme: white
+institute: GESIS
+date: "2023-06-19"
+date-format: "YYYY-MM-DD"
+footer: "@gesis_org"
+embed-resources: true
+format: fakegesis-revealjs
 ---
 
 ## Getting up

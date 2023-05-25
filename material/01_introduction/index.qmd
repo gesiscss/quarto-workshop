@@ -1,0 +1,42 @@
+---
+title: "Introduction to literate programming and setting up Quarto"
+author: David Schoch
+lesson: 1
+institute: GESIS
+date: "2023-06-19"
+date-format: "YYYY-MM-DD"
+footer: "@gesis_org"
+embed-resources: true
+format: fakegesis-revealjs
+---
+
+
+##
+
+"Let us change our traditional attitude to the construction of programs. 
+Instead of imagining that our main task is to instruct a computer what to do, 
+let us concentrate rather on explaining to human beings what we want a computer to do." 
+[Donald Knuth]
+
+##
+
+Literate programs are written in a metalanguage that mixes a document formatting language (e.g., TEX or HTML) and 
+a programming language (e.g., C++). 
+
+The approach is used in scientific computing and in data science routinely for reproducible research and open access purposes.
+
+## Examples
+
+Sweave - Early R and Latex integration (2002)
+Knitr - R in Latex, HTML, Markdown...(2012)
+RMarkdown - R/python/julia in Latex, Microsoft Word, LibreOffice, HTML (~2014)
+Jupyter Notebooks - anything with a jupyter kernel (~2014)
+Quarto - 
+
+## Markdown
+
+Markdown is a lightweight markup language with plain text formatting syntax. 
+It’s designed so that it can be converted to HTML and many other formats (e.g. .pdf, .docx).
+
+
+## Quarto vs Rmarkdown
