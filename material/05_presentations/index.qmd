@@ -18,4 +18,26 @@ Quarto supports different formats for creating presentations:
 - `pptx` - PowerPoint (MS Office)
 - `beamer` - Beamer (LaTeX/PDF)
 
- most capable format by far is `revealjs`.  
+most capable is `revealjs`.  
+
+## Creating slides
+
+Very similar to creating documents with markdown syntax
+
+```{.markdown}
+---
+title: "Habits"
+author: "John Doe"
+format: revealjs
+---
+
+## Getting up
+
+- Turn off alarm
+- Get out of bed
+
+## Going to sleep
+
+- Get in bed
+- Count sheep
+```
