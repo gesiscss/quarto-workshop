@@ -2,10 +2,10 @@
   {
     "listing": "/material.html",
     "items": [
-      "/resources/01_introduction/index.html",
-      "/resources/04_exporting/index.html",
-      "/resources/05_presentations/index.html",
-      "/resources/06_websites/index.html"
+      "/material/01_introduction/index.html",
+      "/material/04_exporting/index.html",
+      "/material/05_presentations/index.html",
+      "/material/06_websites/index.html"
     ]
   }
 ]

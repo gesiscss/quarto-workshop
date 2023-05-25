@@ -4,7 +4,7 @@
     "href": "material.html",
     "title": "Automated Reports & Co with Quarto and Markdown",
     "section": "",
-    "text": "Introduction to literate programming and setting up Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\nExporting to different formats\n\n\n\n\n\n\n\n\n\n\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\nLet’s make a presentation with Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\nLet’s make a website with Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nDavid Schoch\n\n\n\n\n\n\nNo matching items"
+    "text": "Introduction to literate programming and setting up Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nJun 19, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\nExporting to different formats\n\n\n\n\n\n\n\n\n\n\n\n\nJun 19, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\nLet’s make a presentation with Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\nLet’s make a website with Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -14,59 +14,80 @@
     "text": "Lecturers\nDavid Schoch\nTeam lead for “Transparent Social Analytics” in the Department for Computational Social Science at GESIS in Cologne\n \nChung-hong Chan\nSenior Researcher in the team “Transparent Social Analytics” in the Department for Computational Social Science at GESIS in Cologne\n \nAbout the course\nCreating professionally looking scientific reports and papers are recurring tasks for social scientists - and often time-consuming. This workshop introduces Quarto and the associated Markdown-based systems for generating automated reports using literate programming techniques to facilitate this process. Literate programming is the paradigm of combining code, its output, and its interpretation in a single document. For example, one can embed scripts for data analysis in R or Python in a Quarto file to generate tables and figures reproducibly. This allows to create fully reproducible, beautiful documents with little effort. In this course, we will cover the basics of writing automated reports with Quarto, as well as academic-specific topics such as bibliography generation and collaborative writing with non-technical individuals. Additionally, we will cover how Quarto can be used to create high-quality presentations and webpages, such as a personal page or for a project.\nSchedule\nday 1:\n• 09:00 – 10:30: Introduction to literate programming and setting up Quarto (David)\n• 10:30 – 10:45: Coffee break\n• 10:45 – 12:15: Writing your first Quarto document: Introduction to Markdown Syntax (Hong)\n• 12:15 – 13:45: Lunch break\n• 13:45 – 15:15: Literate programming: Combining Markdown and R / Python (Hong)\n• 15:15 – 15:30: Coffee break\n• 15:30 – 17:00: Exporting to different formats (David)\nday 2:\n• 09:00 – 10:30: Let’s make a presentation with Quarto (David)\n• 10:30 – 10:45: Coffee break\n• 10:45 – 12:15: Let’s make a website with Quarto (David)\n• 12:15 – 13:45: Lunch break\n• 13:45 – 15:15: Let’s write an academic paper with Quarto (Hong)\n• 15:15 – 15:30: Coffee break\n• 15:30 – 17:00: Q&A (Hong)\nSoftware\n\nA text editor, e.g. RStudio, VS Code\nR\nQuarto"
   },
   {
-    "objectID": "resources/01_introduction/index.html#getting-up",
-    "href": "resources/01_introduction/index.html#getting-up",
+    "objectID": "material/01_introduction/index.html#section",
+    "href": "material/01_introduction/index.html#section",
     "title": "Introduction to literate programming and setting up Quarto",
-    "section": "Getting up",
-    "text": "Getting up\n\nTurn off alarm\nGet out of bed"
+    "section": "",
+    "text": "“Let us change our traditional attitude to the construction of programs. Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to human beings what we want a computer to do.” [Donald Knuth]"
   },
   {
-    "objectID": "resources/01_introduction/index.html#going-to-sleep",
-    "href": "resources/01_introduction/index.html#going-to-sleep",
+    "objectID": "material/01_introduction/index.html#section-1",
+    "href": "material/01_introduction/index.html#section-1",
     "title": "Introduction to literate programming and setting up Quarto",
-    "section": "Going to sleep",
-    "text": "Going to sleep\n\nGet in bed\nCount sheep"
+    "section": "",
+    "text": "Literate programs are written in a metalanguage that mixes a document formatting language (e.g., TEX or HTML) and a programming language (e.g., C++).\nThe approach is used in scientific computing and in data science routinely for reproducible research and open access purposes."
   },
   {
-    "objectID": "resources/05_presentations/index.html#getting-up",
-    "href": "resources/05_presentations/index.html#getting-up",
+    "objectID": "material/01_introduction/index.html#examples",
+    "href": "material/01_introduction/index.html#examples",
+    "title": "Introduction to literate programming and setting up Quarto",
+    "section": "Examples",
+    "text": "Examples\nSweave - Early R and Latex integration (2002) Knitr - R in Latex, HTML, Markdown…(2012) RMarkdown - R/python/julia in Latex, Microsoft Word, LibreOffice, HTML (~2014) Jupyter Notebooks - anything with a jupyter kernel (~2014) Quarto -"
+  },
+  {
+    "objectID": "material/01_introduction/index.html#markdown",
+    "href": "material/01_introduction/index.html#markdown",
+    "title": "Introduction to literate programming and setting up Quarto",
+    "section": "Markdown",
+    "text": "Markdown\nMarkdown is a lightweight markup language with plain text formatting syntax. It’s designed so that it can be converted to HTML and many other formats (e.g. .pdf, .docx)."
+  },
+  {
+    "objectID": "material/01_introduction/index.html#quarto-vs-rmarkdown",
+    "href": "material/01_introduction/index.html#quarto-vs-rmarkdown",
+    "title": "Introduction to literate programming and setting up Quarto",
+    "section": "Quarto vs Rmarkdown",
+    "text": "Quarto vs Rmarkdown\n\n\n\n@gesis_org"
+  },
+  {
+    "objectID": "material/05_presentations/index.html#introductions",
+    "href": "material/05_presentations/index.html#introductions",
     "title": "Let’s make a presentation with Quarto",
-    "section": "Getting up",
-    "text": "Getting up\n\nTurn off alarm\nGet out of bed"
+    "section": "Introductions",
+    "text": "Introductions\nQuarto supports different formats for creating presentations:\n\nrevealjs - revealjs (HTML)\npptx - PowerPoint (MS Office)\nbeamer - Beamer (LaTeX/PDF)\n\nmost capable is revealjs."
   },
   {
-    "objectID": "resources/05_presentations/index.html#going-to-sleep",
-    "href": "resources/05_presentations/index.html#going-to-sleep",
+    "objectID": "material/05_presentations/index.html#creating-slides",
+    "href": "material/05_presentations/index.html#creating-slides",
     "title": "Let’s make a presentation with Quarto",
-    "section": "Going to sleep",
-    "text": "Going to sleep\n\nGet in bed\nCount sheep"
+    "section": "Creating slides",
+    "text": "Creating slides\nVery similar to creating documents with markdown syntax\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: revealjs\n---\n\n## Getting up\n\n- Turn off alarm\n- Get out of bed\n\n## Going to sleep\n\n- Get in bed\n- Count sheep\n\n\n\n@gesis_org"
   },
   {
-    "objectID": "resources/06_websites/index.html#getting-up",
-    "href": "resources/06_websites/index.html#getting-up",
+    "objectID": "material/06_websites/index.html#getting-up",
+    "href": "material/06_websites/index.html#getting-up",
     "title": "Let’s make a website with Quarto",
     "section": "Getting up",
     "text": "Getting up\n\nTurn off alarm\nGet out of bed"
   },
   {
-    "objectID": "resources/06_websites/index.html#going-to-sleep",
-    "href": "resources/06_websites/index.html#going-to-sleep",
+    "objectID": "material/06_websites/index.html#going-to-sleep",
+    "href": "material/06_websites/index.html#going-to-sleep",
     "title": "Let’s make a website with Quarto",
     "section": "Going to sleep",
-    "text": "Going to sleep\n\nGet in bed\nCount sheep"
+    "text": "Going to sleep\n\nGet in bed\nCount sheep\n\n\n\n\n@gesis_org"
   },
   {
-    "objectID": "resources/04_exporting/index.html#getting-up",
-    "href": "resources/04_exporting/index.html#getting-up",
+    "objectID": "material/04_exporting/index.html#getting-up",
+    "href": "material/04_exporting/index.html#getting-up",
     "title": "Exporting to different formats",
     "section": "Getting up",
     "text": "Getting up\n\nTurn off alarm\nGet out of bed"
   },
   {
-    "objectID": "resources/04_exporting/index.html#going-to-sleep",
-    "href": "resources/04_exporting/index.html#going-to-sleep",
+    "objectID": "material/04_exporting/index.html#going-to-sleep",
+    "href": "material/04_exporting/index.html#going-to-sleep",
     "title": "Exporting to different formats",
     "section": "Going to sleep",
-    "text": "Going to sleep\n\nGet in bed\nCount sheep"
+    "text": "Going to sleep\n\nGet in bed\nCount sheep\n\n\n\n\n@gesis_org"
   }
 ]
