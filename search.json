@@ -46,14 +46,7 @@
     "href": "material/01_introduction/index.html#examples",
     "title": "Introduction to literate programming and setting up Quarto",
     "section": "Examples",
-    "text": "Examples\nSweave - Early R and Latex integration (2002)\nKnitr - R in Latex, HTML, Markdown…(2012)\nRMarkdown - R/python/julia in Latex, Microsoft Word, LibreOffice, HTML (~2014)\nJupyter Notebooks - anything with a jupyter kernel (~2014)\nQuarto -"
-  },
-  {
-    "objectID": "material/01_introduction/index.html#markdown",
-    "href": "material/01_introduction/index.html#markdown",
-    "title": "Introduction to literate programming and setting up Quarto",
-    "section": "Markdown",
-    "text": "Markdown\nMarkdown is a lightweight markup language with plain text formatting syntax. It’s designed so that it can be converted to HTML and many other formats (e.g. .pdf, .docx)."
+    "text": "Examples\nSweave - Early R and Latex integration (2002)\npandoc - convert between different document formats (2006) knitr - R in Latex, HTML, Markdown…(2012)\nRMarkdown - R/python/julia in Latex, Microsoft Word, LibreOffice, HTML (~2014)\nJupyter Notebooks - anything with a jupyter kernel (~2014)\nQuarto -"
   },
   {
     "objectID": "material/01_introduction/index.html#what-is-quarto",
