@@ -18,21 +18,35 @@
     "href": "material/01_introduction/index.html#section",
     "title": "Introduction to literate programming and setting up Quarto",
     "section": "",
-    "text": "“Let us change our traditional attitude to the construction of programs. Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to human beings what we want a computer to do.” [Donald Knuth]"
+    "text": "“Let us change our traditional attitude to the construction of programs. Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to human beings what we want a computer to do.”  [Donald Knuth]"
   },
   {
-    "objectID": "material/01_introduction/index.html#section-1",
-    "href": "material/01_introduction/index.html#section-1",
+    "objectID": "material/01_introduction/index.html#what-is-literate-programming",
+    "href": "material/01_introduction/index.html#what-is-literate-programming",
     "title": "Introduction to literate programming and setting up Quarto",
-    "section": "",
-    "text": "Literate programs are written in a metalanguage that mixes a document formatting language (e.g., TEX or HTML) and a programming language (e.g., C++).\nThe approach is used in scientific computing and in data science routinely for reproducible research and open access purposes."
+    "section": "What is literate programming?",
+    "text": "What is literate programming?\nMixing a document formatting language and a programming language."
+  },
+  {
+    "objectID": "material/01_introduction/index.html#why-use-literate-programming",
+    "href": "material/01_introduction/index.html#why-use-literate-programming",
+    "title": "Introduction to literate programming and setting up Quarto",
+    "section": "Why use literate programming?",
+    "text": "Why use literate programming?\n\n\nEnhanced Readability\nEmphasizes clear and coherent documentation alongside the code\nImproved Documentation\nDocumentation is an integral part of the program\nCode Reusability\nSimpler to extract and adapt code components for use in other projects\nEducation and Learning\ncan serve as an effective educational tool"
+  },
+  {
+    "objectID": "material/01_introduction/index.html#why-use-literate-programming-as-an-academic",
+    "href": "material/01_introduction/index.html#why-use-literate-programming-as-an-academic",
+    "title": "Introduction to literate programming and setting up Quarto",
+    "section": "Why use literate programming as an academic?",
+    "text": "Why use literate programming as an academic?\nThe approach is used in scientific computing and in data science routinely for reproducible research and open access purposes."
   },
   {
     "objectID": "material/01_introduction/index.html#examples",
     "href": "material/01_introduction/index.html#examples",
     "title": "Introduction to literate programming and setting up Quarto",
     "section": "Examples",
-    "text": "Examples\nSweave - Early R and Latex integration (2002) Knitr - R in Latex, HTML, Markdown…(2012) RMarkdown - R/python/julia in Latex, Microsoft Word, LibreOffice, HTML (~2014) Jupyter Notebooks - anything with a jupyter kernel (~2014) Quarto -"
+    "text": "Examples\nSweave - Early R and Latex integration (2002)\nKnitr - R in Latex, HTML, Markdown…(2012)\nRMarkdown - R/python/julia in Latex, Microsoft Word, LibreOffice, HTML (~2014)\nJupyter Notebooks - anything with a jupyter kernel (~2014)\nQuarto -"
   },
   {
     "objectID": "material/01_introduction/index.html#markdown",
@@ -42,11 +56,25 @@
     "text": "Markdown\nMarkdown is a lightweight markup language with plain text formatting syntax. It’s designed so that it can be converted to HTML and many other formats (e.g. .pdf, .docx)."
   },
   {
-    "objectID": "material/01_introduction/index.html#quarto-vs-rmarkdown",
-    "href": "material/01_introduction/index.html#quarto-vs-rmarkdown",
+    "objectID": "material/01_introduction/index.html#what-is-quarto",
+    "href": "material/01_introduction/index.html#what-is-quarto",
     "title": "Introduction to literate programming and setting up Quarto",
-    "section": "Quarto vs Rmarkdown",
-    "text": "Quarto vs Rmarkdown\n\n\n\n@gesis_org"
+    "section": "What is Quarto?",
+    "text": "What is Quarto?\nopen-source scientific and technical publishing system\n\nPublish reproducible, production quality articles, presentations, websites, blogs, and books in HTML, PDF, MS Word, ePub, and more.\nCreate dynamic content with Python, R, Julia, and Observable.\nAuthor using Jupyter notebooks or with plain text markdown in your favorite editor.\nWrite using Pandoc markdown, including equations, citations, crossrefs, figure panels, callouts, advanced layout, and more.\n\n“The concept is to make a major, long term investment in reproducible research, while keeping it compatible with existing formats and adaptable to the various environments users work in.”"
+  },
+  {
+    "objectID": "material/01_introduction/index.html#quarto-vs-r-markdown",
+    "href": "material/01_introduction/index.html#quarto-vs-r-markdown",
+    "title": "Introduction to literate programming and setting up Quarto",
+    "section": "Quarto vs R Markdown",
+    "text": "Quarto vs R Markdown\nSimilar pipeline: \nBut:\n\nQuarto is like R Markdown, bookdown, xaringan, distill, etc. combined\nQuarto is multi-language and multi-engine (knitr, jupyter, observable, …)\n\nget more advice"
+  },
+  {
+    "objectID": "material/01_introduction/index.html#setting-up-quarto",
+    "href": "material/01_introduction/index.html#setting-up-quarto",
+    "title": "Introduction to literate programming and setting up Quarto",
+    "section": "Setting up Quarto",
+    "text": "Setting up Quarto\n\n\n\nAutomated Reports & Co with Quarto and Markdown"
   },
   {
     "objectID": "material/05_presentations/index.html#introductions",
@@ -60,7 +88,7 @@
     "href": "material/05_presentations/index.html#creating-slides",
     "title": "Let’s make a presentation with Quarto",
     "section": "Creating slides",
-    "text": "Creating slides\nVery similar to creating documents with markdown syntax\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: revealjs\n---\n\n## Getting up\n\n- Turn off alarm\n- Get out of bed\n\n## Going to sleep\n\n- Get in bed\n- Count sheep\n\n\n\n@gesis_org"
+    "text": "Creating slides\nVery similar to creating documents with markdown syntax\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: revealjs\n---\n\n## Getting up\n\n- Turn off alarm\n- Get out of bed\n\n## Going to sleep\n\n- Get in bed\n- Count sheep\n\n\n\nAutomated Reports & Co with Quarto and Markdown"
   },
   {
     "objectID": "material/06_websites/index.html#getting-up",
@@ -74,7 +102,7 @@
     "href": "material/06_websites/index.html#going-to-sleep",
     "title": "Let’s make a website with Quarto",
     "section": "Going to sleep",
-    "text": "Going to sleep\n\nGet in bed\nCount sheep\n\n\n\n\n@gesis_org"
+    "text": "Going to sleep\n\nGet in bed\nCount sheep\n\n\n\n\nAutomated Reports & Co with Quarto and Markdown"
   },
   {
     "objectID": "material/04_exporting/index.html#getting-up",
@@ -88,6 +116,6 @@
     "href": "material/04_exporting/index.html#going-to-sleep",
     "title": "Exporting to different formats",
     "section": "Going to sleep",
-    "text": "Going to sleep\n\nGet in bed\nCount sheep\n\n\n\n\n@gesis_org"
+    "text": "Going to sleep\n\nGet in bed\nCount sheep\n\n\n\n\nAutomated Reports & Co with Quarto and Markdown"
   }
 ]
