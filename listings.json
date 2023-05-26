@@ -1,11 +1,6 @@
 [
   {
     "listing": "/material.html",
-    "items": [
-      "/material/01_introduction/index.html",
-      "/material/04_exporting/index.html",
-      "/material/05_presentations/index.html",
-      "/material/06_websites/index.html"
-    ]
+    "items": []
   }
 ]
