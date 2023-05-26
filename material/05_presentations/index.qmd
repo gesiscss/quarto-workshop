@@ -5,7 +5,7 @@ lesson: 5
 institute: GESIS
 date: "2023-06-20"
 date-format: "YYYY-MM-DD"
-footer: "@gesis_org"
+footer: "Automated Reports & Co with Quarto and Markdown"
 embed-resources: true
 format: fakegesis-revealjs
 ---
