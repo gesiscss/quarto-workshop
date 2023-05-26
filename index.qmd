@@ -34,23 +34,36 @@ Creating professionally looking scientific reports and papers are recurring task
 
 **day 1**:  
 
-    • 09:00 – 10:30: Introduction to literate programming and setting up Quarto (David)
-    • 10:30 – 10:45: Coffee break
-    • 10:45 – 12:15: Writing your first Quarto document: Introduction to Markdown Syntax (Hong)
-    • 12:15 – 13:45: Lunch break
-    • 13:45 – 15:15: Literate programming: Combining Markdown and R / Python (Hong)
-    • 15:15 – 15:30: Coffee break
-    • 15:30 – 17:00: Exporting to different formats (David)
+09:00 – 10:30: [Introduction to literate programming and setting up Quarto](material/01_introduction.qmd)
+
+10:30 – 10:45: Coffee break
+
+10:45 – 12:15: [Writing your first Quarto document: Introduction to Markdown Syntax](material/02_first_doc.qmd)
+
+12:15 – 13:45: Lunch break
+
+13:45 – 15:15: [Literate programming: Combining Markdown and R / Python](material/03_combine_with_R.qmd)
+
+15:15 – 15:30: Coffee break
+
+15:30 – 17:00: [Exporting to different formats](material/04_exporting.qmd)
 
 **day 2**:  
 
-    • 09:00 – 10:30: Let’s make a presentation with Quarto (David)
-    • 10:30 – 10:45: Coffee break
-    • 10:45 – 12:15: Let’s make a website with Quarto (David)
-    • 12:15 – 13:45: Lunch break
-    • 13:45 – 15:15: Let’s write an academic paper with Quarto (Hong)
-    • 15:15 – 15:30: Coffee break
-    • 15:30 – 17:00: Q&A (Hong)
+
+09:00 – 10:30: [Let’s make a presentation with Quarto](material/05_presentations.qmd)
+
+10:30 – 10:45: Coffee break
+
+10:45 – 12:15: [Let’s make a website with Quarto](material/06_websites.qmd)
+
+12:15 – 13:45: Lunch break
+
+13:45 – 15:15: [Let’s write an academic paper with Quarto](material/07_paper.qmd)
+
+15:15 – 15:30: Coffee break
+
+15:30 – 17:00: Q&A
 
 ## Software
 
