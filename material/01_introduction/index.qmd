@@ -5,11 +5,9 @@ lesson: 1
 institute: GESIS
 date: "2023-06-19"
 date-format: "YYYY-MM-DD"
-footer: "Automated Reports & Co with Quarto and Markdown"
+footer: "[Automated Reports & Co with Quarto and Markdown](https://gesiscss.github.io/quarto-workshop/)"
 embed-resources: true
-format: 
-    fakegesis-revealjs:
-        css: ../../styles.css
+format: fakegesis-revealjs
 ---
 
 
@@ -51,15 +49,11 @@ The approach is used in scientific computing and in data science routinely for r
 ## Examples
 
 Sweave - Early R and Latex integration (2002)  
-Knitr - R in Latex, HTML, Markdown...(2012)  
+pandoc - convert between different document formats (2006)
+knitr - R in Latex, HTML, Markdown...(2012)  
 RMarkdown - R/python/julia in Latex, Microsoft Word, LibreOffice, HTML (~2014)  
 Jupyter Notebooks - anything with a jupyter kernel (~2014)  
 Quarto - 
-
-## Markdown
-
-Markdown is a lightweight markup language with plain text formatting syntax. 
-It’s designed so that it can be converted to HTML and many other formats (e.g. .pdf, .docx).
 
 ## What is Quarto?
 
