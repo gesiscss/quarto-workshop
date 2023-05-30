@@ -1,0 +1,89 @@
+---
+title: "Introduction to literate programming and setting up Quarto"
+author: David Schoch
+lesson: 1
+institute: GESIS
+date: "2023-06-19"
+date-format: "YYYY-MM-DD"
+footer: "[Automated Reports & Co with Quarto and Markdown](https://gesiscss.github.io/quarto-workshop/)"
+embed-resources: true
+format: fakegesis-revealjs
+---
+
+
+## {.center}
+
+
+*"Let us change our traditional attitude to the construction of programs. 
+Instead of imagining that our main task is to instruct a computer what to do, 
+let us concentrate rather on explaining to human beings what we want a computer to do." *
+[Donald Knuth]
+
+. . .
+
+<br>
+
+**Literate Programming**  
+Mixing a document formatting language and a programming language
+
+## Why use literate programming?
+
+:::{.incremental}
+- **Enhanced Readability**    
+  [Emphasizes clear and coherent documentation alongside the code]{style="font-size:20pt"}
+
+- **Improved Documentation**  
+  [Documentation is an integral part of the program]{style="font-size:20pt"}
+
+- **Code Reusability**  
+  [Simpler to extract and adapt code components for use in other projects]{style="font-size:20pt"}
+
+- **Education and Learning**  
+  [can serve as an effective educational tool]{style="font-size:20pt"}
+:::
+
+## Why use literate programming as an academic?
+
+::: {.r-fit-text}
+Convenience
+:::
+
+. . .
+
+::: {.r-fit-text}
+Reproducibility
+:::
+
+## History 
+
+*(focusing on R/Python ecosystems)*  
+
+`Sweave` - Early R and Latex integration (2002)  
+`Pandoc` - convert between different document formats (2006)  
+`knitr` -  convenient extension to Sweave (2012)  
+`R Markdown` - knitr extension based on Pandoc (~2014)  
+`Jupyter Notebooks` - anything with a jupyter kernel (~2014)  
+`Quarto` - Next generation R Markdown (~2022)
+
+## What is Quarto?
+
+**open-source scientific and technical publishing system built on Pandoc**  
+
+> You can weave together narrative text and code to produce elegantly formatted output as documents, web pages, blog posts, books and more.
+
+*"The concept is to make a major, long term investment in reproducible research, while keeping it compatible with existing formats and adaptable to the various environments users work in."*
+
+## Quarto vs R Markdown
+
+Similar pipeline: 
+![](https://quarto.org/docs/get-started/hello/images/rstudio-qmd-how-it-works.png)
+
+**But**:  
+
+- Quarto is like R Markdown, bookdown, xaringan, distill, etc. combined
+
+- Quarto is multi-language and multi-engine (knitr, jupyter, observable, ...)
+
+[get more advice](https://quarto.org/docs/faq/rmarkdown.html)
+
+## Setting up Quarto
