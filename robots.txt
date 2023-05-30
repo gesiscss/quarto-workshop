@@ -1,1 +1,1 @@
-Sitemap: https://github.com/gesiscss/quarto-workshop/sitemap.xml
+Sitemap: https://gesiscss.github.io/quarto-workshop/sitemap.xml
