@@ -24,7 +24,7 @@ let us concentrate rather on explaining to human beings what we want a computer 
 <br>
 
 **Literate Programming**  
-Mixing a document formatting language and a programming language
+Mixing a document formatting language and a programming language.
 
 ## Why use literate programming?
 
