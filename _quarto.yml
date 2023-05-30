@@ -1,5 +1,6 @@
 project:
   type: website
+  lib-dir: "libs"
 
 website:
   title: "Quarto Workshop"
