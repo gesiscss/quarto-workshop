@@ -1,0 +1,21 @@
+---
+title: "Let's make a website with Quarto"
+author: "David Schoch"
+lesson: 6
+institute: GESIS
+date: "2023-06-20"
+date-format: "YYYY-MM-DD"
+footer: "[Automated Reports & Co with Quarto and Markdown](https://gesiscss.github.io/quarto-workshop/)"
+embed-resources: true
+format: fakegesis-revealjs
+---
+
+## Getting up
+
+- Turn off alarm
+- Get out of bed
+
+## Going to sleep
+
+- Get in bed
+- Count sheep
