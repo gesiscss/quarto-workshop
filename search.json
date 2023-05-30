@@ -2,7 +2,7 @@
   {
     "objectID": "material.html",
     "href": "material.html",
-    "title": "Automated Reports & Co with Quarto and Markdown",
+    "title": "Quarto Workshop",
     "section": "",
     "text": "Introduction to literate programming and setting up Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nJun 19, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\nExporting to different formats\n\n\n\n\n\n\n\n\n\n\n\n\nJun 19, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\nLet’s make a presentation with Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\nLet’s make a website with Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
   },
@@ -75,6 +75,20 @@
     "title": "Introduction to literate programming and setting up Quarto",
     "section": "Why use literate programming as an academic?",
     "text": "Why use literate programming as an academic?\n\nConvenience\n\n\n\nReproducibility"
+  },
+  {
+    "objectID": "material/01_introduction.html#convenience",
+    "href": "material/01_introduction.html#convenience",
+    "title": "Introduction to literate programming and setting up Quarto",
+    "section": "Convenience",
+    "text": "Convenience"
+  },
+  {
+    "objectID": "material/01_introduction.html#reproducibility",
+    "href": "material/01_introduction.html#reproducibility",
+    "title": "Introduction to literate programming and setting up Quarto",
+    "section": "Reproducibility",
+    "text": "Reproducibility"
   },
   {
     "objectID": "material/01_introduction.html#history",
