@@ -81,7 +81,7 @@
     "href": "material/01_introduction.html#convenience",
     "title": "Introduction to literate programming and setting up Quarto",
     "section": "Convenience",
-    "text": "Convenience"
+    "text": "Convenience\ncommon academic workflow:\n\nwrite paper in Word, LaTeX, …\nrun analysis with some software package, “copy” results to paper\nmake presentation with PowerPoint, LaTeX, …\n\n\nliterate programing can unify writing and analysis (and Quarto also presenting)"
   },
   {
     "objectID": "material/01_introduction.html#reproducibility",
