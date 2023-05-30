@@ -66,9 +66,16 @@ Reproducibility
 
 . . .
 
-literate programing can unify writing and analysis (*and Quarto also presenting*)
+literate programing can unify writing and analysis (*and Quarto also presenting!*)
 
 ## Reproducibility
+
+(*simplified view*)  
+
+- complete and self-contained paper that includes both code and documentation
+
+- no need to publish code and data separately
+
 
 ## History 
 
