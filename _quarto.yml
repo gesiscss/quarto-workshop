@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "Automated Reports & Co with Quarto and Markdown"
+  title: "Quarto Workshop"
   search: false
   navbar:
     left:
