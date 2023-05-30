@@ -74,14 +74,14 @@
     "href": "material/01_introduction.html#why-use-literate-programming-as-an-academic",
     "title": "Introduction to literate programming and setting up Quarto",
     "section": "Why use literate programming as an academic?",
-    "text": "Why use literate programming as an academic?\n\nConvenience\n\n\n\nReproducibility"
+    "text": "Why use literate programming as an academic?\n\n\nConvenience\n\n\n\n\nReproducibility"
   },
   {
     "objectID": "material/01_introduction.html#convenience",
     "href": "material/01_introduction.html#convenience",
     "title": "Introduction to literate programming and setting up Quarto",
     "section": "Convenience",
-    "text": "Convenience\ncommon academic workflow:\n\nwrite paper in Word, LaTeX, …\nrun analysis with some software package, “copy” results to paper\nmake presentation with PowerPoint, LaTeX, …\n\n\nliterate programing can unify writing and analysis (and Quarto also presenting!)"
+    "text": "Convenience\ncommon academic workflow:\n\nwrite paper in Word, LaTeX, …\nrun analysis with some software package, “copy” results to paper\nmake presentation with PowerPoint, LaTeX, …\n\n\n\nliterate programing can unify writing and analysis\n(and Quarto also presenting!)"
   },
   {
     "objectID": "material/01_introduction.html#reproducibility",
@@ -95,21 +95,42 @@
     "href": "material/01_introduction.html#history",
     "title": "Introduction to literate programming and setting up Quarto",
     "section": "History",
-    "text": "History\n(focusing on R/Python ecosystems)\nSweave - Early R and Latex integration (2002)\nPandoc - convert between different document formats (2006)\nknitr - convenient extension to Sweave (2012)\nR Markdown - knitr extension based on Pandoc (~2014)\nJupyter Notebooks - anything with a jupyter kernel (~2014)\nQuarto - Next generation R Markdown (~2022)"
+    "text": "History\n(focusing on R/Python ecosystems)\nSweave - Early R and Latex integration (2002)\nPandoc - convert between different document formats (2006)\nknitr - convenient extension to Sweave (2012)\nRMarkdown - knitr extension based on Pandoc (~2014)\nJupyter Notebooks - anything with a jupyter kernel (~2014)\nQuarto - Next generation RMarkdown (~2022)"
   },
   {
     "objectID": "material/01_introduction.html#what-is-quarto",
     "href": "material/01_introduction.html#what-is-quarto",
     "title": "Introduction to literate programming and setting up Quarto",
     "section": "What is Quarto?",
-    "text": "What is Quarto?\nopen-source scientific and technical publishing system built on Pandoc\n\nYou can weave together narrative text and code to produce elegantly formatted output as documents, web pages, blog posts, books and more.\n\n“The concept is to make a major, long term investment in reproducible research, while keeping it compatible with existing formats and adaptable to the various environments users work in.”"
+    "text": "What is Quarto?\nopen-source scientific and technical publishing system built on Pandoc\n\nQuarto is a command line interface (CLI) that renders plain text formats (.qmd, .rmd, .md) OR mixed formats (.ipynb/Jupyter notebook) into static documents (Word, PDF, HTML,…), websites, presentations, books and much more!\n\n“The concept is to make a major, long term investment in reproducible research, while keeping it compatible with existing formats and adaptable to the various environments users work in.”"
   },
   {
-    "objectID": "material/01_introduction.html#quarto-vs-r-markdown",
-    "href": "material/01_introduction.html#quarto-vs-r-markdown",
+    "objectID": "material/01_introduction.html#working-with-quarto",
+    "href": "material/01_introduction.html#working-with-quarto",
     "title": "Introduction to literate programming and setting up Quarto",
-    "section": "Quarto vs R Markdown",
-    "text": "Quarto vs R Markdown\nSimilar pipeline: \nBut:\n\nQuarto is like R Markdown, bookdown, xaringan, distill, etc. combined\nQuarto is multi-language and multi-engine (knitr, jupyter, observable, …)\n\nget more advice"
+    "section": "Working with Quarto",
+    "text": "Working with Quarto\nQuarto is independent of R and RStudio\n\nYou can use your favorite editor:\n\nRStudio\nVS Code\nJupyter Lab\nNeovim\nany other text editor + terminal\n\n\n\nBest support for RStudio and VS Code"
+  },
+  {
+    "objectID": "material/01_introduction.html#how-quarto-works",
+    "href": "material/01_introduction.html#how-quarto-works",
+    "title": "Introduction to literate programming and setting up Quarto",
+    "section": "How Quarto works",
+    "text": "How Quarto works\n\n\nknitr or jupyter evaluate code and return an md file\nQuarto applies Lua filters + CSS/LaTeX and Pandoc converts to a final ouput format"
+  },
+  {
+    "objectID": "material/01_introduction.html#quarto-vs-rmarkdown",
+    "href": "material/01_introduction.html#quarto-vs-rmarkdown",
+    "title": "Introduction to literate programming and setting up Quarto",
+    "section": "Quarto vs RMarkdown",
+    "text": "Quarto vs RMarkdown\nRMarkdown grew into a large ecosystem, with varying syntax.\nBasic: html_document, pdf_document, word_document\nBeamer: beamer_presentation\nPowerPoint: powerpoint_presentation\nHTML Slides: xaringan, ioslides, revealjs\nAdvanced layouts: tufte\nWebsites: blogdown, distill, pagedown\nBooks: bookdown\nJournal Articles: rticles\n Quarto supports (most of) these out of the box"
+  },
+  {
+    "objectID": "material/01_introduction.html#should-i-switch",
+    "href": "material/01_introduction.html#should-i-switch",
+    "title": "Introduction to literate programming and setting up Quarto",
+    "section": "Should I switch?",
+    "text": "Should I switch?\nYes:\n\n“Batteries included”, shared syntax\nChoose your own editor and your preferred language\nBetter accessibility and richer features out of the box\nMore enhancements overtime\n\nNo:\n\nRMarkdown will still be maintained\nIf you cherish your workflow"
   },
   {
     "objectID": "material/01_introduction.html#setting-up-quarto",
