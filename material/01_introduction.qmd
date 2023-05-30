@@ -56,6 +56,18 @@ Reproducibility
 
 ## Convenience
 
+**common academic workflow**:  
+
+- write paper in Word, LaTeX, ...
+
+- run analysis with some software package, "copy" results to paper
+
+- make presentation with PowerPoint, LaTeX, ...
+
+. . .
+
+literate programing can unify writing and analysis (*and Quarto also presenting*)
+
 ## Reproducibility
 
 ## History 
