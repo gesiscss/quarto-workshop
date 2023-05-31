@@ -59,9 +59,11 @@ Reproducibility
 
 **common academic workflow**:  
 
-- write paper in Word, LaTeX, ...
+- write paper in Word, LaTeX, ...  
+  (*changing format is tideous*)
 
-- run analysis with some software package, "copy" results to paper
+- analysis with some software package, "copy" results to paper  
+  (*changing data/code means manually changing tables/figures*)
 
 - make presentation with PowerPoint, LaTeX, ...
 
@@ -91,6 +93,8 @@ literate programing can unify writing and analysis
 `RMarkdown` - knitr extension based on Pandoc (~2014)  
 `Jupyter Notebooks` - anything with a jupyter kernel (~2014)  
 `Quarto` - Next generation RMarkdown (~2022)
+
+<!-- https://stackoverflow.com/questions/40563479/relationship-between-r-markdown-knitr-pandoc-and-bookdown -->
 
 ## What is Quarto?
 
@@ -164,4 +168,22 @@ Quarto supports (most of) these out of the box
 
 - If you cherish your workflow
 
-## Setting up Quarto
+## need convincing?
+
+**Interactive Documents**  
+Shiny, Observable JS, widgets
+
+. . .
+
+**Extensions**  
+shortcodes, filters, [journal articles]{.fragment .highlight-red}, custom formats, revealjs
+[Examples](https://quarto.org/docs/extensions/listing-filters.html){preview-link="true"}
+
+. . .
+
+**Publishing**  
+`quarto publish` (e.g. Github pages) with continuous integration
+
+
+
+# Setting up Quarto
