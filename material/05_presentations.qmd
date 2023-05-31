@@ -9,34 +9,206 @@ footer: "[Automated Reports & Co with Quarto and Markdown](https://gesiscss.gith
 format: fakegesis-revealjs
 ---
 
-## Introductions
+## Quarto presentation formats
 
-Quarto supports different formats for creating presentations:
 
-- `revealjs` - revealjs (HTML)
-- `pptx` - PowerPoint (MS Office)
-- `beamer` - Beamer (LaTeX/PDF)
+- `revealjs` essentially the replacement for `xaringan`
 
-most capable is `revealjs`.  
+- `beamer` for LaTex slides
 
-## Creating slides
+- Powerpoint for when you have no choice...
 
-Very similar to creating documents with markdown syntax
+## What is revealjs?
 
-```{.markdown}
+> reveal.js is an open source HTML presentation framework. It’s a tool that enables anyone with a web browser to create fully-featured and beautiful presentations for free.
+
+. . .
+
+There is an R package for RMarkdown 
+```r
+install.packages("revealjs")
+```
+but it is rarely used since `xaringan` is more popular
+
+
+## No need to learn new syntax
+
+
+```{.markdown  code-line-numbers="false"}
 ---
-title: "Habits"
-author: "John Doe"
 format: revealjs
 ---
 
-## Getting up
+## Slide 1
+Add some content
 
-- Turn off alarm
-- Get out of bed
+## Slide 2
+- and 
+- maybe
+- a 
+- list
 
-## Going to sleep
-
-- Get in bed
-- Count sheep
 ```
+
+Render to pptx? set `format: pptx`  
+Render to beamer? set `format: beamer`
+
+:::{.aside}
+Switching between formats is THAT easy as long as you do not have any "fancy" features included
+:::
+
+## HTML divs and spans with Pandoc
+
+```{.markdown  code-line-numbers="false"}
+::: {.class}
+Content in a div with a class
+:::
+
+Some text with a specific [span]{.span-class}
+```
+
+Pandoc translates this to
+```{.html code-line-numbers="false"}
+<div class="class">
+   Content in a div with a class
+</div>
+Some text with a specific <span class="span-class">span</span>
+```
+
+## Incremental lists
+
+```{.markdown code-line-numbers="false"}
+:::{.incremental}
+- item 1
+- item 2
+- item 3
+:::
+```
+
+:::{.incremental}
+- item 1
+- item 2
+- item 3
+:::
+
+## Incremental Slides
+
+Use `. . .` syntax  
+
+```{.markdown code-line-numbers="false"}
+This appears first 
+
+. . .
+
+This second
+```
+
+. . .
+
+This appears first 
+
+. . .
+
+This second
+
+## Fragments, Basics
+
+```{.markdown code-line-numbers="false"}
+
+::: {.fragment}
+Fade in
+:::
+
+::: {.fragment .fade-out}
+Fade out
+:::
+
+::: {.fragment .highlight-red}
+Highlight red
+:::
+
+::: {.fragment .fade-in-then-out}
+Fade in, then out
+:::
+
+::: {.fragment .fade-up}
+Slide up while fading in
+:::
+```
+
+## Fragments, Basics
+
+::: {.fragment}
+Fade in
+:::
+
+::: {.fragment .fade-out}
+Fade out
+:::
+
+::: {.fragment .highlight-red}
+Highlight red
+:::
+
+::: {.fragment .fade-in-then-out}
+Fade in, then out
+:::
+
+::: {.fragment .fade-up}
+Slide up while fading in
+:::
+
+## Fragments, More
+
+This is an [important sentence!]{.fragment .highlight-red}
+```{.markdown code-line-numbers="false"}
+This is an [important sentence!]{.fragment .highlight-red}
+```
+
+::: {.fragment .fade-in}
+::: {.fragment .highlight-red}
+::: {.fragment .semi-fade-out}
+Fade in > Turn red > Semi fade out
+:::
+:::
+:::
+
+. . .
+
+```{.markdown code-line-numbers="false"}
+::: {.fragment .fade-in}
+::: {.fragment .highlight-red}
+::: {.fragment .semi-fade-out}
+Fade in > Turn red > Semi fade out
+:::
+:::
+:::
+```
+
+## Multiple Columns
+
+```{.markdown code-line-numbers="false"}
+:::: {.columns}
+
+::: {.column width="40%"}
+Left column
+:::
+
+::: {.column width="60%"}
+Right column
+:::
+
+::::
+```
+
+:::: {.columns}
+
+::: {.column width="40%"}
+Left column
+:::
+
+::: {.column width="60%"}
+Right column
+:::
+
+::::
