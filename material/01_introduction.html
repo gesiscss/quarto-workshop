@@ -382,8 +382,10 @@ Mixing a document formatting language and a programming language.</p>
 <h2>Convenience</h2>
 <p><strong>common academic workflow</strong>:</p>
 <ul>
-<li><p>write paper in Word, LaTeX, …</p></li>
-<li><p>run analysis with some software package, “copy” results to paper</p></li>
+<li><p>write paper in Word, LaTeX, …<br>
+(<em>changing format is tideous</em>)</p></li>
+<li><p>analysis with some software package, “copy” results to paper<br>
+(<em>changing data/code means manually changing tables/figures</em>)</p></li>
 <li><p>make presentation with PowerPoint, LaTeX, …</p></li>
 </ul>
 <div class="fragment">
@@ -410,6 +412,7 @@ Mixing a document formatting language and a programming language.</p>
 <code>RMarkdown</code> - knitr extension based on Pandoc (~2014)<br>
 <code>Jupyter Notebooks</code> - anything with a jupyter kernel (~2014)<br>
 <code>Quarto</code> - Next generation RMarkdown (~2022)</p>
+<!-- https://stackoverflow.com/questions/40563479/relationship-between-r-markdown-knitr-pandoc-and-bookdown -->
 </section>
 <section id="what-is-quarto" class="slide level2">
 <h2>What is Quarto?</h2>
@@ -472,8 +475,21 @@ Journal Articles: <code>rticles</code></p>
 <li><p>If you cherish your workflow</p></li>
 </ul>
 </section>
-<section id="setting-up-quarto" class="slide level2">
-<h2>Setting up Quarto</h2>
+<section id="need-convincing" class="slide level2">
+<h2>need convincing?</h2>
+<p><strong>Interactive Documents</strong><br>
+Shiny, Observable JS, widgets</p>
+<div class="fragment">
+<p><strong>Extensions</strong><br>
+shortcodes, filters, <span class="fragment highlight-red">journal articles</span>, custom formats, revealjs <a href="https://quarto.org/docs/extensions/listing-filters.html" data-preview-link="true">Examples</a></p>
+</div>
+<div class="fragment">
+<p><strong>Publishing</strong><br>
+<code>quarto publish</code> (e.g.&nbsp;Github pages) with continuous integration</p>
+</div>
+</section>
+<section id="setting-up-quarto" class="title-slide slide level1 center">
+<h1>Setting up Quarto</h1>
 
 
 <img src="_extensions/gesiscss/fakegesis/gesis.png" class="slide-logo r-stretch"><div class="footer footer-default">

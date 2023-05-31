@@ -1,45 +1,10 @@
 [
   {
-    "objectID": "material.html",
-    "href": "material.html",
-    "title": "Quarto Workshop",
-    "section": "",
-    "text": "Introduction to literate programming and setting up Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nJun 19, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\nExporting to different formats\n\n\n\n\n\n\n\n\n\n\n\n\nJun 19, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\nLet’s make a presentation with Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\nLet’s make a website with Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Automated Reports & Co with Quarto and Markdown",
     "section": "",
     "text": "Lecturers\nDavid Schoch\nTeam lead for “Transparent Social Analytics” in the Department for Computational Social Science at GESIS in Cologne\n \nChung-hong Chan\nSenior Researcher in the team “Transparent Social Analytics” in the Department for Computational Social Science at GESIS in Cologne\n \nAbout the course\nCreating professionally looking scientific reports and papers are recurring tasks for social scientists - and often time-consuming. This workshop introduces Quarto and the associated Markdown-based systems for generating automated reports using literate programming techniques to facilitate this process. Literate programming is the paradigm of combining code, its output, and its interpretation in a single document. For example, one can embed scripts for data analysis in R or Python in a Quarto file to generate tables and figures reproducibly. This allows to create fully reproducible, beautiful documents with little effort. In this course, we will cover the basics of writing automated reports with Quarto, as well as academic-specific topics such as bibliography generation and collaborative writing with non-technical individuals. Additionally, we will cover how Quarto can be used to create high-quality presentations and webpages, such as a personal page or for a project.\nSchedule\nday 1:\n09:00 – 10:30: Introduction to literate programming and setting up Quarto\n10:30 – 10:45: Coffee break\n10:45 – 12:15: Writing your first Quarto document: Introduction to Markdown Syntax\n12:15 – 13:45: Lunch break\n13:45 – 15:15: Literate programming: Combining Markdown and R / Python\n15:15 – 15:30: Coffee break\n15:30 – 17:00: Exporting to different formats\nday 2:\n09:00 – 10:30: Let’s make a presentation with Quarto\n10:30 – 10:45: Coffee break\n10:45 – 12:15: Let’s make a website with Quarto\n12:15 – 13:45: Lunch break\n13:45 – 15:15: Let’s write an academic paper with Quarto\n15:15 – 15:30: Coffee break\n15:30 – 17:00: Q&A\nSoftware\n\nA text editor, e.g. RStudio, VS Code\nR\nQuarto"
-  },
-  {
-    "objectID": "material/05_presentations.html#introductions",
-    "href": "material/05_presentations.html#introductions",
-    "title": "Let’s make a presentation with Quarto",
-    "section": "Introductions",
-    "text": "Introductions\nQuarto supports different formats for creating presentations:\n\nrevealjs - revealjs (HTML)\npptx - PowerPoint (MS Office)\nbeamer - Beamer (LaTeX/PDF)\n\nmost capable is revealjs."
-  },
-  {
-    "objectID": "material/05_presentations.html#creating-slides",
-    "href": "material/05_presentations.html#creating-slides",
-    "title": "Let’s make a presentation with Quarto",
-    "section": "Creating slides",
-    "text": "Creating slides\nVery similar to creating documents with markdown syntax\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: revealjs\n---\n\n## Getting up\n\n- Turn off alarm\n- Get out of bed\n\n## Going to sleep\n\n- Get in bed\n- Count sheep\n\n\n\nAutomated Reports & Co with Quarto and Markdown"
-  },
-  {
-    "objectID": "material/04_exporting.html#getting-up",
-    "href": "material/04_exporting.html#getting-up",
-    "title": "Exporting to different formats",
-    "section": "Getting up",
-    "text": "Getting up\n\nTurn off alarm\nGet out of bed"
-  },
-  {
-    "objectID": "material/04_exporting.html#going-to-sleep",
-    "href": "material/04_exporting.html#going-to-sleep",
-    "title": "Exporting to different formats",
-    "section": "Going to sleep",
-    "text": "Going to sleep\n\nGet in bed\nCount sheep\n\n\n\n\nAutomated Reports & Co with Quarto and Markdown"
   },
   {
     "objectID": "material/06_websites.html#getting-up",
@@ -54,6 +19,76 @@
     "title": "Let’s make a website with Quarto",
     "section": "Going to sleep",
     "text": "Going to sleep\n\nGet in bed\nCount sheep\n\n\n\n\nAutomated Reports & Co with Quarto and Markdown"
+  },
+  {
+    "objectID": "material/05_presentations.html#quarto-presentation-formats",
+    "href": "material/05_presentations.html#quarto-presentation-formats",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Quarto presentation formats",
+    "text": "Quarto presentation formats\n\nrevealjs essentially the replacement for xaringan\nbeamer for LaTex slides\nPowerpoint for when you have no choice…"
+  },
+  {
+    "objectID": "material/05_presentations.html#what-is-revealjs",
+    "href": "material/05_presentations.html#what-is-revealjs",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "What is revealjs?",
+    "text": "What is revealjs?\n\nreveal.js is an open source HTML presentation framework. It’s a tool that enables anyone with a web browser to create fully-featured and beautiful presentations for free.\n\n\nThere is an R package for RMarkdown\ninstall.packages(\"revealjs\")\nbut it is rarely used since xaringan is more popular"
+  },
+  {
+    "objectID": "material/05_presentations.html#no-need-to-learn-new-syntax",
+    "href": "material/05_presentations.html#no-need-to-learn-new-syntax",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "No need to learn new syntax",
+    "text": "No need to learn new syntax\n---\nformat: revealjs\n---\n\n## Slide 1\nAdd some content\n\n## Slide 2\n- and \n- maybe\n- a \n- list\nRender to pptx? set format: pptx\nRender to beamer? set format: beamer\n\n\nSwitching between formats is THAT easy as long as you do not have any “fancy” features included"
+  },
+  {
+    "objectID": "material/05_presentations.html#html-divs-and-spans-with-pandoc",
+    "href": "material/05_presentations.html#html-divs-and-spans-with-pandoc",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "HTML divs and spans with Pandoc",
+    "text": "HTML divs and spans with Pandoc\n::: {.class}\nContent in a div with a class\n:::\n\nSome text with a specific [span]{.span-class}\nPandoc translates this to\n&lt;div class=\"class\"&gt;\n   Content in a div with a class\n&lt;/div&gt;\nSome text with a specific &lt;span class=\"span-class\"&gt;span&lt;/span&gt;"
+  },
+  {
+    "objectID": "material/05_presentations.html#incremental-lists",
+    "href": "material/05_presentations.html#incremental-lists",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Incremental lists",
+    "text": "Incremental lists\n:::{.incremental}\n- item 1\n- item 2\n- item 3\n:::\n\n\nitem 1\nitem 2\nitem 3"
+  },
+  {
+    "objectID": "material/05_presentations.html#incremental-slides",
+    "href": "material/05_presentations.html#incremental-slides",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Incremental Slides",
+    "text": "Incremental Slides\nUse . . . syntax\nThis appears first \n\n. . .\n\nThis second\n\nThis appears first\n\n\nThis second"
+  },
+  {
+    "objectID": "material/05_presentations.html#fragments-basics",
+    "href": "material/05_presentations.html#fragments-basics",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Fragments, Basics",
+    "text": "Fragments, Basics\n\n::: {.fragment}\nFade in\n:::\n\n::: {.fragment .fade-out}\nFade out\n:::\n\n::: {.fragment .highlight-red}\nHighlight red\n:::\n\n::: {.fragment .fade-in-then-out}\nFade in, then out\n:::\n\n::: {.fragment .fade-up}\nSlide up while fading in\n:::"
+  },
+  {
+    "objectID": "material/05_presentations.html#fragments-basics-1",
+    "href": "material/05_presentations.html#fragments-basics-1",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Fragments, Basics",
+    "text": "Fragments, Basics\n\nFade in\n\n\nFade out\n\n\nHighlight red\n\n\nFade in, then out\n\n\nSlide up while fading in"
+  },
+  {
+    "objectID": "material/05_presentations.html#fragments-more",
+    "href": "material/05_presentations.html#fragments-more",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Fragments, More",
+    "text": "Fragments, More\nThis is an important sentence!\nThis is an [important sentence!]{.fragment .highlight-red}\n\n\n\nFade in &gt; Turn red &gt; Semi fade out\n\n\n\n\n::: {.fragment .fade-in}\n::: {.fragment .highlight-red}\n::: {.fragment .semi-fade-out}\nFade in &gt; Turn red &gt; Semi fade out\n:::\n:::\n:::"
+  },
+  {
+    "objectID": "material/05_presentations.html#multiple-columns",
+    "href": "material/05_presentations.html#multiple-columns",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Multiple Columns",
+    "text": "Multiple Columns\n:::: {.columns}\n\n::: {.column width=\"40%\"}\nLeft column\n:::\n\n::: {.column width=\"60%\"}\nRight column\n:::\n\n::::\n\n\nLeft column\n\nRight column\n\n\n\n\n\nAutomated Reports & Co with Quarto and Markdown"
   },
   {
     "objectID": "material/01_introduction.html#section",
@@ -81,7 +116,7 @@
     "href": "material/01_introduction.html#convenience",
     "title": "Introduction to literate programming and setting up Quarto",
     "section": "Convenience",
-    "text": "Convenience\ncommon academic workflow:\n\nwrite paper in Word, LaTeX, …\nrun analysis with some software package, “copy” results to paper\nmake presentation with PowerPoint, LaTeX, …\n\n\n\nliterate programing can unify writing and analysis\n(and Quarto also presenting!)"
+    "text": "Convenience\ncommon academic workflow:\n\nwrite paper in Word, LaTeX, …\n(changing format is tideous)\nanalysis with some software package, “copy” results to paper\n(changing data/code means manually changing tables/figures)\nmake presentation with PowerPoint, LaTeX, …\n\n\n\nliterate programing can unify writing and analysis\n(and Quarto also presenting!)"
   },
   {
     "objectID": "material/01_introduction.html#reproducibility",
@@ -133,10 +168,31 @@
     "text": "Should I switch?\nYes:\n\n“Batteries included”, shared syntax\nChoose your own editor and your preferred language\nBetter accessibility and richer features out of the box\nMore enhancements overtime\n\nNo:\n\nRMarkdown will still be maintained\nIf you cherish your workflow"
   },
   {
-    "objectID": "material/01_introduction.html#setting-up-quarto",
-    "href": "material/01_introduction.html#setting-up-quarto",
+    "objectID": "material/01_introduction.html#need-convincing",
+    "href": "material/01_introduction.html#need-convincing",
     "title": "Introduction to literate programming and setting up Quarto",
-    "section": "Setting up Quarto",
-    "text": "Setting up Quarto\n\n\n\nAutomated Reports & Co with Quarto and Markdown"
+    "section": "need convincing?",
+    "text": "need convincing?\nInteractive Documents\nShiny, Observable JS, widgets\n\nExtensions\nshortcodes, filters, journal articles, custom formats, revealjs Examples\n\n\nPublishing\nquarto publish (e.g. Github pages) with continuous integration"
+  },
+  {
+    "objectID": "material/04_exporting.html#getting-up",
+    "href": "material/04_exporting.html#getting-up",
+    "title": "Exporting to different formats",
+    "section": "Getting up",
+    "text": "Getting up\n\nTurn off alarm\nGet out of bed"
+  },
+  {
+    "objectID": "material/04_exporting.html#going-to-sleep",
+    "href": "material/04_exporting.html#going-to-sleep",
+    "title": "Exporting to different formats",
+    "section": "Going to sleep",
+    "text": "Going to sleep\n\nGet in bed\nCount sheep\n\n\n\n\nAutomated Reports & Co with Quarto and Markdown"
+  },
+  {
+    "objectID": "material.html",
+    "href": "material.html",
+    "title": "Quarto Workshop",
+    "section": "",
+    "text": "Introduction to literate programming and setting up Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nJun 19, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\nExporting to different formats\n\n\n\n\n\n\n\n\n\n\n\n\nJun 19, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\nLet’s make a presentation with Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\nLet’s make a website with Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
   }
 ]
