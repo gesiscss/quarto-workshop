@@ -1,24 +1,17 @@
 [
   {
+    "objectID": "material.html",
+    "href": "material.html",
+    "title": "Quarto Workshop",
+    "section": "",
+    "text": "Introduction to literate programming and setting up Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nJun 19, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\nExporting to different formats\n\n\n\n\n\n\n\n\n\n\n\n\nJun 19, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\nLet’s make a presentation with Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\nLet’s make a website with Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Automated Reports & Co with Quarto and Markdown",
     "section": "",
     "text": "Lecturers\nDavid Schoch\nTeam lead for “Transparent Social Analytics” in the Department for Computational Social Science at GESIS in Cologne\n \nChung-hong Chan\nSenior Researcher in the team “Transparent Social Analytics” in the Department for Computational Social Science at GESIS in Cologne\n \nAbout the course\nCreating professionally looking scientific reports and papers are recurring tasks for social scientists - and often time-consuming. This workshop introduces Quarto and the associated Markdown-based systems for generating automated reports using literate programming techniques to facilitate this process. Literate programming is the paradigm of combining code, its output, and its interpretation in a single document. For example, one can embed scripts for data analysis in R or Python in a Quarto file to generate tables and figures reproducibly. This allows to create fully reproducible, beautiful documents with little effort. In this course, we will cover the basics of writing automated reports with Quarto, as well as academic-specific topics such as bibliography generation and collaborative writing with non-technical individuals. Additionally, we will cover how Quarto can be used to create high-quality presentations and webpages, such as a personal page or for a project.\nSchedule\nday 1:\n09:00 – 10:30: Introduction to literate programming and setting up Quarto\n10:30 – 10:45: Coffee break\n10:45 – 12:15: Writing your first Quarto document: Introduction to Markdown Syntax\n12:15 – 13:45: Lunch break\n13:45 – 15:15: Literate programming: Combining Markdown and R / Python\n15:15 – 15:30: Coffee break\n15:30 – 17:00: Exporting to different formats\nday 2:\n09:00 – 10:30: Let’s make a presentation with Quarto\n10:30 – 10:45: Coffee break\n10:45 – 12:15: Let’s make a website with Quarto\n12:15 – 13:45: Lunch break\n13:45 – 15:15: Let’s write an academic paper with Quarto\n15:15 – 15:30: Coffee break\n15:30 – 17:00: Q&A\nSoftware\n\nA text editor, e.g. RStudio, VS Code\nR\nQuarto"
-  },
-  {
-    "objectID": "material/06_websites.html#getting-up",
-    "href": "material/06_websites.html#getting-up",
-    "title": "Let’s make a website with Quarto",
-    "section": "Getting up",
-    "text": "Getting up\n\nTurn off alarm\nGet out of bed"
-  },
-  {
-    "objectID": "material/06_websites.html#going-to-sleep",
-    "href": "material/06_websites.html#going-to-sleep",
-    "title": "Let’s make a website with Quarto",
-    "section": "Going to sleep",
-    "text": "Going to sleep\n\nGet in bed\nCount sheep\n\n\n\n\nAutomated Reports & Co with Quarto and Markdown"
   },
   {
     "objectID": "material/05_presentations.html#quarto-presentation-formats",
@@ -32,7 +25,7 @@
     "href": "material/05_presentations.html#what-is-revealjs",
     "title": "Let’s make a presentation with Quarto",
     "section": "What is revealjs?",
-    "text": "What is revealjs?\n\nreveal.js is an open source HTML presentation framework. It’s a tool that enables anyone with a web browser to create fully-featured and beautiful presentations for free.\n\n\nThere is an R package for RMarkdown\ninstall.packages(\"revealjs\")\nbut it is rarely used since xaringan is more popular"
+    "text": "What is revealjs?\n\nreveal.js is an open source HTML presentation framework. It’s a tool that enables anyone with a web browser to create fully-featured and beautiful presentations for free.\n\n\nThere is an R package for RMarkdown\ninstall.packages(\"revealjs\")\nbut it is rarely used since xaringan (based on knitr and remark.js, no Pandoc) is more popular"
   },
   {
     "objectID": "material/05_presentations.html#no-need-to-learn-new-syntax",
@@ -60,7 +53,7 @@
     "href": "material/05_presentations.html#incremental-slides",
     "title": "Let’s make a presentation with Quarto",
     "section": "Incremental Slides",
-    "text": "Incremental Slides\nUse . . . syntax\nThis appears first \n\n. . .\n\nThis second\n\nThis appears first\n\n\nThis second"
+    "text": "Incremental Slides\nUse . . . syntax\nThis appears first \n\n. . .\n\nThis second\n\n\nThis appears first\n\n\nThis second"
   },
   {
     "objectID": "material/05_presentations.html#fragments-basics",
@@ -84,11 +77,200 @@
     "text": "Fragments, More\nThis is an important sentence!\nThis is an [important sentence!]{.fragment .highlight-red}\n\n\n\nFade in &gt; Turn red &gt; Semi fade out\n\n\n\n\n::: {.fragment .fade-in}\n::: {.fragment .highlight-red}\n::: {.fragment .semi-fade-out}\nFade in &gt; Turn red &gt; Semi fade out\n:::\n:::\n:::"
   },
   {
-    "objectID": "material/05_presentations.html#multiple-columns",
-    "href": "material/05_presentations.html#multiple-columns",
+    "objectID": "material/05_presentations.html#slide-transition",
+    "href": "material/05_presentations.html#slide-transition",
     "title": "Let’s make a presentation with Quarto",
-    "section": "Multiple Columns",
-    "text": "Multiple Columns\n:::: {.columns}\n\n::: {.column width=\"40%\"}\nLeft column\n:::\n\n::: {.column width=\"60%\"}\nRight column\n:::\n\n::::\n\n\nLeft column\n\nRight column\n\n\n\n\n\nAutomated Reports & Co with Quarto and Markdown"
+    "section": "Slide Transition",
+    "text": "Slide Transition\n\nfade\n\n\n\n## Slide Transition {transition=\"fade\"}"
+  },
+  {
+    "objectID": "material/05_presentations.html#slide-transition-1",
+    "href": "material/05_presentations.html#slide-transition-1",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Slide Transition",
+    "text": "Slide Transition\n\nslide\n\n\n\n## Slide Transition {transition=\"slide\"}"
+  },
+  {
+    "objectID": "material/05_presentations.html#slide-transition-2",
+    "href": "material/05_presentations.html#slide-transition-2",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Slide Transition",
+    "text": "Slide Transition\n\nconvex\n\n\n\n## Slide Transition {transition=\"convex\"}"
+  },
+  {
+    "objectID": "material/05_presentations.html#slide-transition-3",
+    "href": "material/05_presentations.html#slide-transition-3",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Slide Transition",
+    "text": "Slide Transition\n\nconcave\n\n\n\n## Slide Transition {transition=\"concave\"}"
+  },
+  {
+    "objectID": "material/05_presentations.html#slide-transition-4",
+    "href": "material/05_presentations.html#slide-transition-4",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Slide Transition",
+    "text": "Slide Transition\n\nzoom\n\n\n\n## Slide Transition {transition=\"zoom\"}"
+  },
+  {
+    "objectID": "material/05_presentations.html#slide-transition-global",
+    "href": "material/05_presentations.html#slide-transition-global",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Slide Transition, global",
+    "text": "Slide Transition, global\n---\ntitle: \"Presentation\"\nformat:\n  revealjs:\n    transition: slide\n    background-transition: fade\n    transition-speed: fast\n---"
+  },
+  {
+    "objectID": "material/05_presentations.html#column-layout",
+    "href": "material/05_presentations.html#column-layout",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Column layout",
+    "text": "Column layout\n:::: {.columns}\n\n::: {.column width=\"40%\"}\nLeft column\n:::\n\n::: {.column width=\"60%\"}\nRight column\n:::\n\n::::\n\n\nLeft column\n\nRight column"
+  },
+  {
+    "objectID": "material/05_presentations.html#column-layout-1",
+    "href": "material/05_presentations.html#column-layout-1",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Column layout",
+    "text": "Column layout\n\n\n\n```{r}\n#| eval: false\ndplyr::glimpse(mtcars)\n```\n\n\n\n\nRows: 32\nColumns: 11\n$ mpg  &lt;dbl&gt; 21.0, 21.0, 22.8, 21.4, 18.7, 18.1, 14.3, 24.4, 22.8, 19.2, 17.8,…\n$ cyl  &lt;dbl&gt; 6, 6, 4, 6, 8, 6, 8, 4, 4, 6, 6, 8, 8, 8, 8, 8, 8, 4, 4, 4, 4, 8,…\n$ disp &lt;dbl&gt; 160.0, 160.0, 108.0, 258.0, 360.0, 225.0, 360.0, 146.7, 140.8, 16…\n$ hp   &lt;dbl&gt; 110, 110, 93, 110, 175, 105, 245, 62, 95, 123, 123, 180, 180, 180…\n$ drat &lt;dbl&gt; 3.90, 3.90, 3.85, 3.08, 3.15, 2.76, 3.21, 3.69, 3.92, 3.92, 3.92,…\n$ wt   &lt;dbl&gt; 2.620, 2.875, 2.320, 3.215, 3.440, 3.460, 3.570, 3.190, 3.150, 3.…\n$ qsec &lt;dbl&gt; 16.46, 17.02, 18.61, 19.44, 17.02, 20.22, 15.84, 20.00, 22.90, 18…\n$ vs   &lt;dbl&gt; 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0,…\n$ am   &lt;dbl&gt; 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0,…\n$ gear &lt;dbl&gt; 4, 4, 4, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 4, 4, 4, 3, 3,…\n$ carb &lt;dbl&gt; 4, 4, 1, 1, 2, 1, 4, 2, 2, 4, 4, 3, 3, 3, 4, 4, 4, 1, 2, 1, 1, 2,…"
+  },
+  {
+    "objectID": "material/05_presentations.html#output-location-column-fragment",
+    "href": "material/05_presentations.html#output-location-column-fragment",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Output location, column-fragment",
+    "text": "Output location, column-fragment\n\n\n```{r}\n#| output-location: column-fragment\n#| code-line-numbers: \"|2\"\n\nlibrary(ggplot2)\n\nmtcars |&gt; \n  ggplot(aes(x = disp, y = mpg)) +\n  geom_point() +\n  geom_smooth(method = \"loess\", formula = \"y~x\")\n```"
+  },
+  {
+    "objectID": "material/05_presentations.html#output-location-column",
+    "href": "material/05_presentations.html#output-location-column",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Output location, column",
+    "text": "Output location, column\n\n\n```{r}\n#| output-location: column\n#| code-line-numbers: \"|2\"\n\nlibrary(ggplot2)\n\nmtcars |&gt; \n  ggplot(aes(x = disp, y = mpg)) +\n  geom_point() +\n  geom_smooth(method = \"loess\", formula = \"y~x\")\n```"
+  },
+  {
+    "objectID": "material/05_presentations.html#output-location-fragment",
+    "href": "material/05_presentations.html#output-location-fragment",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Output location, fragment",
+    "text": "Output location, fragment\n\n```{r}\n#| output-location: fragment\n#| code-line-numbers: \"|2\"\n\nlibrary(ggplot2)\n\nmtcars |&gt; \n  ggplot(aes(x = disp, y = mpg)) +\n  geom_point() +\n  geom_smooth(method = \"loess\", formula = \"y~x\")\n```"
+  },
+  {
+    "objectID": "material/05_presentations.html#output-location-slide",
+    "href": "material/05_presentations.html#output-location-slide",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Output location, slide",
+    "text": "Output location, slide\n\n```{r}\n#| output-location: slide\n#| code-line-numbers: \"|2\"\n\nlibrary(ggplot2)\n\nmtcars |&gt; \n  ggplot(aes(x = disp, y = mpg)) +\n  geom_point() +\n  geom_smooth(method = \"loess\", formula = \"y~x\")\n```"
+  },
+  {
+    "objectID": "material/05_presentations.html#output-location-slide-output",
+    "href": "material/05_presentations.html#output-location-slide-output",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Output location, slide",
+    "text": "Output location, slide"
+  },
+  {
+    "objectID": "material/05_presentations.html#code-line-highlighting",
+    "href": "material/05_presentations.html#code-line-highlighting",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Code line-highlighting",
+    "text": "Code line-highlighting\nUse #| code-line-numbers: \"3\" syntax - will highlight line 3 and fade others\n\n\n```{r}\n#| output-location: column\n#| code-line-numbers: \"3\"\n\nlibrary(ggplot2)\n\nmtcars |&gt; \n  ggplot(aes(x = disp, y = mpg)) +\n  geom_point() +\n  geom_smooth(method = \"loess\", formula = \"y~x\")\n```"
+  },
+  {
+    "objectID": "material/05_presentations.html#code-line-highlighting-1",
+    "href": "material/05_presentations.html#code-line-highlighting-1",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Code line-highlighting",
+    "text": "Code line-highlighting\nwith a “fragment style”\n\n\n```{r}\n#| output-location: column\n#| code-line-numbers: \"|3\"\n\nlibrary(ggplot2)\n\nmtcars |&gt; \n  ggplot(aes(x = disp, y = mpg)) +\n  geom_point() +\n  geom_smooth(method = \"loess\", formula = \"y~x\")\n```"
+  },
+  {
+    "objectID": "material/05_presentations.html#code-line-highlighting-2",
+    "href": "material/05_presentations.html#code-line-highlighting-2",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Code line-highlighting",
+    "text": "Code line-highlighting\nhighlight different line ranges progressively\n\n\n```{r}\n#| output-location: column\n#| code-line-numbers: \"|3|5|8|10\"\n\nlibrary(ggplot2)\n\nmtcars |&gt; \n  ggplot(aes(x = disp, y = mpg)) +\n  geom_point() +\n  geom_smooth(method = \"loess\", formula = \"y~x\")\n```"
+  },
+  {
+    "objectID": "material/05_presentations.html#stack-images",
+    "href": "material/05_presentations.html#stack-images",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Stack images",
+    "text": "Stack images"
+  },
+  {
+    "objectID": "material/05_presentations.html#stack-images-1",
+    "href": "material/05_presentations.html#stack-images-1",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Stack images",
+    "text": "Stack images\n::: {.r-stack}\n![](img/kitten1.jpeg){.fragment width=\"450\"}\n\n![](img/kitten2.jpeg){.fragment width=\"400\"}\n\n![](img/kitten3.jpeg){.fragment width=\"300\"}\n:::"
+  },
+  {
+    "objectID": "material/05_presentations.html#background-color-and-image",
+    "href": "material/05_presentations.html#background-color-and-image",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Background color and image",
+    "text": "Background color and image\nBackground color:\n## Background color and image  {background-color=\"red\"} \n\n\nBackground image:\n## Background color and image  {background-image=\"&lt;link-to-image&gt;\"}"
+  },
+  {
+    "objectID": "material/05_presentations.html#themes",
+    "href": "material/05_presentations.html#themes",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Themes",
+    "text": "Themes\nsee https://quarto.org/docs/presentations/revealjs/themes.html\n---\ntitle: \"Presentation\"\nformat:\n  revealjs: \n    theme: dark\n---\n\n---\ntitle: \"Presentation\"\nformat:\n  revealjs: \n    theme: beige\n---\n\n\n---\ntitle: \"Presentation\"\nformat:\n  revealjs: \n    theme: simple\n---"
+  },
+  {
+    "objectID": "material/05_presentations.html#themes-via-custom-sass",
+    "href": "material/05_presentations.html#themes-via-custom-sass",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Themes via custom SASS",
+    "text": "Themes via custom SASS\n---\ntitle: \"Presentation\"\nformat:\n  revealjs: \n    theme: [default,custom.scss]\n---\ncustom.scss:\n/*-- scss:defaults --*/\n\n$body-bg: #191919;\n$body-color: #fff;\n$link-color: #42affa;\n\n/*-- scss:rules --*/\n\n.reveal .slide blockquote {\n  border-left: 3px solid $text-muted;\n  padding-left: 0.5em;\n}"
+  },
+  {
+    "objectID": "material/05_presentations.html#themes-via-extensions",
+    "href": "material/05_presentations.html#themes-via-extensions",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Themes via Extensions",
+    "text": "Themes via Extensions\nInstall Extension (in the folder of your presentation):\nquarto use template gesiscss/quarto-revealjs-fakegesis\n\n\nuse in yaml header:\n---\ntitle: \"Let's make a presentation with Quarto\"\nauthor: \"David Schoch\"\nlesson: 5\ninstitute: GESIS\ndate: \"2023-06-20\"\ndate-format: \"YYYY-MM-DD\"\nfooter: \"[Automated Reports & Co with Quarto and Markdown](https://gesiscss.github.io/quarto-workshop/)\"\nformat: fakegesis-revealjs\n---\n\n\nVery creative themes can be found here"
+  },
+  {
+    "objectID": "material/05_presentations.html#examples",
+    "href": "material/05_presentations.html#examples",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Examples",
+    "text": "Examples"
+  },
+  {
+    "objectID": "material/05_presentations.html#section",
+    "href": "material/05_presentations.html#section",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "",
+    "text": "Give me more\n\n\n\n\n\nAutomated Reports & Co with Quarto and Markdown\n\n\nThese slides are based on an RStudio Workshop"
+  },
+  {
+    "objectID": "material/04_exporting.html#getting-up",
+    "href": "material/04_exporting.html#getting-up",
+    "title": "Exporting to different formats",
+    "section": "Getting up",
+    "text": "Getting up\n\nTurn off alarm\nGet out of bed"
+  },
+  {
+    "objectID": "material/04_exporting.html#going-to-sleep",
+    "href": "material/04_exporting.html#going-to-sleep",
+    "title": "Exporting to different formats",
+    "section": "Going to sleep",
+    "text": "Going to sleep\n\nGet in bed\nCount sheep\n\n\n\n\nAutomated Reports & Co with Quarto and Markdown"
+  },
+  {
+    "objectID": "material/06_websites.html#getting-up",
+    "href": "material/06_websites.html#getting-up",
+    "title": "Let’s make a website with Quarto",
+    "section": "Getting up",
+    "text": "Getting up\n\nTurn off alarm\nGet out of bed"
+  },
+  {
+    "objectID": "material/06_websites.html#going-to-sleep",
+    "href": "material/06_websites.html#going-to-sleep",
+    "title": "Let’s make a website with Quarto",
+    "section": "Going to sleep",
+    "text": "Going to sleep\n\nGet in bed\nCount sheep\n\n\n\n\nAutomated Reports & Co with Quarto and Markdown"
   },
   {
     "objectID": "material/01_introduction.html#section",
@@ -173,26 +355,5 @@
     "title": "Introduction to literate programming and setting up Quarto",
     "section": "need convincing?",
     "text": "need convincing?\nInteractive Documents\nShiny, Observable JS, widgets\n\nExtensions\nshortcodes, filters, journal articles, custom formats, revealjs Examples\n\n\nPublishing\nquarto publish (e.g. Github pages) with continuous integration"
-  },
-  {
-    "objectID": "material/04_exporting.html#getting-up",
-    "href": "material/04_exporting.html#getting-up",
-    "title": "Exporting to different formats",
-    "section": "Getting up",
-    "text": "Getting up\n\nTurn off alarm\nGet out of bed"
-  },
-  {
-    "objectID": "material/04_exporting.html#going-to-sleep",
-    "href": "material/04_exporting.html#going-to-sleep",
-    "title": "Exporting to different formats",
-    "section": "Going to sleep",
-    "text": "Going to sleep\n\nGet in bed\nCount sheep\n\n\n\n\nAutomated Reports & Co with Quarto and Markdown"
-  },
-  {
-    "objectID": "material.html",
-    "href": "material.html",
-    "title": "Quarto Workshop",
-    "section": "",
-    "text": "Introduction to literate programming and setting up Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nJun 19, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\nExporting to different formats\n\n\n\n\n\n\n\n\n\n\n\n\nJun 19, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\nLet’s make a presentation with Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\nLet’s make a website with Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
   }
 ]
