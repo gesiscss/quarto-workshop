@@ -1,17 +1,164 @@
 [
   {
-    "objectID": "material.html",
-    "href": "material.html",
-    "title": "Quarto Workshop",
-    "section": "",
-    "text": "Introduction to literate programming and setting up Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nJun 19, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\nExporting to different formats\n\n\n\n\n\n\n\n\n\n\n\n\nJun 19, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\nLet’s make a presentation with Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\nLet’s make a website with Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Automated Reports & Co with Quarto and Markdown",
     "section": "",
     "text": "Lecturers\nDavid Schoch\nTeam lead for “Transparent Social Analytics” in the Department for Computational Social Science at GESIS in Cologne\n \nChung-hong Chan\nSenior Researcher in the team “Transparent Social Analytics” in the Department for Computational Social Science at GESIS in Cologne\n \nAbout the course\nCreating professionally looking scientific reports and papers are recurring tasks for social scientists - and often time-consuming. This workshop introduces Quarto and the associated Markdown-based systems for generating automated reports using literate programming techniques to facilitate this process. Literate programming is the paradigm of combining code, its output, and its interpretation in a single document. For example, one can embed scripts for data analysis in R or Python in a Quarto file to generate tables and figures reproducibly. This allows to create fully reproducible, beautiful documents with little effort. In this course, we will cover the basics of writing automated reports with Quarto, as well as academic-specific topics such as bibliography generation and collaborative writing with non-technical individuals. Additionally, we will cover how Quarto can be used to create high-quality presentations and webpages, such as a personal page or for a project.\nSchedule\nday 1:\n09:00 – 10:30: Introduction to literate programming and setting up Quarto\n10:30 – 10:45: Coffee break\n10:45 – 12:15: Writing your first Quarto document: Introduction to Markdown Syntax\n12:15 – 13:45: Lunch break\n13:45 – 15:15: Literate programming: Combining Markdown and R / Python\n15:15 – 15:30: Coffee break\n15:30 – 17:00: Exporting to different formats\nday 2:\n09:00 – 10:30: Let’s make a presentation with Quarto\n10:30 – 10:45: Coffee break\n10:45 – 12:15: Let’s make a website with Quarto\n12:15 – 13:45: Lunch break\n13:45 – 15:15: Let’s write an academic paper with Quarto\n15:15 – 15:30: Coffee break\n15:30 – 17:00: Q&A\nSoftware\n\nA text editor, e.g. RStudio, VS Code\nR\nQuarto"
+  },
+  {
+    "objectID": "material/02_first_doc.html",
+    "href": "material/02_first_doc.html",
+    "title": "Markdown",
+    "section": "",
+    "text": "Literate programming: mixing a document formatting language and a programming language.\nIn this session, we will focus on the document formatting language. And the programming language in the next session."
+  },
+  {
+    "objectID": "material/02_first_doc.html#text-formatting-the-essential",
+    "href": "material/02_first_doc.html#text-formatting-the-essential",
+    "title": "Markdown",
+    "section": "Text formatting (The essential)",
+    "text": "Text formatting (The essential)\nText attributes *italic*, **bold**, `monospace`.\n\nHorizontal rule:\n\n---\n\nExercise:\nProduce something like this:\nabcdef\n\n\n\nGood to know\n&gt; \"ego cogito, ergo sum\"\n\n     ego cogito, ergo sum\n\n~~Nothing~~"
+  },
+  {
+    "objectID": "material/02_first_doc.html#headings",
+    "href": "material/02_first_doc.html#headings",
+    "title": "Markdown",
+    "section": "Headings",
+    "text": "Headings\n# Heading\n\nGESIS\n\n## Subheading\n\nis\n\n### Alternative heading\n\nwonderful\n\n#### Alternative subheading\n\n*Hello World!*"
+  },
+  {
+    "objectID": "material/02_first_doc.html#lists",
+    "href": "material/02_first_doc.html#lists",
+    "title": "Markdown",
+    "section": "Lists",
+    "text": "Lists\n* Item A\n* Item B\n* Item C\n* Item D\n1. Item 1\n2. Item 2\n3. Item 3\n1. Item 1\n2. Item 2\n    * Item 2a\n    * Item 2b\n\nExercises:\nProduce a ranking of cities, e.g.\n\nMannheim\nCologne\nMainz\nKonstanz\n\nList out all the things you ate this morning for breakfast\n\nBlack Coffee\nAir"
+  },
+  {
+    "objectID": "material/02_first_doc.html#links-images",
+    "href": "material/02_first_doc.html#links-images",
+    "title": "Markdown",
+    "section": "Links / Images",
+    "text": "Links / Images\n[Github](https://github.com/)\n![cat](https://upload.wikimedia.org/wikipedia/commons/1/15/Cat_August_2010-4.jpg)\n\nGood to know\nAdjusting the size (Quarto)\n![cat](https://upload.wikimedia.org/wikipedia/commons/1/15/Cat_August_2010-4.jpg){width=100}\nReference\nLocal file\n![cat](img/pic.png)\n\n\nExercises:\nProduce a list of websites (with links) you like to visit, e.g.\n\nGithub\nTagesschau\nSlashdot\n\nFind a dog picture on Wikipedia and link to it\nProduce a sourced quote (Optional)\n\nA Markdown-formatted document should be publishable as-is, as plain text, without looking like it’s been marked up with tags or formatting instructions. – John Gruber"
+  },
+  {
+    "objectID": "material/06_websites.html#websites-with-quarto",
+    "href": "material/06_websites.html#websites-with-quarto",
+    "title": "Let’s make a website with Quarto",
+    "section": "Websites with Quarto",
+    "text": "Websites with Quarto\n\nWebsites are essentially format: html + a Quarto Project\nWebsites and books are actually very similar (in the Quarto sense) since they assemble multiple pages into one resource"
+  },
+  {
+    "objectID": "material/06_websites.html#why-not-wordpress-tumblr-medium.com-blogger.com-etc",
+    "href": "material/06_websites.html#why-not-wordpress-tumblr-medium.com-blogger.com-etc",
+    "title": "Let’s make a website with Quarto",
+    "section": "Why not WordPress, Tumblr, Medium.com, Blogger.com, etc?",
+    "text": "Why not WordPress, Tumblr, Medium.com, Blogger.com, etc?\n\nNo R Markdown support (even math support is often nonexistent or awkward)\nHuge benefits of static websites compared to dynamic websites\n\nall static files, no PHP or databases, no login/password, work everywhere (even offline)\ntypically fast to visit (no computation needed on the server side), and easy to speed up via CDN\n\n\n\n\ntaken from https://slides.yihui.org/2017-rmarkdown-UNL-Yihui-Xie.html#36"
+  },
+  {
+    "objectID": "material/06_websites.html#create-a-website-project",
+    "href": "material/06_websites.html#create-a-website-project",
+    "title": "Let’s make a website with Quarto",
+    "section": "Create a website project",
+    "text": "Create a website project\nCreate a website:\nquarto create-project MySiteName --type website\n\nCreate a blog:\nquarto create-project MyBlogName --type website:blog\n\n\nCreate a book:\nquarto create-project mybook --type book\n\n\nIn RStudio: New Project &gt; [Quarto Website/Quarto Blog/Quarto Book]\nAlso support in VS Code"
+  },
+  {
+    "objectID": "material/06_websites.html#creating-a-website",
+    "href": "material/06_websites.html#creating-a-website",
+    "title": "Let’s make a website with Quarto",
+    "section": "Creating a website",
+    "text": "Creating a website\n$ quarto create-project MyWebsite --type website\nCreating project at /home/david/Documents/tmp/MyWebsite:\n  - Created _quarto.yml\n  - Created index.qmd\n  - Created about.qmd\n  - Created styles.css"
+  },
+  {
+    "objectID": "material/06_websites.html#navigation-structure",
+    "href": "material/06_websites.html#navigation-structure",
+    "title": "Let’s make a website with Quarto",
+    "section": "Navigation & Structure",
+    "text": "Navigation & Structure\n\n\n\nFile\nDescription\n\n\n\n\n_quarto.yml\nQuarto project file.\n\n\nindex.qmd\nlanding page.\n\n\nabout.qmd\nwebsite about page.\n\n\nstyles.css\nCustom CSS for website"
+  },
+  {
+    "objectID": "material/06_websites.html#the-project-file-_quarto.yml",
+    "href": "material/06_websites.html#the-project-file-_quarto.yml",
+    "title": "Let’s make a website with Quarto",
+    "section": "The project file _quarto.yml",
+    "text": "The project file _quarto.yml\nthis is where you customize the overall appearance and preferences\nproject:\n  type: website\n\nwebsite:\n  title: \"MyWebsite\"\n  navbar:\n    left:\n      - href: index.qmd\n        text: Home\n      - about.qmd\n\nformat:\n  html:\n    theme: cosmo\n    css: styles.css\n    toc: true"
+  },
+  {
+    "objectID": "material/06_websites.html#themes",
+    "href": "material/06_websites.html#themes",
+    "title": "Let’s make a website with Quarto",
+    "section": "Themes",
+    "text": "Themes\nhttps://quarto.org/docs/output-formats/html-themes.html\ndefault, cerulean, cosmo, cyborg, darkly, flatly, journal, litera, lumen, lux, materia, minty, morph, pulse, quartz, sandstone, simplex, sketchy, slate, solar, spacelab, superhero, united, vapor, yeti, zephyr\n\nor create your own\nformat:\n  html:\n    theme: custom.scss\n    css: styles.css\n    toc: true\nvery similar to customizing presentations!"
+  },
+  {
+    "objectID": "material/06_websites.html#possibilities-are-endless",
+    "href": "material/06_websites.html#possibilities-are-endless",
+    "title": "Let’s make a website with Quarto",
+    "section": "Possibilities are endless",
+    "text": "Possibilities are endless\n\nMy personal website\nThis Workshop\nA serious project\nA not so serious project"
+  },
+  {
+    "objectID": "material/06_websites.html#customize-customize-customize",
+    "href": "material/06_websites.html#customize-customize-customize",
+    "title": "Let’s make a website with Quarto",
+    "section": "customize, customize, customize",
+    "text": "customize, customize, customize\n_quarto.yml\nproject:\n  type: website\n\nwebsite:\n  site-url: \"https://mr.schochastics.net\"\n  title: \"schochastics\"\n  favicon: \"static/favicon.png\"\n  twitter-card:\n    creator: \"@schochastics\"\n    site: \"@schochastics\"\n    description: \"I’m the team lead for Transparent Social Analytics in the Department for Computational Social Science at GESIS and I develop tools in R.\"\n    image: \"static/img/avatar.png\"\n    card-style: \"summary\"\n  search: false\n  open-graph: \n    site-name: schochastics\n    description: \"I’m the team lead for Transparent Social Analytics in the Department for Computational Social Science at GESIS and I develop tools in R.\"\n    image: \"static/img/avatar.png\"\n  navbar:\n    logo: \"static/logo.png\"\n    title: false\n    background: primary\n    right:\n      - href: publications/index.qmd\n        text: Publications\n      - href: http://blog.schochastics.net\n        text: Blog\n      - href: project/index.qmd\n        text: Projects\n      - href: material/index.qmd\n        text: Material\n      - href: about/index.qmd\n        text: About me\n  page-footer:\n    left: \"© 2022 David Schoch\"\n    center: \"powered by [quarto](https://quarto.org)\"\n    right:\n      - icon: twitter\n        href: https://twitter.com/schochastics\n      - icon: github\n        href: https://github.com/schochastics\n      - text: &lt;i class=\"ai ai-google-scholar\" role=\"img\"&gt;&lt;/i&gt;\n        href: https://scholar.google.de/citations?user=MFlgHdcAAAAJ&hl=en\n      - text: &lt;i class=\"ai ai-orcid\" role=\"img\"&gt;&lt;/i&gt;\n        href: https://orcid.org/0000-0003-2952-4812\n      - text: &lt;i class=\"bi bi-mastodon\"&gt;&lt;/i&gt;\n        href: https://fosstodon.org/@schochastics\n\nformat:\n  html:\n    theme: \n      - cosmo\n      - custom.scss\n    css: \n      - styles.css\n      - academicons.css\n    toc: true\nexecute: \n  freeze: auto"
+  },
+  {
+    "objectID": "material/06_websites.html#customize-customize-customize-1",
+    "href": "material/06_websites.html#customize-customize-customize-1",
+    "title": "Let’s make a website with Quarto",
+    "section": "customize, customize, customize",
+    "text": "customize, customize, customize\ncustom.scss\n/*-- scss:defaults --*/\n$body-bg: #333333 !default;\n$body-color: #9EEBCF;\n$link-color: white;\n$font-family-sans-serif: 'IBM Plex Sans';\n$font-family-monospace: 'IBM Plex Sans';\n\n$navbar-bg: #333333;\n$navbar-fg: #9EEBCF;\n$navbar-hl: #9EEBCF;\n\n/*-- scss:rules --*/\n@font-face {\n    font-family: 'Nova Square';\n    src: url('static/fonts/novasquare-regular-webfont.woff2') format('woff2'),\n         url('static/fonts/novasquare-regular-webfont.woff') format('woff');\n    font-weight: normal;\n    font-style: normal;\n\n}\n\n@font-face {\n    font-family: 'IBM Plex Sans';\n    src: url('static/fonts/IBMPlexSans-Regular.woff2') format('woff2'),\n        url('static/fonts/IBMPlexSans-Regular.woff') format('woff');\n    font-weight: normal;\n    font-style: normal;\n}\n\n@media screen and (min-width: 56em) {\n  html {\n    font-size: 1.1em;\n  }\n}"
+  },
+  {
+    "objectID": "material/06_websites.html#customize-customize-customize-2",
+    "href": "material/06_websites.html#customize-customize-customize-2",
+    "title": "Let’s make a website with Quarto",
+    "section": "customize, customize, customize",
+    "text": "customize, customize, customize\nstyles.css\n/* css styles */\ndiv.sourceCode{\n  background-color: black;\n}\n\n\nh1,h2,h3,h4{\n  font-family: 'Nova Square';\n}\n\n.listing-title{\n  color: white;\n  text-decoration: underline;\n  font-weight: 700;\n}\n\npre{\n  border: 1px solid white;\n  color: var(--navbar-fg);\n  padding: 5px 5px 5px 5px;\n}\n\ncode{\n  color: var(--navbar-fg);\n}\n\n/* inline code */\n.post-body&gt;p&gt;code{\n  background-color: rgba(255,255,255,.1);\n}\n\na.btn-links:hover{\n  background-color: rgba(255,255,255,.1)!important;\n}\n\n.habout{\n  font-size: 3rem;\n  font-family: 'Nova Square';\n  font-weight: 700;\n}\n\nh1,h2,h4{\n  font-weight: 700;\n}\n\nh4.f4{\n  font-size: 1.75rem;\n}\n\nh1.f3{\n  font-weight: 700;\n}\n\n/* navbar kink */\n@media screen and (min-width: 999px) {\n  .navbar .navbar-nav .nav-link {\n    color: #9EEBCF;\n    font-size: 1rem;\n    text-transform: uppercase;\n  }\n  .navbar .navbar-nav .nav-link:hover {\n    color: #9EEBCF;\n  }\n  .navbar .navbar-nav .nav-item {\n    position: relative;\n  }\n  .navbar .navbar-nav .nav-item::after {\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    margin: auto;\n    background-color: #ffd700;\n    width: 0%;\n    content: \"\";\n    height: 1px;\n    transition: all 0.5s;\n  }\n  \n.navbar .navbar-nav .nav-item:hover::after {\n    width: 100%;\n  }\n}\n\n.navbar-brand&gt;img {\n    max-height: 48px;\n    width: auto;\n    padding-right: 6px;\n}\n\n.nav-footer a{\n  color: #9EEBCF;\n}\n\n.active {\n  border-bottom: 1px solid #ffd700;\n}\n\n.navbar-brand {\n    position: relative;\n    width: 170px;\n    left: 15px;\n    background-size: contain;\n}\n\n/*footer*/\n.nav-footer{\n  border-top: 0px !important;\n}\n\n/*buttons*/\n\n.btn-outline-success{\n  border-color: #9EEBCF;\n  background-color: transparent;\n}\n\n.btn-outline-success:hover{\n  border-color: white;\n  background-color: #666666;\n}\n\n.btn-outline-success a{\n  text-decoration: none;\n  text-transform: uppercase;\n}\n\n/* grid cards */\n.card-body{\n  background-color: #333333;\n}\n\n.card-img-top{\n  background-color: #333333;\n  width: 80%;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.borderless{\n  background-color: #333333;\n}\n\n.quarto-grid-item img.thumbnail-image {\n    object-fit: contain;\n}\n\n.thumbnail-image:hover{\n  opacity:75%;\n}\n\n.center{\n   text-align: center;\n}\n\ndiv.column.col-v-center{\n   vertical-align: middle;\n}\n\n.home-title{\n  font-size: 2em;\n}\n\n.socials{\n  padding-top: 0.5em;\n  padding-bottom: 1em;\n}\n\n.socials a{\n  color: #9EEBCF;\n  margin-left: 0.5em;\n}"
+  },
+  {
+    "objectID": "material/06_websites.html#adding-an-about-page",
+    "href": "material/06_websites.html#adding-an-about-page",
+    "title": "Let’s make a website with Quarto",
+    "section": "Adding an About page",
+    "text": "Adding an About page\n---\ntwitter-card:\n    image: images/profile-preview.png\n    creator: \"@schochastics\"\nopen-graph: true\ntitle: \"David Schoch\"\nimage: images/profile-preview.png\nabout:\n    template: trestles\n    links:\n    - icon: twitter\n        text: Twitter\n        href: https://twitter.com/schochastics\n    - icon: github\n        text: Github\n        href: https://github.com/schochastics\n---"
+  },
+  {
+    "objectID": "material/06_websites.html#about-page-templates",
+    "href": "material/06_websites.html#about-page-templates",
+    "title": "Let’s make a website with Quarto",
+    "section": "About page templates",
+    "text": "About page templates\nabout:\n  template: trestles\n\njollatrestlessolanamarqueebroadside"
+  },
+  {
+    "objectID": "material/06_websites.html#publishing",
+    "href": "material/06_websites.html#publishing",
+    "title": "Let’s make a website with Quarto",
+    "section": "Publishing",
+    "text": "Publishing\n(not limited to websites)\nThere are many ways to publish Quarto websites. Since rendered content uses standard formats (HTML, PDFs, etc.) it can be published anywhere. Additionally, there is a quarto publish command available for easy publishing to popular services (GitHub, Netlify, Posit Connect, etc.)\n\nas well as various tools to make it easy to publish from a Continuous Integration (CI) system."
+  },
+  {
+    "objectID": "material/06_websites.html#interlude-ci",
+    "href": "material/06_websites.html#interlude-ci",
+    "title": "Let’s make a website with Quarto",
+    "section": "Interlude: CI",
+    "text": "Interlude: CI\nContinuous integration is a DevOps software development practice where developers regularly merge their code changes into a central repository, after which automated builds and tests are run.\n\nIn simpler terms:\nInstead of rendering your website and uploading the new version, CI allows to simply “push” code to a repository and the website is automatically updated"
+  },
+  {
+    "objectID": "material/06_websites.html#publishing-with-github",
+    "href": "material/06_websites.html#publishing-with-github",
+    "title": "Let’s make a website with Quarto",
+    "section": "Publishing with GitHub",
+    "text": "Publishing with GitHub\nGitHub Pages enables you to publish websites based on a GitHub repository.\n\nThere are three publishing options from Quarto:\n\nRender sites on your local machine to the docs directory, check the rendered site into GitHub, and then configure your GitHub repo to publish from the docs directory.\nUse the quarto publish command to publish content rendered on your local machine.\nUse a GitHub Action to automatically render your files (a single Quarto document or a Quarto project) and publish the resulting content whenever you push a source code change to your repository."
+  },
+  {
+    "objectID": "material/06_websites.html#publishing-with-github-step-by-step",
+    "href": "material/06_websites.html#publishing-with-github-step-by-step",
+    "title": "Let’s make a website with Quarto",
+    "section": "Publishing with GitHub, step-by-step",
+    "text": "Publishing with GitHub, step-by-step\n(assuming your website source code is checked into GitHub)\n\n\nfreeze computations (add to _quarto.yml)\n\n\nexecute:\n  freeze: auto\n\n(re)render\n\n$ quarto render\n\npublish locally\n\n$ quarto publish gh-pages\n\nadd .github/workflows/publish.yml with this content\ncommit and push\n\n\n\n\n\nAutomated Reports & Co with Quarto and Markdown"
   },
   {
     "objectID": "material/05_presentations.html#quarto-presentation-formats",
@@ -245,34 +392,6 @@
     "text": "Give me more\n\n\n\n\n\nAutomated Reports & Co with Quarto and Markdown\n\n\nThese slides are based on an RStudio Workshop"
   },
   {
-    "objectID": "material/04_exporting.html#getting-up",
-    "href": "material/04_exporting.html#getting-up",
-    "title": "Exporting to different formats",
-    "section": "Getting up",
-    "text": "Getting up\n\nTurn off alarm\nGet out of bed"
-  },
-  {
-    "objectID": "material/04_exporting.html#going-to-sleep",
-    "href": "material/04_exporting.html#going-to-sleep",
-    "title": "Exporting to different formats",
-    "section": "Going to sleep",
-    "text": "Going to sleep\n\nGet in bed\nCount sheep\n\n\n\n\nAutomated Reports & Co with Quarto and Markdown"
-  },
-  {
-    "objectID": "material/06_websites.html#getting-up",
-    "href": "material/06_websites.html#getting-up",
-    "title": "Let’s make a website with Quarto",
-    "section": "Getting up",
-    "text": "Getting up\n\nTurn off alarm\nGet out of bed"
-  },
-  {
-    "objectID": "material/06_websites.html#going-to-sleep",
-    "href": "material/06_websites.html#going-to-sleep",
-    "title": "Let’s make a website with Quarto",
-    "section": "Going to sleep",
-    "text": "Going to sleep\n\nGet in bed\nCount sheep\n\n\n\n\nAutomated Reports & Co with Quarto and Markdown"
-  },
-  {
     "objectID": "material/01_introduction.html#section",
     "href": "material/01_introduction.html#section",
     "title": "Introduction to literate programming and setting up Quarto",
@@ -355,5 +474,26 @@
     "title": "Introduction to literate programming and setting up Quarto",
     "section": "need convincing?",
     "text": "need convincing?\nInteractive Documents\nShiny, Observable JS, widgets\n\nExtensions\nshortcodes, filters, journal articles, custom formats, revealjs Examples\n\n\nPublishing\nquarto publish (e.g. Github pages) with continuous integration"
+  },
+  {
+    "objectID": "material/04_exporting.html#getting-up",
+    "href": "material/04_exporting.html#getting-up",
+    "title": "Exporting to different formats",
+    "section": "Getting up",
+    "text": "Getting up\n\nTurn off alarm\nGet out of bed"
+  },
+  {
+    "objectID": "material/04_exporting.html#going-to-sleep",
+    "href": "material/04_exporting.html#going-to-sleep",
+    "title": "Exporting to different formats",
+    "section": "Going to sleep",
+    "text": "Going to sleep\n\nGet in bed\nCount sheep\n\n\n\n\nAutomated Reports & Co with Quarto and Markdown"
+  },
+  {
+    "objectID": "material.html",
+    "href": "material.html",
+    "title": "Quarto Workshop",
+    "section": "",
+    "text": "Introduction to literate programming and setting up Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nJun 19, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\nMarkdown\n\n\n\n\n\n\n\n\n\n\n\n\nJun 19, 2023\n\n\nChung-hong Chan\n\n\n\n\n\n\n  \n\n\n\n\nExporting to different formats\n\n\n\n\n\n\n\n\n\n\n\n\nJun 19, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\nLet’s make a presentation with Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\nLet’s make a website with Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
   }
 ]

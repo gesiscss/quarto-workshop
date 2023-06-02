@@ -30,6 +30,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #24292e;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #24292e; } /* Normal */
+    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
+    code span.an { color: #6a737d; } /* Annotation */
+    code span.at { color: #d73a49; } /* Attribute */
+    code span.bn { color: #005cc5; } /* BaseN */
+    code span.bu { color: #d73a49; } /* BuiltIn */
+    code span.cf { color: #d73a49; } /* ControlFlow */
+    code span.ch { color: #032f62; } /* Char */
+    code span.cn { color: #005cc5; } /* Constant */
+    code span.co { color: #6a737d; } /* Comment */
+    code span.cv { color: #6a737d; } /* CommentVar */
+    code span.do { color: #6a737d; } /* Documentation */
+    code span.dt { color: #d73a49; } /* DataType */
+    code span.dv { color: #005cc5; } /* DecVal */
+    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
+    code span.ex { color: #d73a49; font-weight: bold; } /* Extension */
+    code span.fl { color: #005cc5; } /* Float */
+    code span.fu { color: #6f42c1; } /* Function */
+    code span.im { color: #032f62; } /* Import */
+    code span.in { color: #6a737d; } /* Information */
+    code span.kw { color: #d73a49; } /* Keyword */
+    code span.op { color: #24292e; } /* Operator */
+    code span.ot { color: #6f42c1; } /* Other */
+    code span.pp { color: #d73a49; } /* Preprocessor */
+    code span.re { color: #6a737d; } /* RegionMarker */
+    code span.sc { color: #005cc5; } /* SpecialChar */
+    code span.ss { color: #032f62; } /* SpecialString */
+    code span.st { color: #032f62; } /* String */
+    code span.va { color: #e36209; } /* Variable */
+    code span.vs { color: #032f62; } /* VerbatimString */
+    code span.wa { color: #ff5555; } /* Warning */
   </style>
   <link rel="stylesheet" href="../libs/revealjs/dist/theme/quarto.css">
   <link href="../libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -341,25 +406,508 @@ David Schoch
 
   <p class="date">2023-06-20</p>
 </section>
-<section id="getting-up" class="slide level2">
-<h2>Getting up</h2>
+<section id="websites-with-quarto" class="slide level2">
+<h2>Websites with Quarto</h2>
 <ul>
-<li>Turn off alarm</li>
-<li>Get out of bed</li>
+<li><p>Websites are essentially <code>format: html</code> + a Quarto Project</p></li>
+<li><p>Websites and books are actually very similar (in the Quarto sense) since they assemble multiple pages into one resource</p></li>
 </ul>
 </section>
-<section id="going-to-sleep" class="slide level2">
-<h2>Going to sleep</h2>
+<section id="why-not-wordpress-tumblr-medium.com-blogger.com-etc" class="slide level2">
+<h2>Why not WordPress, Tumblr, Medium.com, Blogger.com, etc?</h2>
 <ul>
-<li>Get in bed</li>
-<li>Count sheep</li>
+<li><p>No R Markdown support (even math support is often nonexistent or awkward)</p></li>
+<li><p>Huge benefits of static websites compared to dynamic websites</p>
+<ul>
+<li><p>all static files, no PHP or databases, no login/password, work everywhere (even offline)</p></li>
+<li><p>typically fast to visit (no computation needed on the server side), and easy to speed up via CDN</p></li>
+</ul></li>
 </ul>
+
+<aside><div>
+<p>taken from <a href="https://slides.yihui.org/2017-rmarkdown-UNL-Yihui-Xie.html#36" class="uri">https://slides.yihui.org/2017-rmarkdown-UNL-Yihui-Xie.html#36</a></p>
+</div></aside></section>
+<section id="create-a-website-project" class="slide level2">
+<h2>Create a website project</h2>
+<p>Create a website:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">quarto</span> create-project MySiteName <span class="at">--type</span> website</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="fragment">
+<p>Create a blog:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="ex">quarto</span> create-project MyBlogName <span class="at">--type</span> website:blog</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<p>Create a book:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="ex">quarto</span> create-project mybook <span class="at">--type</span> book</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<p>In RStudio: New Project &gt; [Quarto Website/Quarto Blog/Quarto Book]<br>
+Also support in VS Code</p>
+</div>
+</section>
+<section id="creating-a-website" class="slide level2">
+<h2>Creating a website</h2>
+<div class="sourceCode" id="cb4" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> quarto create-project MyWebsite <span class="at">--type</span> website</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Creating</span> project at /home/david/Documents/tmp/MyWebsite:</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-</span> Created _quarto.yml</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-</span> Created index.qmd</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-</span> Created about.qmd</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-</span> Created styles.css</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="navigation-structure" class="slide level2">
+<h2>Navigation &amp; Structure</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">File</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>_quarto.yml</code></td>
+<td style="text-align: left;">Quarto project file.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>index.qmd</code></td>
+<td style="text-align: left;">landing page.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>about.qmd</code></td>
+<td style="text-align: left;">website about page.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>styles.css</code></td>
+<td style="text-align: left;">Custom CSS for website</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="the-project-file-_quarto.yml" class="slide level2">
+<h2>The project file <code>_quarto.yml</code></h2>
+<p>this is where you customize the overall appearance and preferences</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">project</span><span class="kw">:</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> website</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a></span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="fu">website</span><span class="kw">:</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"MyWebsite"</span></span>
+<span id="cb5-6"><a href="#cb5-6"></a><span class="at">  </span><span class="fu">navbar</span><span class="kw">:</span></span>
+<span id="cb5-7"><a href="#cb5-7"></a><span class="at">    </span><span class="fu">left</span><span class="kw">:</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> index.qmd</span></span>
+<span id="cb5-9"><a href="#cb5-9"></a><span class="at">        </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Home</span></span>
+<span id="cb5-10"><a href="#cb5-10"></a><span class="at">      </span><span class="kw">-</span><span class="at"> about.qmd</span></span>
+<span id="cb5-11"><a href="#cb5-11"></a></span>
+<span id="cb5-12"><a href="#cb5-12"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb5-13"><a href="#cb5-13"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb5-14"><a href="#cb5-14"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> cosmo</span></span>
+<span id="cb5-15"><a href="#cb5-15"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> styles.css</span></span>
+<span id="cb5-16"><a href="#cb5-16"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section>
+<section id="in-built-themes" class="title-slide slide level1 center">
+<h1>In built Themes</h1>
+
+</section>
+<section id="themes" class="slide level2">
+<h2>Themes</h2>
+<p><a href="https://quarto.org/docs/output-formats/html-themes.html" class="uri">https://quarto.org/docs/output-formats/html-themes.html</a></p>
+<p><a href="https://bootswatch.com/default/">default</a>, <a href="https://bootswatch.com/cerulean/">cerulean</a>, <a href="https://bootswatch.com/cosmo/">cosmo</a>, <a href="https://bootswatch.com/cyborg/">cyborg</a>, <a href="https://bootswatch.com/darkly/">darkly</a>, <a href="https://bootswatch.com/flatly/">flatly</a>, <a href="https://bootswatch.com/journal/">journal</a>, <a href="https://bootswatch.com/litera/">litera</a>, <a href="https://bootswatch.com/lumen/">lumen</a>, <a href="https://bootswatch.com/lux/">lux</a>, <a href="https://bootswatch.com/materia/">materia</a>, <a href="https://bootswatch.com/minty/">minty</a>, <a href="https://bootswatch.com/morph/">morph</a>, <a href="https://bootswatch.com/pulse/">pulse</a>, <a href="https://bootswatch.com/quartz/">quartz</a>, <a href="https://bootswatch.com/sandstone/">sandstone</a>, <a href="https://bootswatch.com/simplex/">simplex</a>, <a href="https://bootswatch.com/sketchy/">sketchy</a>, <a href="https://bootswatch.com/slate/">slate</a>, <a href="https://bootswatch.com/solar/">solar</a>, <a href="https://bootswatch.com/spacelab/">spacelab</a>, <a href="https://bootswatch.com/superhero/">superhero</a>, <a href="https://bootswatch.com/united/">united</a>, <a href="https://bootswatch.com/vapor/">vapor</a>, <a href="https://bootswatch.com/yeti/">yeti</a>, <a href="https://bootswatch.com/zephyr/">zephyr</a></p>
+<div class="fragment">
+<p>or create your own</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> custom.scss</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> styles.css</span></span>
+<span id="cb6-5"><a href="#cb6-5"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>very similar to customizing presentations!</p>
+</div>
+</section>
+<section id="possibilities-are-endless" class="slide level2">
+<h2>Possibilities are endless</h2>
+<ul>
+<li><p><a href="https://mr.schochastics.net" data-preview-link="true">My personal website</a></p></li>
+<li><p><a href="gesiscss.github.io/quarto-workshop/" data-preview-link="true">This Workshop</a></p></li>
+<li><p><a href="http://soccerverse.com" data-preview-link="true">A serious project</a></p></li>
+<li><p><a href="https://schochastics.quarto.pub/quartocities/" data-preview-link="true">A not so serious project</a></p></li>
+</ul>
+</section>
+<section id="customize-customize-customize" class="slide level2">
+<h2>customize, customize, customize</h2>
+<p><code>_quarto.yml</code></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">project</span><span class="kw">:</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> website</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a></span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="fu">website</span><span class="kw">:</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a><span class="at">  </span><span class="fu">site-url</span><span class="kw">:</span><span class="at"> </span><span class="st">"https://mr.schochastics.net"</span></span>
+<span id="cb7-6"><a href="#cb7-6"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"schochastics"</span></span>
+<span id="cb7-7"><a href="#cb7-7"></a><span class="at">  </span><span class="fu">favicon</span><span class="kw">:</span><span class="at"> </span><span class="st">"static/favicon.png"</span></span>
+<span id="cb7-8"><a href="#cb7-8"></a><span class="at">  </span><span class="fu">twitter-card</span><span class="kw">:</span></span>
+<span id="cb7-9"><a href="#cb7-9"></a><span class="at">    </span><span class="fu">creator</span><span class="kw">:</span><span class="at"> </span><span class="st">"@schochastics"</span></span>
+<span id="cb7-10"><a href="#cb7-10"></a><span class="at">    </span><span class="fu">site</span><span class="kw">:</span><span class="at"> </span><span class="st">"@schochastics"</span></span>
+<span id="cb7-11"><a href="#cb7-11"></a><span class="at">    </span><span class="fu">description</span><span class="kw">:</span><span class="at"> </span><span class="st">"I’m the team lead for Transparent Social Analytics in the Department for Computational Social Science at GESIS and I develop tools in R."</span></span>
+<span id="cb7-12"><a href="#cb7-12"></a><span class="at">    </span><span class="fu">image</span><span class="kw">:</span><span class="at"> </span><span class="st">"static/img/avatar.png"</span></span>
+<span id="cb7-13"><a href="#cb7-13"></a><span class="at">    </span><span class="fu">card-style</span><span class="kw">:</span><span class="at"> </span><span class="st">"summary"</span></span>
+<span id="cb7-14"><a href="#cb7-14"></a><span class="at">  </span><span class="fu">search</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb7-15"><a href="#cb7-15"></a><span class="at">  </span><span class="fu">open-graph</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb7-16"><a href="#cb7-16"></a><span class="at">    </span><span class="fu">site-name</span><span class="kw">:</span><span class="at"> schochastics</span></span>
+<span id="cb7-17"><a href="#cb7-17"></a><span class="at">    </span><span class="fu">description</span><span class="kw">:</span><span class="at"> </span><span class="st">"I’m the team lead for Transparent Social Analytics in the Department for Computational Social Science at GESIS and I develop tools in R."</span></span>
+<span id="cb7-18"><a href="#cb7-18"></a><span class="at">    </span><span class="fu">image</span><span class="kw">:</span><span class="at"> </span><span class="st">"static/img/avatar.png"</span></span>
+<span id="cb7-19"><a href="#cb7-19"></a><span class="at">  </span><span class="fu">navbar</span><span class="kw">:</span></span>
+<span id="cb7-20"><a href="#cb7-20"></a><span class="at">    </span><span class="fu">logo</span><span class="kw">:</span><span class="at"> </span><span class="st">"static/logo.png"</span></span>
+<span id="cb7-21"><a href="#cb7-21"></a><span class="at">    </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb7-22"><a href="#cb7-22"></a><span class="at">    </span><span class="fu">background</span><span class="kw">:</span><span class="at"> primary</span></span>
+<span id="cb7-23"><a href="#cb7-23"></a><span class="at">    </span><span class="fu">right</span><span class="kw">:</span></span>
+<span id="cb7-24"><a href="#cb7-24"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> publications/index.qmd</span></span>
+<span id="cb7-25"><a href="#cb7-25"></a><span class="at">        </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Publications</span></span>
+<span id="cb7-26"><a href="#cb7-26"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> http://blog.schochastics.net</span></span>
+<span id="cb7-27"><a href="#cb7-27"></a><span class="at">        </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Blog</span></span>
+<span id="cb7-28"><a href="#cb7-28"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> project/index.qmd</span></span>
+<span id="cb7-29"><a href="#cb7-29"></a><span class="at">        </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Projects</span></span>
+<span id="cb7-30"><a href="#cb7-30"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> material/index.qmd</span></span>
+<span id="cb7-31"><a href="#cb7-31"></a><span class="at">        </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Material</span></span>
+<span id="cb7-32"><a href="#cb7-32"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> about/index.qmd</span></span>
+<span id="cb7-33"><a href="#cb7-33"></a><span class="at">        </span><span class="fu">text</span><span class="kw">:</span><span class="at"> About me</span></span>
+<span id="cb7-34"><a href="#cb7-34"></a><span class="at">  </span><span class="fu">page-footer</span><span class="kw">:</span></span>
+<span id="cb7-35"><a href="#cb7-35"></a><span class="at">    </span><span class="fu">left</span><span class="kw">:</span><span class="at"> </span><span class="st">"© 2022 David Schoch"</span></span>
+<span id="cb7-36"><a href="#cb7-36"></a><span class="at">    </span><span class="fu">center</span><span class="kw">:</span><span class="at"> </span><span class="st">"powered by [quarto](https://quarto.org)"</span></span>
+<span id="cb7-37"><a href="#cb7-37"></a><span class="at">    </span><span class="fu">right</span><span class="kw">:</span></span>
+<span id="cb7-38"><a href="#cb7-38"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> twitter</span></span>
+<span id="cb7-39"><a href="#cb7-39"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://twitter.com/schochastics</span></span>
+<span id="cb7-40"><a href="#cb7-40"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> github</span></span>
+<span id="cb7-41"><a href="#cb7-41"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://github.com/schochastics</span></span>
+<span id="cb7-42"><a href="#cb7-42"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> &lt;i class="ai ai-google-scholar" role="img"&gt;&lt;/i&gt;</span></span>
+<span id="cb7-43"><a href="#cb7-43"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://scholar.google.de/citations?user=MFlgHdcAAAAJ&amp;hl=en</span></span>
+<span id="cb7-44"><a href="#cb7-44"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> &lt;i class="ai ai-orcid" role="img"&gt;&lt;/i&gt;</span></span>
+<span id="cb7-45"><a href="#cb7-45"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://orcid.org/0000-0003-2952-4812</span></span>
+<span id="cb7-46"><a href="#cb7-46"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> &lt;i class="bi bi-mastodon"&gt;&lt;/i&gt;</span></span>
+<span id="cb7-47"><a href="#cb7-47"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://fosstodon.org/@schochastics</span></span>
+<span id="cb7-48"><a href="#cb7-48"></a></span>
+<span id="cb7-49"><a href="#cb7-49"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb7-50"><a href="#cb7-50"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb7-51"><a href="#cb7-51"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb7-52"><a href="#cb7-52"></a><span class="at">      </span><span class="kw">-</span><span class="at"> cosmo</span></span>
+<span id="cb7-53"><a href="#cb7-53"></a><span class="at">      </span><span class="kw">-</span><span class="at"> custom.scss</span></span>
+<span id="cb7-54"><a href="#cb7-54"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb7-55"><a href="#cb7-55"></a><span class="at">      </span><span class="kw">-</span><span class="at"> styles.css</span></span>
+<span id="cb7-56"><a href="#cb7-56"></a><span class="at">      </span><span class="kw">-</span><span class="at"> academicons.css</span></span>
+<span id="cb7-57"><a href="#cb7-57"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb7-58"><a href="#cb7-58"></a><span class="fu">execute</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb7-59"><a href="#cb7-59"></a><span class="at">  </span><span class="fu">freeze</span><span class="kw">:</span><span class="at"> auto</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="customize-customize-customize-1" class="slide level2">
+<h2>customize, customize, customize</h2>
+<p><code>custom.scss</code></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb8-1"><a href="#cb8-1"></a><span class="co">/*-- scss:defaults --*/</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a>$body-bg<span class="in">: #333333 !default</span>;</span>
+<span id="cb8-3"><a href="#cb8-3"></a>$body-color<span class="in">: #9EEBCF;</span></span>
+<span id="cb8-4"><a href="#cb8-4"></a>$link-color<span class="in">: white</span>;</span>
+<span id="cb8-5"><a href="#cb8-5"></a>$font-family-sans-serif<span class="in">: 'IBM</span> Plex Sans';</span>
+<span id="cb8-6"><a href="#cb8-6"></a>$font-family-monospace<span class="in">: 'IBM</span> Plex Sans';</span>
+<span id="cb8-7"><a href="#cb8-7"></a></span>
+<span id="cb8-8"><a href="#cb8-8"></a>$navbar-bg<span class="in">: #333333;</span></span>
+<span id="cb8-9"><a href="#cb8-9"></a>$navbar-fg<span class="in">: #9EEBCF;</span></span>
+<span id="cb8-10"><a href="#cb8-10"></a>$navbar-hl<span class="in">: #9EEBCF;</span></span>
+<span id="cb8-11"><a href="#cb8-11"></a></span>
+<span id="cb8-12"><a href="#cb8-12"></a><span class="co">/*-- scss:rules --*/</span></span>
+<span id="cb8-13"><a href="#cb8-13"></a><span class="im">@font-face</span> {</span>
+<span id="cb8-14"><a href="#cb8-14"></a>    <span class="kw">font-family</span>: <span class="st">'Nova Square'</span><span class="op">;</span></span>
+<span id="cb8-15"><a href="#cb8-15"></a>    src: <span class="fu">url(</span><span class="st">'static/fonts/novasquare-regular-webfont.woff2'</span><span class="fu">)</span> <span class="fu">format(</span><span class="st">'woff2'</span><span class="fu">)</span><span class="op">,</span></span>
+<span id="cb8-16"><a href="#cb8-16"></a>         <span class="fu">url(</span><span class="st">'static/fonts/novasquare-regular-webfont.woff'</span><span class="fu">)</span> <span class="fu">format(</span><span class="st">'woff'</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb8-17"><a href="#cb8-17"></a>    <span class="kw">font-weight</span>: <span class="dv">normal</span><span class="op">;</span></span>
+<span id="cb8-18"><a href="#cb8-18"></a>    <span class="kw">font-style</span>: <span class="dv">normal</span><span class="op">;</span></span>
+<span id="cb8-19"><a href="#cb8-19"></a></span>
+<span id="cb8-20"><a href="#cb8-20"></a>}</span>
+<span id="cb8-21"><a href="#cb8-21"></a></span>
+<span id="cb8-22"><a href="#cb8-22"></a><span class="im">@font-face</span> {</span>
+<span id="cb8-23"><a href="#cb8-23"></a>    <span class="kw">font-family</span>: <span class="st">'IBM Plex Sans'</span><span class="op">;</span></span>
+<span id="cb8-24"><a href="#cb8-24"></a>    src: <span class="fu">url(</span><span class="st">'static/fonts/IBMPlexSans-Regular.woff2'</span><span class="fu">)</span> <span class="fu">format(</span><span class="st">'woff2'</span><span class="fu">)</span><span class="op">,</span></span>
+<span id="cb8-25"><a href="#cb8-25"></a>        <span class="fu">url(</span><span class="st">'static/fonts/IBMPlexSans-Regular.woff'</span><span class="fu">)</span> <span class="fu">format(</span><span class="st">'woff'</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb8-26"><a href="#cb8-26"></a>    <span class="kw">font-weight</span>: <span class="dv">normal</span><span class="op">;</span></span>
+<span id="cb8-27"><a href="#cb8-27"></a>    <span class="kw">font-style</span>: <span class="dv">normal</span><span class="op">;</span></span>
+<span id="cb8-28"><a href="#cb8-28"></a>}</span>
+<span id="cb8-29"><a href="#cb8-29"></a></span>
+<span id="cb8-30"><a href="#cb8-30"></a><span class="im">@media</span> <span class="dv">screen</span> <span class="kw">and</span> (<span class="kw">min-width</span>: <span class="dv">56</span><span class="dt">em</span>) {</span>
+<span id="cb8-31"><a href="#cb8-31"></a>  html {</span>
+<span id="cb8-32"><a href="#cb8-32"></a>    <span class="kw">font-size</span>: <span class="dv">1.1</span><span class="dt">em</span><span class="op">;</span></span>
+<span id="cb8-33"><a href="#cb8-33"></a>  }</span>
+<span id="cb8-34"><a href="#cb8-34"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="customize-customize-customize-2" class="slide level2">
+<h2>customize, customize, customize</h2>
+<p><code>styles.css</code></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb9-1"><a href="#cb9-1"></a><span class="co">/* css styles */</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a>div<span class="fu">.sourceCode</span>{</span>
+<span id="cb9-3"><a href="#cb9-3"></a>  <span class="kw">background-color</span>: <span class="cn">black</span><span class="op">;</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a>}</span>
+<span id="cb9-5"><a href="#cb9-5"></a></span>
+<span id="cb9-6"><a href="#cb9-6"></a></span>
+<span id="cb9-7"><a href="#cb9-7"></a>h1<span class="op">,</span>h2<span class="op">,</span>h3<span class="op">,</span>h4{</span>
+<span id="cb9-8"><a href="#cb9-8"></a>  <span class="kw">font-family</span>: <span class="st">'Nova Square'</span><span class="op">;</span></span>
+<span id="cb9-9"><a href="#cb9-9"></a>}</span>
+<span id="cb9-10"><a href="#cb9-10"></a></span>
+<span id="cb9-11"><a href="#cb9-11"></a><span class="fu">.listing-title</span>{</span>
+<span id="cb9-12"><a href="#cb9-12"></a>  <span class="kw">color</span>: <span class="cn">white</span><span class="op">;</span></span>
+<span id="cb9-13"><a href="#cb9-13"></a>  <span class="kw">text-decoration</span>: <span class="dv">underline</span><span class="op">;</span></span>
+<span id="cb9-14"><a href="#cb9-14"></a>  <span class="kw">font-weight</span>: <span class="dv">700</span><span class="op">;</span></span>
+<span id="cb9-15"><a href="#cb9-15"></a>}</span>
+<span id="cb9-16"><a href="#cb9-16"></a></span>
+<span id="cb9-17"><a href="#cb9-17"></a>pre{</span>
+<span id="cb9-18"><a href="#cb9-18"></a>  <span class="kw">border</span>: <span class="dv">1</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">white</span><span class="op">;</span></span>
+<span id="cb9-19"><a href="#cb9-19"></a>  <span class="kw">color</span>: <span class="fu">var(</span><span class="va">--navbar-fg</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb9-20"><a href="#cb9-20"></a>  <span class="kw">padding</span>: <span class="dv">5</span><span class="dt">px</span> <span class="dv">5</span><span class="dt">px</span> <span class="dv">5</span><span class="dt">px</span> <span class="dv">5</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb9-21"><a href="#cb9-21"></a>}</span>
+<span id="cb9-22"><a href="#cb9-22"></a></span>
+<span id="cb9-23"><a href="#cb9-23"></a>code{</span>
+<span id="cb9-24"><a href="#cb9-24"></a>  <span class="kw">color</span>: <span class="fu">var(</span><span class="va">--navbar-fg</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb9-25"><a href="#cb9-25"></a>}</span>
+<span id="cb9-26"><a href="#cb9-26"></a></span>
+<span id="cb9-27"><a href="#cb9-27"></a><span class="co">/* inline code */</span></span>
+<span id="cb9-28"><a href="#cb9-28"></a><span class="fu">.post-body</span><span class="op">&gt;</span>p<span class="op">&gt;</span>code{</span>
+<span id="cb9-29"><a href="#cb9-29"></a>  <span class="kw">background-color</span>: <span class="fu">rgba(</span><span class="dv">255</span><span class="op">,</span><span class="dv">255</span><span class="op">,</span><span class="dv">255</span><span class="op">,</span><span class="dv">.1</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb9-30"><a href="#cb9-30"></a>}</span>
+<span id="cb9-31"><a href="#cb9-31"></a></span>
+<span id="cb9-32"><a href="#cb9-32"></a>a<span class="fu">.btn-links</span><span class="in">:hover</span>{</span>
+<span id="cb9-33"><a href="#cb9-33"></a>  <span class="kw">background-color</span>: <span class="fu">rgba(</span><span class="dv">255</span><span class="op">,</span><span class="dv">255</span><span class="op">,</span><span class="dv">255</span><span class="op">,</span><span class="dv">.1</span><span class="fu">)</span><span class="at">!important</span><span class="op">;</span></span>
+<span id="cb9-34"><a href="#cb9-34"></a>}</span>
+<span id="cb9-35"><a href="#cb9-35"></a></span>
+<span id="cb9-36"><a href="#cb9-36"></a><span class="fu">.habout</span>{</span>
+<span id="cb9-37"><a href="#cb9-37"></a>  <span class="kw">font-size</span>: <span class="dv">3</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb9-38"><a href="#cb9-38"></a>  <span class="kw">font-family</span>: <span class="st">'Nova Square'</span><span class="op">;</span></span>
+<span id="cb9-39"><a href="#cb9-39"></a>  <span class="kw">font-weight</span>: <span class="dv">700</span><span class="op">;</span></span>
+<span id="cb9-40"><a href="#cb9-40"></a>}</span>
+<span id="cb9-41"><a href="#cb9-41"></a></span>
+<span id="cb9-42"><a href="#cb9-42"></a>h1<span class="op">,</span>h2<span class="op">,</span>h4{</span>
+<span id="cb9-43"><a href="#cb9-43"></a>  <span class="kw">font-weight</span>: <span class="dv">700</span><span class="op">;</span></span>
+<span id="cb9-44"><a href="#cb9-44"></a>}</span>
+<span id="cb9-45"><a href="#cb9-45"></a></span>
+<span id="cb9-46"><a href="#cb9-46"></a>h4<span class="fu">.f4</span>{</span>
+<span id="cb9-47"><a href="#cb9-47"></a>  <span class="kw">font-size</span>: <span class="dv">1.75</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb9-48"><a href="#cb9-48"></a>}</span>
+<span id="cb9-49"><a href="#cb9-49"></a></span>
+<span id="cb9-50"><a href="#cb9-50"></a>h1<span class="fu">.f3</span>{</span>
+<span id="cb9-51"><a href="#cb9-51"></a>  <span class="kw">font-weight</span>: <span class="dv">700</span><span class="op">;</span></span>
+<span id="cb9-52"><a href="#cb9-52"></a>}</span>
+<span id="cb9-53"><a href="#cb9-53"></a></span>
+<span id="cb9-54"><a href="#cb9-54"></a><span class="co">/* navbar kink */</span></span>
+<span id="cb9-55"><a href="#cb9-55"></a><span class="im">@media</span> <span class="dv">screen</span> <span class="kw">and</span> (<span class="kw">min-width</span>: <span class="dv">999</span><span class="dt">px</span>) {</span>
+<span id="cb9-56"><a href="#cb9-56"></a>  <span class="fu">.navbar</span> <span class="fu">.navbar-nav</span> <span class="fu">.nav-link</span> {</span>
+<span id="cb9-57"><a href="#cb9-57"></a>    <span class="kw">color</span>: <span class="cn">#9EEBCF</span><span class="op">;</span></span>
+<span id="cb9-58"><a href="#cb9-58"></a>    <span class="kw">font-size</span>: <span class="dv">1</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb9-59"><a href="#cb9-59"></a>    <span class="kw">text-transform</span>: <span class="dv">uppercase</span><span class="op">;</span></span>
+<span id="cb9-60"><a href="#cb9-60"></a>  }</span>
+<span id="cb9-61"><a href="#cb9-61"></a>  <span class="fu">.navbar</span> <span class="fu">.navbar-nav</span> <span class="fu">.nav-link</span><span class="in">:hover</span> {</span>
+<span id="cb9-62"><a href="#cb9-62"></a>    <span class="kw">color</span>: <span class="cn">#9EEBCF</span><span class="op">;</span></span>
+<span id="cb9-63"><a href="#cb9-63"></a>  }</span>
+<span id="cb9-64"><a href="#cb9-64"></a>  <span class="fu">.navbar</span> <span class="fu">.navbar-nav</span> <span class="fu">.nav-item</span> {</span>
+<span id="cb9-65"><a href="#cb9-65"></a>    <span class="kw">position</span>: <span class="dv">relative</span><span class="op">;</span></span>
+<span id="cb9-66"><a href="#cb9-66"></a>  }</span>
+<span id="cb9-67"><a href="#cb9-67"></a>  <span class="fu">.navbar</span> <span class="fu">.navbar-nav</span> <span class="fu">.nav-item</span><span class="in">::after</span> {</span>
+<span id="cb9-68"><a href="#cb9-68"></a>    <span class="kw">position</span>: <span class="dv">absolute</span><span class="op">;</span></span>
+<span id="cb9-69"><a href="#cb9-69"></a>    <span class="kw">bottom</span>: <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb9-70"><a href="#cb9-70"></a>    <span class="kw">left</span>: <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb9-71"><a href="#cb9-71"></a>    <span class="kw">right</span>: <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb9-72"><a href="#cb9-72"></a>    <span class="kw">margin</span>: <span class="bu">auto</span><span class="op">;</span></span>
+<span id="cb9-73"><a href="#cb9-73"></a>    <span class="kw">background-color</span>: <span class="cn">#ffd700</span><span class="op">;</span></span>
+<span id="cb9-74"><a href="#cb9-74"></a>    <span class="kw">width</span>: <span class="dv">0</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb9-75"><a href="#cb9-75"></a>    <span class="kw">content</span>: <span class="st">""</span><span class="op">;</span></span>
+<span id="cb9-76"><a href="#cb9-76"></a>    <span class="kw">height</span>: <span class="dv">1</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb9-77"><a href="#cb9-77"></a>    <span class="kw">transition</span>: <span class="dv">all</span> <span class="dv">0.5</span><span class="dt">s</span><span class="op">;</span></span>
+<span id="cb9-78"><a href="#cb9-78"></a>  }</span>
+<span id="cb9-79"><a href="#cb9-79"></a>  </span>
+<span id="cb9-80"><a href="#cb9-80"></a><span class="fu">.navbar</span> <span class="fu">.navbar-nav</span> <span class="fu">.nav-item</span><span class="in">:hover::after</span> {</span>
+<span id="cb9-81"><a href="#cb9-81"></a>    <span class="kw">width</span>: <span class="dv">100</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb9-82"><a href="#cb9-82"></a>  }</span>
+<span id="cb9-83"><a href="#cb9-83"></a>}</span>
+<span id="cb9-84"><a href="#cb9-84"></a></span>
+<span id="cb9-85"><a href="#cb9-85"></a><span class="fu">.navbar-brand</span><span class="op">&gt;</span>img {</span>
+<span id="cb9-86"><a href="#cb9-86"></a>    <span class="kw">max-height</span>: <span class="dv">48</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb9-87"><a href="#cb9-87"></a>    <span class="kw">width</span>: <span class="bu">auto</span><span class="op">;</span></span>
+<span id="cb9-88"><a href="#cb9-88"></a>    <span class="kw">padding-right</span>: <span class="dv">6</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb9-89"><a href="#cb9-89"></a>}</span>
+<span id="cb9-90"><a href="#cb9-90"></a></span>
+<span id="cb9-91"><a href="#cb9-91"></a><span class="fu">.nav-footer</span> a{</span>
+<span id="cb9-92"><a href="#cb9-92"></a>  <span class="kw">color</span>: <span class="cn">#9EEBCF</span><span class="op">;</span></span>
+<span id="cb9-93"><a href="#cb9-93"></a>}</span>
+<span id="cb9-94"><a href="#cb9-94"></a></span>
+<span id="cb9-95"><a href="#cb9-95"></a><span class="fu">.active</span> {</span>
+<span id="cb9-96"><a href="#cb9-96"></a>  <span class="kw">border-bottom</span>: <span class="dv">1</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">#ffd700</span><span class="op">;</span></span>
+<span id="cb9-97"><a href="#cb9-97"></a>}</span>
+<span id="cb9-98"><a href="#cb9-98"></a></span>
+<span id="cb9-99"><a href="#cb9-99"></a><span class="fu">.navbar-brand</span> {</span>
+<span id="cb9-100"><a href="#cb9-100"></a>    <span class="kw">position</span>: <span class="dv">relative</span><span class="op">;</span></span>
+<span id="cb9-101"><a href="#cb9-101"></a>    <span class="kw">width</span>: <span class="dv">170</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb9-102"><a href="#cb9-102"></a>    <span class="kw">left</span>: <span class="dv">15</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb9-103"><a href="#cb9-103"></a>    <span class="kw">background-size</span>: <span class="dv">contain</span><span class="op">;</span></span>
+<span id="cb9-104"><a href="#cb9-104"></a>}</span>
+<span id="cb9-105"><a href="#cb9-105"></a></span>
+<span id="cb9-106"><a href="#cb9-106"></a><span class="co">/*footer*/</span></span>
+<span id="cb9-107"><a href="#cb9-107"></a><span class="fu">.nav-footer</span>{</span>
+<span id="cb9-108"><a href="#cb9-108"></a>  <span class="kw">border-top</span>: <span class="dv">0</span><span class="dt">px</span> <span class="at">!important</span><span class="op">;</span></span>
+<span id="cb9-109"><a href="#cb9-109"></a>}</span>
+<span id="cb9-110"><a href="#cb9-110"></a></span>
+<span id="cb9-111"><a href="#cb9-111"></a><span class="co">/*buttons*/</span></span>
+<span id="cb9-112"><a href="#cb9-112"></a></span>
+<span id="cb9-113"><a href="#cb9-113"></a><span class="fu">.btn-outline-success</span>{</span>
+<span id="cb9-114"><a href="#cb9-114"></a>  <span class="kw">border-color</span>: <span class="cn">#9EEBCF</span><span class="op">;</span></span>
+<span id="cb9-115"><a href="#cb9-115"></a>  <span class="kw">background-color</span>: <span class="dv">transparent</span><span class="op">;</span></span>
+<span id="cb9-116"><a href="#cb9-116"></a>}</span>
+<span id="cb9-117"><a href="#cb9-117"></a></span>
+<span id="cb9-118"><a href="#cb9-118"></a><span class="fu">.btn-outline-success</span><span class="in">:hover</span>{</span>
+<span id="cb9-119"><a href="#cb9-119"></a>  <span class="kw">border-color</span>: <span class="cn">white</span><span class="op">;</span></span>
+<span id="cb9-120"><a href="#cb9-120"></a>  <span class="kw">background-color</span>: <span class="cn">#666666</span><span class="op">;</span></span>
+<span id="cb9-121"><a href="#cb9-121"></a>}</span>
+<span id="cb9-122"><a href="#cb9-122"></a></span>
+<span id="cb9-123"><a href="#cb9-123"></a><span class="fu">.btn-outline-success</span> a{</span>
+<span id="cb9-124"><a href="#cb9-124"></a>  <span class="kw">text-decoration</span>: <span class="dv">none</span><span class="op">;</span></span>
+<span id="cb9-125"><a href="#cb9-125"></a>  <span class="kw">text-transform</span>: <span class="dv">uppercase</span><span class="op">;</span></span>
+<span id="cb9-126"><a href="#cb9-126"></a>}</span>
+<span id="cb9-127"><a href="#cb9-127"></a></span>
+<span id="cb9-128"><a href="#cb9-128"></a><span class="co">/* grid cards */</span></span>
+<span id="cb9-129"><a href="#cb9-129"></a><span class="fu">.card-body</span>{</span>
+<span id="cb9-130"><a href="#cb9-130"></a>  <span class="kw">background-color</span>: <span class="cn">#333333</span><span class="op">;</span></span>
+<span id="cb9-131"><a href="#cb9-131"></a>}</span>
+<span id="cb9-132"><a href="#cb9-132"></a></span>
+<span id="cb9-133"><a href="#cb9-133"></a><span class="fu">.card-img-top</span>{</span>
+<span id="cb9-134"><a href="#cb9-134"></a>  <span class="kw">background-color</span>: <span class="cn">#333333</span><span class="op">;</span></span>
+<span id="cb9-135"><a href="#cb9-135"></a>  <span class="kw">width</span>: <span class="dv">80</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb9-136"><a href="#cb9-136"></a>  <span class="kw">margin-left</span>: <span class="bu">auto</span><span class="op">;</span></span>
+<span id="cb9-137"><a href="#cb9-137"></a>  <span class="kw">margin-right</span>: <span class="bu">auto</span><span class="op">;</span></span>
+<span id="cb9-138"><a href="#cb9-138"></a>}</span>
+<span id="cb9-139"><a href="#cb9-139"></a></span>
+<span id="cb9-140"><a href="#cb9-140"></a><span class="fu">.borderless</span>{</span>
+<span id="cb9-141"><a href="#cb9-141"></a>  <span class="kw">background-color</span>: <span class="cn">#333333</span><span class="op">;</span></span>
+<span id="cb9-142"><a href="#cb9-142"></a>}</span>
+<span id="cb9-143"><a href="#cb9-143"></a></span>
+<span id="cb9-144"><a href="#cb9-144"></a><span class="fu">.quarto-grid-item</span> img<span class="fu">.thumbnail-image</span> {</span>
+<span id="cb9-145"><a href="#cb9-145"></a>    <span class="kw">object-fit</span>: <span class="dv">contain</span><span class="op">;</span></span>
+<span id="cb9-146"><a href="#cb9-146"></a>}</span>
+<span id="cb9-147"><a href="#cb9-147"></a></span>
+<span id="cb9-148"><a href="#cb9-148"></a><span class="fu">.thumbnail-image</span><span class="in">:hover</span>{</span>
+<span id="cb9-149"><a href="#cb9-149"></a>  <span class="kw">opacity</span>:<span class="dv">75</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb9-150"><a href="#cb9-150"></a>}</span>
+<span id="cb9-151"><a href="#cb9-151"></a></span>
+<span id="cb9-152"><a href="#cb9-152"></a><span class="fu">.center</span>{</span>
+<span id="cb9-153"><a href="#cb9-153"></a>   <span class="kw">text-align</span>: <span class="dv">center</span><span class="op">;</span></span>
+<span id="cb9-154"><a href="#cb9-154"></a>}</span>
+<span id="cb9-155"><a href="#cb9-155"></a></span>
+<span id="cb9-156"><a href="#cb9-156"></a>div<span class="fu">.column.col-v-center</span>{</span>
+<span id="cb9-157"><a href="#cb9-157"></a>   <span class="kw">vertical-align</span>: <span class="dv">middle</span><span class="op">;</span></span>
+<span id="cb9-158"><a href="#cb9-158"></a>}</span>
+<span id="cb9-159"><a href="#cb9-159"></a></span>
+<span id="cb9-160"><a href="#cb9-160"></a><span class="fu">.home-title</span>{</span>
+<span id="cb9-161"><a href="#cb9-161"></a>  <span class="kw">font-size</span>: <span class="dv">2</span><span class="dt">em</span><span class="op">;</span></span>
+<span id="cb9-162"><a href="#cb9-162"></a>}</span>
+<span id="cb9-163"><a href="#cb9-163"></a></span>
+<span id="cb9-164"><a href="#cb9-164"></a><span class="fu">.socials</span>{</span>
+<span id="cb9-165"><a href="#cb9-165"></a>  <span class="kw">padding-top</span>: <span class="dv">0.5</span><span class="dt">em</span><span class="op">;</span></span>
+<span id="cb9-166"><a href="#cb9-166"></a>  <span class="kw">padding-bottom</span>: <span class="dv">1</span><span class="dt">em</span><span class="op">;</span></span>
+<span id="cb9-167"><a href="#cb9-167"></a>}</span>
+<span id="cb9-168"><a href="#cb9-168"></a></span>
+<span id="cb9-169"><a href="#cb9-169"></a><span class="fu">.socials</span> a{</span>
+<span id="cb9-170"><a href="#cb9-170"></a>  <span class="kw">color</span>: <span class="cn">#9EEBCF</span><span class="op">;</span></span>
+<span id="cb9-171"><a href="#cb9-171"></a>  <span class="kw">margin-left</span>: <span class="dv">0.5</span><span class="dt">em</span><span class="op">;</span></span>
+<span id="cb9-172"><a href="#cb9-172"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="adding-an-about-page" class="slide level2">
+<h2>Adding an About page</h2>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb10-1"><a href="#cb10-1"></a><span class="pp">---</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="fu">twitter-card</span><span class="kw">:</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a><span class="at">    </span><span class="fu">image</span><span class="kw">:</span><span class="at"> images/profile-preview.png</span></span>
+<span id="cb10-4"><a href="#cb10-4"></a><span class="at">    </span><span class="fu">creator</span><span class="kw">:</span><span class="at"> </span><span class="st">"@schochastics"</span></span>
+<span id="cb10-5"><a href="#cb10-5"></a><span class="fu">open-graph</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb10-6"><a href="#cb10-6"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"David Schoch"</span></span>
+<span id="cb10-7"><a href="#cb10-7"></a><span class="fu">image</span><span class="kw">:</span><span class="at"> images/profile-preview.png</span></span>
+<span id="cb10-8"><a href="#cb10-8"></a><span class="fu">about</span><span class="kw">:</span></span>
+<span id="cb10-9"><a href="#cb10-9"></a><span class="at">    </span><span class="fu">template</span><span class="kw">:</span><span class="at"> trestles</span></span>
+<span id="cb10-10"><a href="#cb10-10"></a><span class="at">    </span><span class="fu">links</span><span class="kw">:</span></span>
+<span id="cb10-11"><a href="#cb10-11"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> twitter</span></span>
+<span id="cb10-12"><a href="#cb10-12"></a><span class="at">        </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Twitter</span></span>
+<span id="cb10-13"><a href="#cb10-13"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://twitter.com/schochastics</span></span>
+<span id="cb10-14"><a href="#cb10-14"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> github</span></span>
+<span id="cb10-15"><a href="#cb10-15"></a><span class="at">        </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Github</span></span>
+<span id="cb10-16"><a href="#cb10-16"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://github.com/schochastics</span></span>
+<span id="cb10-17"><a href="#cb10-17"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="about-page-templates" class="slide level2">
+<h2>About page templates</h2>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">about</span><span class="kw">:</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="at">  </span><span class="fu">template</span><span class="kw">:</span><span class="at"> trestles</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">jolla</a></li><li><a href="#tabset-1-2">trestles</a></li><li><a href="#tabset-1-3">solana</a></li><li><a href="#tabset-1-4">marquee</a></li><li><a href="#tabset-1-5">broadside</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<p><img data-src="https://quarto.org/docs/websites/images/about-jolla.png" width="500"></p>
+</div>
+<div id="tabset-1-2">
+<p><img data-src="https://quarto.org/docs/websites/images/about-trestles.png" width="500"></p>
+</div>
+<div id="tabset-1-3">
+<p><img data-src="https://quarto.org/docs/websites/images/about-solana.png" width="500"></p>
+</div>
+<div id="tabset-1-4">
+<p><img data-src="https://quarto.org/docs/websites/images/about-marquee.png" width="500"></p>
+</div>
+<div id="tabset-1-5">
+<p><img data-src="https://quarto.org/docs/websites/images/about-broadside.png" width="500"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="publishing" class="slide level2">
+<h2>Publishing</h2>
+<p>(<em>not limited to websites</em>)</p>
+<p>There are many ways to publish Quarto websites. Since rendered content uses standard formats (HTML, PDFs, etc.) it can be published anywhere. Additionally, there is a <code>quarto publish</code> command available for easy publishing to popular services (GitHub, Netlify, Posit Connect, etc.)</p>
+<p><br></p>
+<p><strong>as well as various tools to make it easy to publish from a Continuous Integration (CI) system.</strong></p>
+</section>
+<section id="interlude-ci" class="slide level2">
+<h2>Interlude: CI</h2>
+<p>Continuous integration is a DevOps software development practice where developers regularly merge their code changes into a central repository, after which automated builds and tests are run.</p>
+<div class="fragment">
+<p>In simpler terms:<br>
+Instead of rendering your website and uploading the new version, CI allows to simply “push” code to a repository and the website is automatically updated</p>
+</div>
+</section>
+<section id="publishing-with-github" class="slide level2">
+<h2>Publishing with GitHub</h2>
+<p><a href="https://pages.github.com">GitHub Pages</a> enables you to publish websites based on a GitHub repository.</p>
+<div class="fragment">
+<p>There are three publishing options from Quarto:</p>
+<ul>
+<li><p><span style="font-size:26px">Render sites on your local machine to the docs directory, check the rendered site into GitHub, and then configure your GitHub repo to publish from the docs directory.</span></p></li>
+<li><p><span style="font-size:26px">Use the quarto publish command to publish content rendered on your local machine.</span></p></li>
+<li><p><span style="font-size:26px">Use a GitHub Action to automatically render your files (a single Quarto document or a Quarto project) and publish the resulting content whenever you push a source code change to your repository.</span></p></li>
+</ul>
+</div>
+</section>
+<section id="publishing-with-github-step-by-step" class="slide level2">
+<h2>Publishing with GitHub, step-by-step</h2>
+<p>(<em>assuming your website source code is checked into GitHub</em>)</p>
+<div>
+<ol type="1">
+<li class="fragment">freeze computations (add to <code>_quarto.yml</code>)<br>
+</li>
+</ol>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">execute</span><span class="kw">:</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="at">  </span><span class="fu">freeze</span><span class="kw">:</span><span class="at"> auto</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="2" type="1">
+<li class="fragment">(re)render</li>
+</ol>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1"></a><span class="ex">$</span> quarto render</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="3" type="1">
+<li class="fragment">publish locally</li>
+</ol>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1"></a><span class="ex">$</span> quarto publish gh-pages</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="4" type="1">
+<li class="fragment"><p>add <code>.github/workflows/publish.yml</code> with <a href="https://github.com/gesiscss/quarto-workshop/blob/main/.github/workflows/publish.yml" data-preview-link="true">this content</a></p></li>
+<li class="fragment"><p>commit and push</p></li>
+</ol>
+</div>
 
 
 <img src="_extensions/gesiscss/fakegesis/gesis.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p><a href="https://gesiscss.github.io/quarto-workshop/">Automated Reports &amp; Co with Quarto and Markdown</a></p>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
