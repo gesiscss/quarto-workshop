@@ -1,0 +1,215 @@
+---
+title: "Markdown"
+author: "Chung-hong Chan"
+lesson: 2
+institute: GESIS
+date: "2023-06-19"
+date-format: "YYYY-MM-DD"
+footer: "[Automated Reports & Co with Quarto and Markdown](https://gesiscss.github.io/quarto-workshop/)"
+format:
+  html:
+    toc: false
+---
+
+# Literate programming
+
+Literate programming: mixing a **document formatting language** and a **programming language**.
+
+In this session, we will focus on the document formatting language. And the programming language in the next session.
+
+# Markdown
+
+Markdown (`md`) is a light-weight markup language for creating formatted text. Quarto (and RMarkdown before it) uses `md` as the document formatting language. `md` is also used in many websites, e.g. Github, Hackmd; and many static site generators / software, e.g. Jekyll, Hugo, Slack, MS teams.
+
+We will use Github as the testbed. And then we will try to create our first Quarto document and render it.
+
+## Text formatting (The essential)
+
+```md
+Text attributes *italic*, **bold**, `monospace`.
+
+Horizontal rule:
+
+---
+```
+
+### Exercise:
+
+Produce something like this:
+
+a*b***c**`d`e**f**
+
+---
+
+### Good to know
+
+```md
+> "ego cogito, ergo sum"
+
+     ego cogito, ergo sum
+
+~~Nothing~~
+
+```
+
+## Headings
+
+```md
+# Heading
+
+GESIS
+
+## Subheading
+
+is
+
+### Alternative heading
+
+wonderful
+
+#### Alternative subheading
+
+*Hello World!*
+
+```
+
+## Lists
+
+```md
+* Item A
+* Item B
+* Item C
+* Item D
+```
+
+```md
+1. Item 1
+2. Item 2
+3. Item 3
+```
+
+```md
+1. Item 1
+2. Item 2
+    * Item 2a
+	* Item 2b
+```
+
+### Exercises:
+
+Produce a ranking of cities, e.g.
+
+1. Mannheim
+2. Cologne
+3. Mainz
+4. Konstanz
+
+List out all the things you ate this morning for breakfast
+
+* Black Coffee
+* Air
+
+## Links / Images
+
+```md
+[Github](https://github.com/)
+```
+
+```md
+![cat](https://upload.wikimedia.org/wikipedia/commons/1/15/Cat_August_2010-4.jpg)
+```
+
+### Good to know
+
+Adjusting the size (Quarto)
+
+```md
+![cat](https://upload.wikimedia.org/wikipedia/commons/1/15/Cat_August_2010-4.jpg){width=100}
+```
+
+[Reference](https://quarto.org/docs/authoring/figures.html)
+
+Local file
+
+```md
+![cat](img/pic.png)
+```
+
+### Exercises:
+
+Produce a list of websites (with links) you like to visit, e.g.
+
+1. [Github](https://github.com/)
+2. [Tagesschau](https://www.tagesschau.de/)
+3. [Slashdot](https://slashdot.org/)
+
+Find a dog picture on Wikipedia and link to it
+
+Produce a sourced quote (Optional)
+
+> A Markdown-formatted document should be publishable as-is, as plain text, without looking like it’s been marked up with tags or formatting instructions. – [John Gruber](https://daringfireball.net/projects/markdown/syntax#philosophy)
+
+# Quarto document (qmd)
+
+A qmd document looks like this
+
+```md
+---
+title: "This is an example"
+format: html
+editor: source
+---
+
+# Hello
+
+This is an `example`
+
+1. Hello
+2. World
+3. Gesis
+
+
+```
+
+And it contains three parts
+
+1. YAML Front-matter (optional)
+2. Body
+3. Code chunks (optional)
+
+We'll deal with Code chunks and YAML later. Let's focus on the Body first.
+
+To create a new Quarto document with RStudio: `New File` -> `Quarto Document`. (Or just create a new empty text file with your favorite text editor)
+
+1. Source Editor / Visual Editor
+2. Render button
+
+By default, a Quarto document renders to HTML.
+
+### Rendering
+
+Suppose you want to render `test.qmd`
+
+```bash
+## by default to: test.html
+quarto render test.qmd
+
+## other filename
+quarto render test.qmd -o index.html
+```
+
+Preview
+
+```bash
+quarto preview test.qmd
+```
+
+### Exercises:
+
+Try out all the markups you know in a Quarto document
+
+Tips: render as often as you can to see the changes
+
+### Project:
+
+Create your CV as a `qmd` file
