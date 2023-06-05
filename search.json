@@ -154,11 +154,18 @@
     "text": "Publishing with GitHub\nGitHub Pages enables you to publish websites based on a GitHub repository.\n\nThere are three publishing options from Quarto:\n\nRender sites on your local machine to the docs directory, check the rendered site into GitHub, and then configure your GitHub repo to publish from the docs directory.\nUse the quarto publish command to publish content rendered on your local machine.\nUse a GitHub Action to automatically render your files (a single Quarto document or a Quarto project) and publish the resulting content whenever you push a source code change to your repository."
   },
   {
-    "objectID": "material/06_websites.html#publishing-with-github-step-by-step",
-    "href": "material/06_websites.html#publishing-with-github-step-by-step",
+    "objectID": "material/06_websites.html#using-ci-with-ga",
+    "href": "material/06_websites.html#using-ci-with-ga",
     "title": "Let’s make a website with Quarto",
-    "section": "Publishing with GitHub, step-by-step",
-    "text": "Publishing with GitHub, step-by-step\n(assuming your website source code is checked into GitHub)\n\n\nfreeze computations (add to _quarto.yml)\n\n\nexecute:\n  freeze: auto\n\n(re)render\n\n$ quarto render\n\npublish locally\n\n$ quarto publish gh-pages\n\nadd .github/workflows/publish.yml with this content\ncommit and push\n\n\n\n\n\nAutomated Reports & Co with Quarto and Markdown"
+    "section": "Using CI with GA",
+    "text": "Using CI with GA\n(assuming your website source code is checked into GitHub)\n\nfreeze computations (add to _quarto.yml)\n\n\nexecute:\n  freeze: auto\n\n(re)render\n\n$ quarto render\n\npublish locally\n\n$ quarto publish gh-pages\n\nadd .github/workflows/publish.yml with this content\ncommit and push"
+  },
+  {
+    "objectID": "material/06_websites.html#section",
+    "href": "material/06_websites.html#section",
+    "title": "Let’s make a website with Quarto",
+    "section": "",
+    "text": "you only need to do this once\n\n(going forward, only step 5 is needed)"
   },
   {
     "objectID": "material/05_presentations.html#quarto-presentation-formats",

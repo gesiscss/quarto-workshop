@@ -879,35 +879,44 @@ Instead of rendering your website and uploading the new version, CI allows to si
 </ul>
 </div>
 </section>
-<section id="publishing-with-github-step-by-step" class="slide level2">
-<h2>Publishing with GitHub, step-by-step</h2>
+<section id="using-ci-with-ga" class="slide level2">
+<h2>Using CI with GA</h2>
 <p>(<em>assuming your website source code is checked into GitHub</em>)</p>
-<div>
 <ol type="1">
-<li class="fragment">freeze computations (add to <code>_quarto.yml</code>)<br>
+<li>freeze computations (add to <code>_quarto.yml</code>)<br>
 </li>
 </ol>
 <div class="sourceCode" id="cb12"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">execute</span><span class="kw">:</span></span>
 <span id="cb12-2"><a href="#cb12-2"></a><span class="at">  </span><span class="fu">freeze</span><span class="kw">:</span><span class="at"> auto</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol start="2" type="1">
-<li class="fragment">(re)render</li>
+<li>(re)render</li>
 </ol>
 <div class="sourceCode" id="cb13"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1"></a><span class="ex">$</span> quarto render</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol start="3" type="1">
-<li class="fragment">publish locally</li>
+<li>publish locally</li>
 </ol>
 <div class="sourceCode" id="cb14"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1"></a><span class="ex">$</span> quarto publish gh-pages</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol start="4" type="1">
-<li class="fragment"><p>add <code>.github/workflows/publish.yml</code> with <a href="https://github.com/gesiscss/quarto-workshop/blob/main/.github/workflows/publish.yml" data-preview-link="true">this content</a></p></li>
-<li class="fragment"><p>commit and push</p></li>
+<li><p>add <code>.github/workflows/publish.yml</code> with <a href="https://github.com/gesiscss/quarto-workshop/blob/main/.github/workflows/publish.yml" data-preview-link="true">this content</a></p></li>
+<li><p>commit and push</p></li>
 </ol>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<p><br> <br> <br> <br> <br></p>
+<div class="r-fit-text">
+<p>you only need to do this once</p>
 </div>
+<p>(going forward, only step 5 is needed)</p>
+</section></section>
+<section id="build-your-own-website" class="title-slide slide level1 center">
+<h1>Build your own website</h1>
 
 
 <img src="_extensions/gesiscss/fakegesis/gesis.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p><a href="https://gesiscss.github.io/quarto-workshop/">Automated Reports &amp; Co with Quarto and Markdown</a></p>
 </div>
-</section></section>
+</section>
     </div>
   </div>
 
