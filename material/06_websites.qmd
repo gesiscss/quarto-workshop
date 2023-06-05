@@ -506,11 +506,9 @@ There are three publishing options from Quarto:
 
 - [Use a GitHub Action to automatically render your files (a single Quarto document or a Quarto project) and publish the resulting content whenever you push a source code change to your repository.]{style="font-size:26px"}
 
-## Publishing with GitHub, step-by-step
+## Using CI with GA
 
 (*assuming your website source code is checked into GitHub*)  
-
-:::{.incremental}
 
 1. freeze computations (add to `_quarto.yml`)  
 ```yaml
@@ -519,17 +517,30 @@ execute:
 ```
 
 2. (re)render
-```bash
+```{.bash}
 $ quarto render
 ```
 
-3. publish locally 
+3. publish locally
 ```bash
 $ quarto publish gh-pages
 ```
 
 4. add `.github/workflows/publish.yml` with [this content](https://github.com/gesiscss/quarto-workshop/blob/main/.github/workflows/publish.yml){preview-link="true"}
 
-5. commit and push
+5. commit and push 
 
+##
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+:::{.r-fit-text}
+you only need to do this once
 :::
+(going forward, only step 5 is needed)
+
+# Build your own website
