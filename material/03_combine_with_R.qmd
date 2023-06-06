@@ -1,0 +1,434 @@
+---
+title: "Computation"
+author: "Chung-hong Chan"
+lesson: 3
+institute: GESIS
+date: "2023-06-19"
+date-format: "YYYY-MM-DD"
+footer: "[Automated Reports & Co with Quarto and Markdown](https://gesiscss.github.io/quarto-workshop/)"
+format:
+  html:
+    toc: false
+---
+
+# Markdown table
+
+```md
+| City     | Country |
+|----------|---------|
+| Mannheim | Germany |
+| Paris    | France  |
+| Tokyo    | Japan   |
+```
+
+| City     | Country |
+|----------|---------|
+| Mannheim | Germany |
+| Paris    | France  |
+| Tokyo    | Japan   |
+
+### Exercise
+
+Create a Tic Tac Toe field and play a game with yourself
+
+| X | X | O |
+|---|---|---|
+| O | O | X |
+| X | O | O |
+
+# Code chunks
+
+Literate programming: mixing a **document formatting language** and a **programming language**.
+
+Code chunks are snippets of programming language to do the "mixing". You can insert a code chunk in a Quarto document with (at least) three backticks.
+
+````md
+
+```r
+x <- "Hello World!"
+message(x)
+```
+
+```python
+x = "Hello World!"
+print(x)
+```
+
+```c
+int main() {
+	printf("Hello World!");
+	return 0;
+}
+```
+
+````
+
+## Exercise
+
+Copy and paste the R code chunk into a Quarto document and render it. Tell us what's the output.
+
+# Computation Option 1: Executable Code chunk
+
+The way to insert a code chink in the previous exercise does not involve code execution. Therefore, Quarto will only format the code, e.g. add syntax highlight.
+
+To make the code executable, wrap `r` with a pair of curly.
+
+````
+
+```{{r}}
+x <- "Hello World!"
+message(x)
+```
+
+````
+
+## Exercise 1
+
+Copy and paste the R code chunk into a Quarto document and render it. Tell us what's the output.
+
+## Exercise 2
+
+Create a code chunk in a Quarto document to calculate the area of a circle with radius = 10 (hints: `pi`). Render it.
+
+# Computation Option 2: Inline R code (knitr)
+
+Another way to invoke code execution is to use inline code: `` `r ` ``
+
+``` markdown
+## Mathematics
+
+I don't know the answer of 1 + 1 equals to `r 1 + 1`.
+
+```
+
+## When to use inline?
+
+For quick and dirty generation of one number in a paragraph, e.g. number of observations, calculation of mean. Otherwise, use code chunk.
+
+## Exercise 1:
+
+Convert the above area calculation to inline R code.
+
+## Exercise 2:
+
+Write inline R code to display the following sentence (hints: `nrow`):
+
+There are `r nrow(mtcars)` observations in the data frame `mtcars`.
+
+# Full circle
+
+Some R functions generate Markdown code.
+
+```r
+mtcars
+knitr::kable(mtcars)
+```
+
+## Exercise
+
+Display the content of `mtcars` as a table in a Quarto document like the following:
+
+```{r}
+#| echo: false
+#| label: vanilla_mtcars
+knitr::kable(mtcars)
+```
+
+# Figures
+
+````markdown
+```{{r}}
+hist(mtcars$mpg)
+```
+````
+
+## Exercise
+
+Display a scatter plot in a Quarto document like the following:
+
+```{r}
+#| echo: false
+#| label: scatter_mtcars
+plot(mtcars$mpg, mtcars$hp)
+```
+
+# Execution Options
+
+You can control how the code is executed with execution options
+
+## Output options (knitr)
+
+````md
+
+```{{r}}
+#| echo: false
+knitr::kable(mtcars)
+```
+
+````
+
+There are 
+
+* `eval` (evaluate the code chunk or not)
+* `echo` (include the source code or not in the output)
+* `output` (include the execution result in the output or not: `true`, `false`, `asis`)
+* `warning` (include warnings in the output)
+* `error` (include errors in the output)
+* `include` (`include: false` suppresses all output, useful for reading data or loading packages)
+
+### Exercise
+
+Read [this file](https://raw.githubusercontent.com/chainsawriot/rang/v0.3/inst/turing/data_raw/penguins_raw.csv) and make Quarto display the following:
+
+```{r}
+#| include: false
+#| label: penguins_loading
+penguins <- read.csv("https://raw.githubusercontent.com/chainsawriot/rang/v0.3/inst/turing/data_raw/penguins_raw.csv")
+```
+
+There are `r nrow(penguins)` observations in the file `penguins_raw.csv` and the first few rows look like so:
+
+```{r}
+#| echo: false
+#| label: penguins_list
+knitr::kable(head(penguins))
+```
+
+## Figure Options (knitr)
+
+[ref](https://quarto.org/docs/reference/formats/html.html#figures)
+
+There are:
+
+* `fig-width`
+* `fig-height`
+* `fig-cap`
+* `fig-alt`
+* `fig-align`
+* `fig-dpi`
+
+An example to play around
+
+````md
+
+```{{r}}
+#| fig-cap: "A random histogram"
+#| fig-height: 10
+#| fig-align: right
+#| echo: false
+hist(mtcars$mpg)
+```
+
+````
+
+```{r}
+#| fig-cap: "A random histogram"
+#| fig-height: 10
+#| fig-align: right
+#| echo: false
+#| label: hist_mtcars
+hist(mtcars$mpg)
+```
+
+## Best practices
+
+### Label your chunk
+
+It does nothing apparently. You will know why it is important tomorrow. All labels must be unique.
+
+````md
+```{{r}}
+#| label: mtcars_listing
+#| echo: false
+knitr::kable(mtcars)
+```
+````
+
+### (Not) cache
+
+You can cache the computational result of a chunk (save the result as a file. When the Quarto file is being rendered again, the cached result is used instead of doing the computation again). It's best to use it with a labeled code chunk. In general, it is not recommended for a reproducible scientific workflow. Use it unless you know what you are doing.
+
+````md
+```{{r}}
+#| label: mtcars_listing
+#| echo: false
+#| cache: true
+knitr::kable(mtcars)
+```
+````
+
+## Engines
+
+R code inside a Quarto document is handled by the computational engine `knitr`. You might want to use another computational engine if R is not your thing. For example, Python code is handled by Jupyter. In a mix language environment, you might need `reticulate`.
+
+````md
+
+```{{python}}
+## This is all the Python I know
+
+def fib(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+list(fib(5))
+```
+````
+
+```{python}
+#| label: python_testing
+
+## This is all the Python I know
+
+def fib(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+list(fib(5))
+```
+
+## Debrief
+
+**Q:** How to display table caption?
+
+**A:** 
+
+With computation
+
+````markdown
+
+```{{r}}
+#| echo: false
+#| tbl-cap: "Just a few rows"
+#| tbl-cap-location: bottom
+#| label: headmtcars
+knitr::kable(head(mtcars))
+```
+
+````
+
+```{r}
+#| echo: false
+#| tbl-cap: "Just a few rows"
+#| tbl-cap-location: bottom
+#| label: headmtcars
+knitr::kable(head(mtcars))
+```
+
+Without computation
+
+```markdown
+| City     | Country |
+|----------|---------|
+| Mannheim | Germany |
+| Paris    | France  |
+| Tokyo    | Japan   |
+
+: List of cities
+
+
+```
+
+| City     | Country |
+|----------|---------|
+| Mannheim | Germany |
+| Paris    | France  |
+| Tokyo    | Japan   |
+
+: List of cities
+
+**Q:** I've heard that the `knitr::kable` call is not necessary.
+
+**A:** You are right. Quarto (or the rendering engine: `knitr`) can convert all `data.frame` objects to Markdown tables using the `df-print` [document option](https://quarto.org/docs/computations/r.html#data-frames). You will learn about document options a.k.a. YAML Front Matter in the next session.
+
+**Q:** Does interactive viz work?
+
+**A:** Oui.
+
+````markdown
+```{{r}}
+#| echo: false
+#| fig-height: 2
+#| fig-width: 5
+#| label: ggplotly_demo
+library(ggplot2)
+library(plotly)
+fig <- ggplot(mtcars, aes(wt, mpg)) + geom_point()
+ggplotly(fig, height = 600, width = 1000)
+```
+````
+
+**Q:** Any fancy stuff I can do with the code listing?
+
+**A:** Many
+
+Showing the filename
+
+````markdown
+```{{r}}
+#| eval: false
+#| filename: "whatever.R"
+library(ggplot2)
+library(plotly)
+fig <- ggplot(mtcars, aes(wt, mpg)) + geom_point()
+ggplotly(fig, height = 600, width = 1000)
+```
+````
+
+```{r}
+#| eval: false
+#| filename: "whatever.R"
+library(ggplot2)
+library(plotly)
+fig <- ggplot(mtcars, aes(wt, mpg)) + geom_point()
+ggplotly(fig, height = 600, width = 1000)
+```
+
+Code folding
+
+````markdown
+```{{r}}
+#| eval: false
+#| code-fold: true
+#| code-summary: "Demo ggplotly"
+library(ggplot2)
+library(plotly)
+fig <- ggplot(mtcars, aes(wt, mpg)) + geom_point()
+ggplotly(fig, height = 600, width = 1000)
+```
+````
+
+```{r}
+#| eval: false
+#| code-fold: true
+#| code-summary: "Demo ggplotly"
+library(ggplot2)
+library(plotly)
+fig <- ggplot(mtcars, aes(wt, mpg)) + geom_point()
+ggplotly(fig, height = 600, width = 1000)
+```
+
+Line-numbering
+
+````markdown
+```{{r}}
+#| eval: false
+#| code-line-numbers: true
+library(ggplot2)
+library(plotly)
+fig <- ggplot(mtcars, aes(wt, mpg)) + geom_point()
+ggplotly(fig, height = 600, width = 1000)
+```
+````
+
+```{r}
+#| eval: false
+#| code-line-numbers: true
+library(ggplot2)
+library(plotly)
+fig <- ggplot(mtcars, aes(wt, mpg)) + geom_point()
+ggplotly(fig, height = 600, width = 1000)
+```
+
+And [many more](https://quarto.org/docs/output-formats/html-code.html).
