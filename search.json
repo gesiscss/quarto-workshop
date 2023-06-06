@@ -7,6 +7,461 @@
     "text": "Lecturers\nDavid Schoch\nTeam lead for “Transparent Social Analytics” in the Department for Computational Social Science at GESIS in Cologne\n \nChung-hong Chan\nSenior Researcher in the team “Transparent Social Analytics” in the Department for Computational Social Science at GESIS in Cologne\n \nAbout the course\nCreating professionally looking scientific reports and papers are recurring tasks for social scientists - and often time-consuming. This workshop introduces Quarto and the associated Markdown-based systems for generating automated reports using literate programming techniques to facilitate this process. Literate programming is the paradigm of combining code, its output, and its interpretation in a single document. For example, one can embed scripts for data analysis in R or Python in a Quarto file to generate tables and figures reproducibly. This allows to create fully reproducible, beautiful documents with little effort. In this course, we will cover the basics of writing automated reports with Quarto, as well as academic-specific topics such as bibliography generation and collaborative writing with non-technical individuals. Additionally, we will cover how Quarto can be used to create high-quality presentations and webpages, such as a personal page or for a project.\nSchedule\nday 1:\n09:00 – 10:30: Introduction to literate programming and setting up Quarto\n10:30 – 10:45: Coffee break\n10:45 – 12:15: Writing your first Quarto document: Introduction to Markdown Syntax\n12:15 – 13:45: Lunch break\n13:45 – 15:15: Literate programming: Combining Markdown and R / Python\n15:15 – 15:30: Coffee break\n15:30 – 17:00: Exporting to different formats\nday 2:\n09:00 – 10:30: Let’s make a presentation with Quarto\n10:30 – 10:45: Coffee break\n10:45 – 12:15: Let’s make a website with Quarto\n12:15 – 13:45: Lunch break\n13:45 – 15:15: Let’s write an academic paper with Quarto\n15:15 – 15:30: Coffee break\n15:30 – 17:00: Q&A\nSoftware\n\nA text editor, e.g. RStudio, VS Code\nR\nQuarto"
   },
   {
+    "objectID": "material/slides/06_websites.html#websites-with-quarto",
+    "href": "material/slides/06_websites.html#websites-with-quarto",
+    "title": "Let’s make a website with Quarto",
+    "section": "Websites with Quarto",
+    "text": "Websites with Quarto\n\nWebsites are essentially format: html + a Quarto Project\nWebsites and books are actually very similar (in the Quarto sense) since they assemble multiple pages into one resource"
+  },
+  {
+    "objectID": "material/slides/06_websites.html#why-not-wordpress-tumblr-medium.com-blogger.com-etc",
+    "href": "material/slides/06_websites.html#why-not-wordpress-tumblr-medium.com-blogger.com-etc",
+    "title": "Let’s make a website with Quarto",
+    "section": "Why not WordPress, Tumblr, Medium.com, Blogger.com, etc?",
+    "text": "Why not WordPress, Tumblr, Medium.com, Blogger.com, etc?\n\nNo R Markdown support (even math support is often nonexistent or awkward)\nHuge benefits of static websites compared to dynamic websites\n\nall static files, no PHP or databases, no login/password, work everywhere (even offline)\ntypically fast to visit (no computation needed on the server side), and easy to speed up via CDN\n\n\n\n\ntaken from https://slides.yihui.org/2017-rmarkdown-UNL-Yihui-Xie.html#36"
+  },
+  {
+    "objectID": "material/slides/06_websites.html#create-a-website-project",
+    "href": "material/slides/06_websites.html#create-a-website-project",
+    "title": "Let’s make a website with Quarto",
+    "section": "Create a website project",
+    "text": "Create a website project\nCreate a website:\nquarto create-project MySiteName --type website\n\nCreate a blog:\nquarto create-project MyBlogName --type website:blog\n\n\nCreate a book:\nquarto create-project mybook --type book\n\n\nIn RStudio: New Project &gt; [Quarto Website/Quarto Blog/Quarto Book]\nAlso support in VS Code"
+  },
+  {
+    "objectID": "material/slides/06_websites.html#creating-a-website",
+    "href": "material/slides/06_websites.html#creating-a-website",
+    "title": "Let’s make a website with Quarto",
+    "section": "Creating a website",
+    "text": "Creating a website\n$ quarto create-project MyWebsite --type website\nCreating project at /home/david/Documents/tmp/MyWebsite:\n  - Created _quarto.yml\n  - Created index.qmd\n  - Created about.qmd\n  - Created styles.css"
+  },
+  {
+    "objectID": "material/slides/06_websites.html#navigation-structure",
+    "href": "material/slides/06_websites.html#navigation-structure",
+    "title": "Let’s make a website with Quarto",
+    "section": "Navigation & Structure",
+    "text": "Navigation & Structure\n\n\n\nFile\nDescription\n\n\n\n\n_quarto.yml\nQuarto project file.\n\n\nindex.qmd\nlanding page.\n\n\nabout.qmd\nwebsite about page.\n\n\nstyles.css\nCustom CSS for website"
+  },
+  {
+    "objectID": "material/slides/06_websites.html#the-project-file-_quarto.yml",
+    "href": "material/slides/06_websites.html#the-project-file-_quarto.yml",
+    "title": "Let’s make a website with Quarto",
+    "section": "The project file _quarto.yml",
+    "text": "The project file _quarto.yml\nthis is where you customize the overall appearance and preferences\nproject:\n  type: website\n\nwebsite:\n  title: \"MyWebsite\"\n  navbar:\n    left:\n      - href: index.qmd\n        text: Home\n      - about.qmd\n\nformat:\n  html:\n    theme: cosmo\n    css: styles.css\n    toc: true"
+  },
+  {
+    "objectID": "material/slides/06_websites.html#themes",
+    "href": "material/slides/06_websites.html#themes",
+    "title": "Let’s make a website with Quarto",
+    "section": "Themes",
+    "text": "Themes\nhttps://quarto.org/docs/output-formats/html-themes.html\ndefault, cerulean, cosmo, cyborg, darkly, flatly, journal, litera, lumen, lux, materia, minty, morph, pulse, quartz, sandstone, simplex, sketchy, slate, solar, spacelab, superhero, united, vapor, yeti, zephyr\n\nor create your own\nformat:\n  html:\n    theme: custom.scss\n    css: styles.css\n    toc: true\nvery similar to customizing presentations!"
+  },
+  {
+    "objectID": "material/slides/06_websites.html#possibilities-are-endless",
+    "href": "material/slides/06_websites.html#possibilities-are-endless",
+    "title": "Let’s make a website with Quarto",
+    "section": "Possibilities are endless",
+    "text": "Possibilities are endless\n\nMy personal website\nThis Workshop\nA serious project\nA not so serious project"
+  },
+  {
+    "objectID": "material/slides/06_websites.html#customize-customize-customize",
+    "href": "material/slides/06_websites.html#customize-customize-customize",
+    "title": "Let’s make a website with Quarto",
+    "section": "customize, customize, customize",
+    "text": "customize, customize, customize\n_quarto.yml\nproject:\n  type: website\n\nwebsite:\n  site-url: \"https://mr.schochastics.net\"\n  title: \"schochastics\"\n  favicon: \"static/favicon.png\"\n  twitter-card:\n    creator: \"@schochastics\"\n    site: \"@schochastics\"\n    description: \"I’m the team lead for Transparent Social Analytics in the Department for Computational Social Science at GESIS and I develop tools in R.\"\n    image: \"static/img/avatar.png\"\n    card-style: \"summary\"\n  search: false\n  open-graph: \n    site-name: schochastics\n    description: \"I’m the team lead for Transparent Social Analytics in the Department for Computational Social Science at GESIS and I develop tools in R.\"\n    image: \"static/img/avatar.png\"\n  navbar:\n    logo: \"static/logo.png\"\n    title: false\n    background: primary\n    right:\n      - href: publications/index.qmd\n        text: Publications\n      - href: http://blog.schochastics.net\n        text: Blog\n      - href: project/index.qmd\n        text: Projects\n      - href: material/index.qmd\n        text: Material\n      - href: about/index.qmd\n        text: About me\n  page-footer:\n    left: \"© 2022 David Schoch\"\n    center: \"powered by [quarto](https://quarto.org)\"\n    right:\n      - icon: twitter\n        href: https://twitter.com/schochastics\n      - icon: github\n        href: https://github.com/schochastics\n      - text: &lt;i class=\"ai ai-google-scholar\" role=\"img\"&gt;&lt;/i&gt;\n        href: https://scholar.google.de/citations?user=MFlgHdcAAAAJ&hl=en\n      - text: &lt;i class=\"ai ai-orcid\" role=\"img\"&gt;&lt;/i&gt;\n        href: https://orcid.org/0000-0003-2952-4812\n      - text: &lt;i class=\"bi bi-mastodon\"&gt;&lt;/i&gt;\n        href: https://fosstodon.org/@schochastics\n\nformat:\n  html:\n    theme: \n      - cosmo\n      - custom.scss\n    css: \n      - styles.css\n      - academicons.css\n    toc: true\nexecute: \n  freeze: auto"
+  },
+  {
+    "objectID": "material/slides/06_websites.html#customize-customize-customize-1",
+    "href": "material/slides/06_websites.html#customize-customize-customize-1",
+    "title": "Let’s make a website with Quarto",
+    "section": "customize, customize, customize",
+    "text": "customize, customize, customize\ncustom.scss\n/*-- scss:defaults --*/\n$body-bg: #333333 !default;\n$body-color: #9EEBCF;\n$link-color: white;\n$font-family-sans-serif: 'IBM Plex Sans';\n$font-family-monospace: 'IBM Plex Sans';\n\n$navbar-bg: #333333;\n$navbar-fg: #9EEBCF;\n$navbar-hl: #9EEBCF;\n\n/*-- scss:rules --*/\n@font-face {\n    font-family: 'Nova Square';\n    src: url('static/fonts/novasquare-regular-webfont.woff2') format('woff2'),\n         url('static/fonts/novasquare-regular-webfont.woff') format('woff');\n    font-weight: normal;\n    font-style: normal;\n\n}\n\n@font-face {\n    font-family: 'IBM Plex Sans';\n    src: url('static/fonts/IBMPlexSans-Regular.woff2') format('woff2'),\n        url('static/fonts/IBMPlexSans-Regular.woff') format('woff');\n    font-weight: normal;\n    font-style: normal;\n}\n\n@media screen and (min-width: 56em) {\n  html {\n    font-size: 1.1em;\n  }\n}"
+  },
+  {
+    "objectID": "material/slides/06_websites.html#customize-customize-customize-2",
+    "href": "material/slides/06_websites.html#customize-customize-customize-2",
+    "title": "Let’s make a website with Quarto",
+    "section": "customize, customize, customize",
+    "text": "customize, customize, customize\nstyles.css\n/* css styles */\ndiv.sourceCode{\n  background-color: black;\n}\n\n\nh1,h2,h3,h4{\n  font-family: 'Nova Square';\n}\n\n.listing-title{\n  color: white;\n  text-decoration: underline;\n  font-weight: 700;\n}\n\npre{\n  border: 1px solid white;\n  color: var(--navbar-fg);\n  padding: 5px 5px 5px 5px;\n}\n\ncode{\n  color: var(--navbar-fg);\n}\n\n/* inline code */\n.post-body&gt;p&gt;code{\n  background-color: rgba(255,255,255,.1);\n}\n\na.btn-links:hover{\n  background-color: rgba(255,255,255,.1)!important;\n}\n\n.habout{\n  font-size: 3rem;\n  font-family: 'Nova Square';\n  font-weight: 700;\n}\n\nh1,h2,h4{\n  font-weight: 700;\n}\n\nh4.f4{\n  font-size: 1.75rem;\n}\n\nh1.f3{\n  font-weight: 700;\n}\n\n/* navbar kink */\n@media screen and (min-width: 999px) {\n  .navbar .navbar-nav .nav-link {\n    color: #9EEBCF;\n    font-size: 1rem;\n    text-transform: uppercase;\n  }\n  .navbar .navbar-nav .nav-link:hover {\n    color: #9EEBCF;\n  }\n  .navbar .navbar-nav .nav-item {\n    position: relative;\n  }\n  .navbar .navbar-nav .nav-item::after {\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    margin: auto;\n    background-color: #ffd700;\n    width: 0%;\n    content: \"\";\n    height: 1px;\n    transition: all 0.5s;\n  }\n  \n.navbar .navbar-nav .nav-item:hover::after {\n    width: 100%;\n  }\n}\n\n.navbar-brand&gt;img {\n    max-height: 48px;\n    width: auto;\n    padding-right: 6px;\n}\n\n.nav-footer a{\n  color: #9EEBCF;\n}\n\n.active {\n  border-bottom: 1px solid #ffd700;\n}\n\n.navbar-brand {\n    position: relative;\n    width: 170px;\n    left: 15px;\n    background-size: contain;\n}\n\n/*footer*/\n.nav-footer{\n  border-top: 0px !important;\n}\n\n/*buttons*/\n\n.btn-outline-success{\n  border-color: #9EEBCF;\n  background-color: transparent;\n}\n\n.btn-outline-success:hover{\n  border-color: white;\n  background-color: #666666;\n}\n\n.btn-outline-success a{\n  text-decoration: none;\n  text-transform: uppercase;\n}\n\n/* grid cards */\n.card-body{\n  background-color: #333333;\n}\n\n.card-img-top{\n  background-color: #333333;\n  width: 80%;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.borderless{\n  background-color: #333333;\n}\n\n.quarto-grid-item img.thumbnail-image {\n    object-fit: contain;\n}\n\n.thumbnail-image:hover{\n  opacity:75%;\n}\n\n.center{\n   text-align: center;\n}\n\ndiv.column.col-v-center{\n   vertical-align: middle;\n}\n\n.home-title{\n  font-size: 2em;\n}\n\n.socials{\n  padding-top: 0.5em;\n  padding-bottom: 1em;\n}\n\n.socials a{\n  color: #9EEBCF;\n  margin-left: 0.5em;\n}"
+  },
+  {
+    "objectID": "material/slides/06_websites.html#adding-an-about-page",
+    "href": "material/slides/06_websites.html#adding-an-about-page",
+    "title": "Let’s make a website with Quarto",
+    "section": "Adding an About page",
+    "text": "Adding an About page\n---\ntwitter-card:\n    image: images/profile-preview.png\n    creator: \"@schochastics\"\nopen-graph: true\ntitle: \"David Schoch\"\nimage: images/profile-preview.png\nabout:\n    template: trestles\n    links:\n    - icon: twitter\n        text: Twitter\n        href: https://twitter.com/schochastics\n    - icon: github\n        text: Github\n        href: https://github.com/schochastics\n---"
+  },
+  {
+    "objectID": "material/slides/06_websites.html#about-page-templates",
+    "href": "material/slides/06_websites.html#about-page-templates",
+    "title": "Let’s make a website with Quarto",
+    "section": "About page templates",
+    "text": "About page templates\nabout:\n  template: trestles\n\njollatrestlessolanamarqueebroadside"
+  },
+  {
+    "objectID": "material/slides/06_websites.html#publishing",
+    "href": "material/slides/06_websites.html#publishing",
+    "title": "Let’s make a website with Quarto",
+    "section": "Publishing",
+    "text": "Publishing\n(not limited to websites)\nThere are many ways to publish Quarto websites. Since rendered content uses standard formats (HTML, PDFs, etc.) it can be published anywhere. Additionally, there is a quarto publish command available for easy publishing to popular services (GitHub, Netlify, Posit Connect, etc.)\n\nas well as various tools to make it easy to publish from a Continuous Integration (CI) system."
+  },
+  {
+    "objectID": "material/slides/06_websites.html#interlude-ci",
+    "href": "material/slides/06_websites.html#interlude-ci",
+    "title": "Let’s make a website with Quarto",
+    "section": "Interlude: CI",
+    "text": "Interlude: CI\nContinuous integration is a DevOps software development practice where developers regularly merge their code changes into a central repository, after which automated builds and tests are run.\n\nIn simpler terms:\nInstead of rendering your website and uploading the new version, CI allows to simply “push” code to a repository and the website is automatically updated"
+  },
+  {
+    "objectID": "material/slides/06_websites.html#publishing-with-github",
+    "href": "material/slides/06_websites.html#publishing-with-github",
+    "title": "Let’s make a website with Quarto",
+    "section": "Publishing with GitHub",
+    "text": "Publishing with GitHub\nGitHub Pages enables you to publish websites based on a GitHub repository.\n\nThere are three publishing options from Quarto:\n\nRender sites on your local machine to the docs directory, check the rendered site into GitHub, and then configure your GitHub repo to publish from the docs directory.\nUse the quarto publish command to publish content rendered on your local machine.\nUse a GitHub Action to automatically render your files (a single Quarto document or a Quarto project) and publish the resulting content whenever you push a source code change to your repository."
+  },
+  {
+    "objectID": "material/slides/06_websites.html#using-ci-with-ga",
+    "href": "material/slides/06_websites.html#using-ci-with-ga",
+    "title": "Let’s make a website with Quarto",
+    "section": "Using CI with GA",
+    "text": "Using CI with GA\n(assuming your website source code is checked into GitHub)\n\nfreeze computations (add to _quarto.yml)\n\n\nexecute:\n  freeze: auto\n\n(re)render\n\n$ quarto render\n\npublish locally\n\n$ quarto publish gh-pages\n\nadd .github/workflows/publish.yml with this content\ncommit and push"
+  },
+  {
+    "objectID": "material/slides/06_websites.html#section",
+    "href": "material/slides/06_websites.html#section",
+    "title": "Let’s make a website with Quarto",
+    "section": "",
+    "text": "you only need to do this once\n\n(going forward, only step 5 is needed)"
+  },
+  {
+    "objectID": "material/slides/05_presentations.html#quarto-presentation-formats",
+    "href": "material/slides/05_presentations.html#quarto-presentation-formats",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Quarto presentation formats",
+    "text": "Quarto presentation formats\n\nrevealjs essentially the replacement for xaringan\nbeamer for LaTex slides\nPowerpoint for when you have no choice…"
+  },
+  {
+    "objectID": "material/slides/05_presentations.html#what-is-revealjs",
+    "href": "material/slides/05_presentations.html#what-is-revealjs",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "What is revealjs?",
+    "text": "What is revealjs?\n\nreveal.js is an open source HTML presentation framework. It’s a tool that enables anyone with a web browser to create fully-featured and beautiful presentations for free.\n\n\nThere is an R package for RMarkdown\ninstall.packages(\"revealjs\")\nbut it is rarely used since xaringan (based on knitr and remark.js, no Pandoc) is more popular"
+  },
+  {
+    "objectID": "material/slides/05_presentations.html#no-need-to-learn-new-syntax",
+    "href": "material/slides/05_presentations.html#no-need-to-learn-new-syntax",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "No need to learn new syntax",
+    "text": "No need to learn new syntax\n---\nformat: revealjs\n---\n\n## Slide 1\nAdd some content\n\n## Slide 2\n- and \n- maybe\n- a \n- list\nRender to pptx? set format: pptx\nRender to beamer? set format: beamer\n\n\nSwitching between formats is THAT easy as long as you do not have any “fancy” features included"
+  },
+  {
+    "objectID": "material/slides/05_presentations.html#html-divs-and-spans-with-pandoc",
+    "href": "material/slides/05_presentations.html#html-divs-and-spans-with-pandoc",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "HTML divs and spans with Pandoc",
+    "text": "HTML divs and spans with Pandoc\n::: {.class}\nContent in a div with a class\n:::\n\nSome text with a specific [span]{.span-class}\nPandoc translates this to\n&lt;div class=\"class\"&gt;\n   Content in a div with a class\n&lt;/div&gt;\nSome text with a specific &lt;span class=\"span-class\"&gt;span&lt;/span&gt;"
+  },
+  {
+    "objectID": "material/slides/05_presentations.html#incremental-lists",
+    "href": "material/slides/05_presentations.html#incremental-lists",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Incremental lists",
+    "text": "Incremental lists\n:::{.incremental}\n- item 1\n- item 2\n- item 3\n:::\n\n\nitem 1\nitem 2\nitem 3"
+  },
+  {
+    "objectID": "material/slides/05_presentations.html#incremental-slides",
+    "href": "material/slides/05_presentations.html#incremental-slides",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Incremental Slides",
+    "text": "Incremental Slides\nUse . . . syntax\nThis appears first \n\n. . .\n\nThis second\n\n\nThis appears first\n\n\nThis second"
+  },
+  {
+    "objectID": "material/slides/05_presentations.html#fragments-basics",
+    "href": "material/slides/05_presentations.html#fragments-basics",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Fragments, Basics",
+    "text": "Fragments, Basics\n\n::: {.fragment}\nFade in\n:::\n\n::: {.fragment .fade-out}\nFade out\n:::\n\n::: {.fragment .highlight-red}\nHighlight red\n:::\n\n::: {.fragment .fade-in-then-out}\nFade in, then out\n:::\n\n::: {.fragment .fade-up}\nSlide up while fading in\n:::"
+  },
+  {
+    "objectID": "material/slides/05_presentations.html#fragments-basics-1",
+    "href": "material/slides/05_presentations.html#fragments-basics-1",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Fragments, Basics",
+    "text": "Fragments, Basics\n\nFade in\n\n\nFade out\n\n\nHighlight red\n\n\nFade in, then out\n\n\nSlide up while fading in"
+  },
+  {
+    "objectID": "material/slides/05_presentations.html#fragments-more",
+    "href": "material/slides/05_presentations.html#fragments-more",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Fragments, More",
+    "text": "Fragments, More\nThis is an important sentence!\nThis is an [important sentence!]{.fragment .highlight-red}\n\n\n\nFade in &gt; Turn red &gt; Semi fade out\n\n\n\n\n::: {.fragment .fade-in}\n::: {.fragment .highlight-red}\n::: {.fragment .semi-fade-out}\nFade in &gt; Turn red &gt; Semi fade out\n:::\n:::\n:::"
+  },
+  {
+    "objectID": "material/slides/05_presentations.html#slide-transition",
+    "href": "material/slides/05_presentations.html#slide-transition",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Slide Transition",
+    "text": "Slide Transition\n\nfade\n\n\n\n## Slide Transition {transition=\"fade\"}"
+  },
+  {
+    "objectID": "material/slides/05_presentations.html#slide-transition-1",
+    "href": "material/slides/05_presentations.html#slide-transition-1",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Slide Transition",
+    "text": "Slide Transition\n\nslide\n\n\n\n## Slide Transition {transition=\"slide\"}"
+  },
+  {
+    "objectID": "material/slides/05_presentations.html#slide-transition-2",
+    "href": "material/slides/05_presentations.html#slide-transition-2",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Slide Transition",
+    "text": "Slide Transition\n\nconvex\n\n\n\n## Slide Transition {transition=\"convex\"}"
+  },
+  {
+    "objectID": "material/slides/05_presentations.html#slide-transition-3",
+    "href": "material/slides/05_presentations.html#slide-transition-3",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Slide Transition",
+    "text": "Slide Transition\n\nconcave\n\n\n\n## Slide Transition {transition=\"concave\"}"
+  },
+  {
+    "objectID": "material/slides/05_presentations.html#slide-transition-4",
+    "href": "material/slides/05_presentations.html#slide-transition-4",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Slide Transition",
+    "text": "Slide Transition\n\nzoom\n\n\n\n## Slide Transition {transition=\"zoom\"}"
+  },
+  {
+    "objectID": "material/slides/05_presentations.html#slide-transition-global",
+    "href": "material/slides/05_presentations.html#slide-transition-global",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Slide Transition, global",
+    "text": "Slide Transition, global\n---\ntitle: \"Presentation\"\nformat:\n  revealjs:\n    transition: slide\n    background-transition: fade\n    transition-speed: fast\n---"
+  },
+  {
+    "objectID": "material/slides/05_presentations.html#column-layout",
+    "href": "material/slides/05_presentations.html#column-layout",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Column layout",
+    "text": "Column layout\n:::: {.columns}\n\n::: {.column width=\"40%\"}\nLeft column\n:::\n\n::: {.column width=\"60%\"}\nRight column\n:::\n\n::::\n\n\nLeft column\n\nRight column"
+  },
+  {
+    "objectID": "material/slides/05_presentations.html#column-layout-1",
+    "href": "material/slides/05_presentations.html#column-layout-1",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Column layout",
+    "text": "Column layout\n\n\n\n```{r}\n#| eval: false\ndplyr::glimpse(mtcars)\n```\n\n\n\n\nRows: 32\nColumns: 11\n$ mpg  &lt;dbl&gt; 21.0, 21.0, 22.8, 21.4, 18.7, 18.1, 14.3, 24.4, 22.8, 19.2, 17.8,…\n$ cyl  &lt;dbl&gt; 6, 6, 4, 6, 8, 6, 8, 4, 4, 6, 6, 8, 8, 8, 8, 8, 8, 4, 4, 4, 4, 8,…\n$ disp &lt;dbl&gt; 160.0, 160.0, 108.0, 258.0, 360.0, 225.0, 360.0, 146.7, 140.8, 16…\n$ hp   &lt;dbl&gt; 110, 110, 93, 110, 175, 105, 245, 62, 95, 123, 123, 180, 180, 180…\n$ drat &lt;dbl&gt; 3.90, 3.90, 3.85, 3.08, 3.15, 2.76, 3.21, 3.69, 3.92, 3.92, 3.92,…\n$ wt   &lt;dbl&gt; 2.620, 2.875, 2.320, 3.215, 3.440, 3.460, 3.570, 3.190, 3.150, 3.…\n$ qsec &lt;dbl&gt; 16.46, 17.02, 18.61, 19.44, 17.02, 20.22, 15.84, 20.00, 22.90, 18…\n$ vs   &lt;dbl&gt; 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0,…\n$ am   &lt;dbl&gt; 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0,…\n$ gear &lt;dbl&gt; 4, 4, 4, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 4, 4, 4, 3, 3,…\n$ carb &lt;dbl&gt; 4, 4, 1, 1, 2, 1, 4, 2, 2, 4, 4, 3, 3, 3, 4, 4, 4, 1, 2, 1, 1, 2,…"
+  },
+  {
+    "objectID": "material/slides/05_presentations.html#output-location-column-fragment",
+    "href": "material/slides/05_presentations.html#output-location-column-fragment",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Output location, column-fragment",
+    "text": "Output location, column-fragment\n\n\n```{r}\n#| output-location: column-fragment\n#| code-line-numbers: \"|2\"\n\nlibrary(ggplot2)\n\nmtcars |&gt; \n  ggplot(aes(x = disp, y = mpg)) +\n  geom_point() +\n  geom_smooth(method = \"loess\", formula = \"y~x\")\n```"
+  },
+  {
+    "objectID": "material/slides/05_presentations.html#output-location-column",
+    "href": "material/slides/05_presentations.html#output-location-column",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Output location, column",
+    "text": "Output location, column\n\n\n```{r}\n#| output-location: column\n#| code-line-numbers: \"|2\"\n\nlibrary(ggplot2)\n\nmtcars |&gt; \n  ggplot(aes(x = disp, y = mpg)) +\n  geom_point() +\n  geom_smooth(method = \"loess\", formula = \"y~x\")\n```"
+  },
+  {
+    "objectID": "material/slides/05_presentations.html#output-location-fragment",
+    "href": "material/slides/05_presentations.html#output-location-fragment",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Output location, fragment",
+    "text": "Output location, fragment\n\n```{r}\n#| output-location: fragment\n#| code-line-numbers: \"|2\"\n\nlibrary(ggplot2)\n\nmtcars |&gt; \n  ggplot(aes(x = disp, y = mpg)) +\n  geom_point() +\n  geom_smooth(method = \"loess\", formula = \"y~x\")\n```"
+  },
+  {
+    "objectID": "material/slides/05_presentations.html#output-location-slide",
+    "href": "material/slides/05_presentations.html#output-location-slide",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Output location, slide",
+    "text": "Output location, slide\n\n```{r}\n#| output-location: slide\n#| code-line-numbers: \"|2\"\n\nlibrary(ggplot2)\n\nmtcars |&gt; \n  ggplot(aes(x = disp, y = mpg)) +\n  geom_point() +\n  geom_smooth(method = \"loess\", formula = \"y~x\")\n```"
+  },
+  {
+    "objectID": "material/slides/05_presentations.html#output-location-slide-output",
+    "href": "material/slides/05_presentations.html#output-location-slide-output",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Output location, slide",
+    "text": "Output location, slide"
+  },
+  {
+    "objectID": "material/slides/05_presentations.html#code-line-highlighting",
+    "href": "material/slides/05_presentations.html#code-line-highlighting",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Code line-highlighting",
+    "text": "Code line-highlighting\nUse #| code-line-numbers: \"3\" syntax - will highlight line 3 and fade others\n\n\n```{r}\n#| output-location: column\n#| code-line-numbers: \"3\"\n\nlibrary(ggplot2)\n\nmtcars |&gt; \n  ggplot(aes(x = disp, y = mpg)) +\n  geom_point() +\n  geom_smooth(method = \"loess\", formula = \"y~x\")\n```"
+  },
+  {
+    "objectID": "material/slides/05_presentations.html#code-line-highlighting-1",
+    "href": "material/slides/05_presentations.html#code-line-highlighting-1",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Code line-highlighting",
+    "text": "Code line-highlighting\nwith a “fragment style”\n\n\n```{r}\n#| output-location: column\n#| code-line-numbers: \"|3\"\n\nlibrary(ggplot2)\n\nmtcars |&gt; \n  ggplot(aes(x = disp, y = mpg)) +\n  geom_point() +\n  geom_smooth(method = \"loess\", formula = \"y~x\")\n```"
+  },
+  {
+    "objectID": "material/slides/05_presentations.html#code-line-highlighting-2",
+    "href": "material/slides/05_presentations.html#code-line-highlighting-2",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Code line-highlighting",
+    "text": "Code line-highlighting\nhighlight different line ranges progressively\n\n\n```{r}\n#| output-location: column\n#| code-line-numbers: \"|3|5|8|10\"\n\nlibrary(ggplot2)\n\nmtcars |&gt; \n  ggplot(aes(x = disp, y = mpg)) +\n  geom_point() +\n  geom_smooth(method = \"loess\", formula = \"y~x\")\n```"
+  },
+  {
+    "objectID": "material/slides/05_presentations.html#stack-images",
+    "href": "material/slides/05_presentations.html#stack-images",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Stack images",
+    "text": "Stack images"
+  },
+  {
+    "objectID": "material/slides/05_presentations.html#stack-images-1",
+    "href": "material/slides/05_presentations.html#stack-images-1",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Stack images",
+    "text": "Stack images\n::: {.r-stack}\n![](../img/kitten1.jpeg){.fragment width=\"450\"}\n\n![](../img/kitten2.jpeg){.fragment width=\"400\"}\n\n![](../img/kitten3.jpeg){.fragment width=\"300\"}\n:::"
+  },
+  {
+    "objectID": "material/slides/05_presentations.html#background-color-and-image",
+    "href": "material/slides/05_presentations.html#background-color-and-image",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Background color and image",
+    "text": "Background color and image\nBackground color:\n## Background color and image  {background-color=\"red\"} \n\n\nBackground image:\n## Background color and image  {background-image=\"&lt;link-to-image&gt;\"}"
+  },
+  {
+    "objectID": "material/slides/05_presentations.html#themes",
+    "href": "material/slides/05_presentations.html#themes",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Themes",
+    "text": "Themes\nsee https://quarto.org/docs/presentations/revealjs/themes.html\n---\ntitle: \"Presentation\"\nformat:\n  revealjs: \n    theme: dark\n---\n\n---\ntitle: \"Presentation\"\nformat:\n  revealjs: \n    theme: beige\n---\n\n\n---\ntitle: \"Presentation\"\nformat:\n  revealjs: \n    theme: simple\n---"
+  },
+  {
+    "objectID": "material/slides/05_presentations.html#themes-via-custom-sass",
+    "href": "material/slides/05_presentations.html#themes-via-custom-sass",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Themes via custom SASS",
+    "text": "Themes via custom SASS\n---\ntitle: \"Presentation\"\nformat:\n  revealjs: \n    theme: [default,custom.scss]\n---\ncustom.scss:\n/*-- scss:defaults --*/\n\n$body-bg: #191919;\n$body-color: #fff;\n$link-color: #42affa;\n\n/*-- scss:rules --*/\n\n.reveal .slide blockquote {\n  border-left: 3px solid $text-muted;\n  padding-left: 0.5em;\n}"
+  },
+  {
+    "objectID": "material/slides/05_presentations.html#themes-via-extensions",
+    "href": "material/slides/05_presentations.html#themes-via-extensions",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Themes via Extensions",
+    "text": "Themes via Extensions\nInstall Extension (in the folder of your presentation):\nquarto use template gesiscss/quarto-revealjs-fakegesis\n\n\nuse in yaml header:\n---\ntitle: \"Let's make a presentation with Quarto\"\nauthor: \"David Schoch\"\nlesson: 5\ninstitute: GESIS\ndate: \"2023-06-20\"\ndate-format: \"YYYY-MM-DD\"\nfooter: \"[Automated Reports & Co with Quarto and Markdown](https://gesiscss.github.io/quarto-workshop/)\"\nformat: fakegesis-revealjs\n---\n\n\nVery creative themes can be found here"
+  },
+  {
+    "objectID": "material/slides/05_presentations.html#examples",
+    "href": "material/slides/05_presentations.html#examples",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "Examples",
+    "text": "Examples"
+  },
+  {
+    "objectID": "material/slides/05_presentations.html#section",
+    "href": "material/slides/05_presentations.html#section",
+    "title": "Let’s make a presentation with Quarto",
+    "section": "",
+    "text": "Give me more\n\n\n\n\n\nAutomated Reports & Co with Quarto and Markdown\n\n\nThese slides are based on an RStudio Workshop"
+  },
+  {
+    "objectID": "material/slides/01_introduction.html#section",
+    "href": "material/slides/01_introduction.html#section",
+    "title": "Introduction to literate programming and setting up Quarto",
+    "section": "",
+    "text": "“Let us change our traditional attitude to the construction of programs. Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to human beings what we want a computer to do.”  [Donald Knuth]\n\n\nLiterate Programming\nMixing a document formatting language and a programming language."
+  },
+  {
+    "objectID": "material/slides/01_introduction.html#why-use-literate-programming",
+    "href": "material/slides/01_introduction.html#why-use-literate-programming",
+    "title": "Introduction to literate programming and setting up Quarto",
+    "section": "Why use literate programming?",
+    "text": "Why use literate programming?\n\n\nEnhanced Readability\nEmphasizes clear and coherent documentation alongside the code\nImproved Documentation\nDocumentation is an integral part of the program\nCode Reusability\nSimpler to extract and adapt code components for use in other projects\nEducation and Learning\ncan serve as an effective educational tool"
+  },
+  {
+    "objectID": "material/slides/01_introduction.html#why-use-literate-programming-as-an-academic",
+    "href": "material/slides/01_introduction.html#why-use-literate-programming-as-an-academic",
+    "title": "Introduction to literate programming and setting up Quarto",
+    "section": "Why use literate programming as an academic?",
+    "text": "Why use literate programming as an academic?\n\n\nConvenience\n\n\n\n\nReproducibility"
+  },
+  {
+    "objectID": "material/slides/01_introduction.html#convenience",
+    "href": "material/slides/01_introduction.html#convenience",
+    "title": "Introduction to literate programming and setting up Quarto",
+    "section": "Convenience",
+    "text": "Convenience\ncommon academic workflow:\n\nwrite paper in Word, LaTeX, …\n(changing format is tideous)\nanalysis with some software package, “copy” results to paper\n(changing data/code means manually changing tables/figures)\nmake presentation with PowerPoint, LaTeX, …\n\n\n\nliterate programing can unify writing and analysis\n(and Quarto also presenting!)"
+  },
+  {
+    "objectID": "material/slides/01_introduction.html#reproducibility",
+    "href": "material/slides/01_introduction.html#reproducibility",
+    "title": "Introduction to literate programming and setting up Quarto",
+    "section": "Reproducibility",
+    "text": "Reproducibility\n(simplified view)\n\ncomplete and self-contained paper that includes both code and documentation\nno need to publish code and data separately"
+  },
+  {
+    "objectID": "material/slides/01_introduction.html#history",
+    "href": "material/slides/01_introduction.html#history",
+    "title": "Introduction to literate programming and setting up Quarto",
+    "section": "History",
+    "text": "History\n(focusing on R/Python ecosystems)\nSweave - Early R and Latex integration (2002)\nPandoc - convert between different document formats (2006)\nknitr - convenient extension to Sweave (2012)\nRMarkdown - knitr extension based on Pandoc (~2014)\nJupyter Notebooks - anything with a jupyter kernel (~2014)\nQuarto - Next generation RMarkdown (~2022)"
+  },
+  {
+    "objectID": "material/slides/01_introduction.html#what-is-quarto",
+    "href": "material/slides/01_introduction.html#what-is-quarto",
+    "title": "Introduction to literate programming and setting up Quarto",
+    "section": "What is Quarto?",
+    "text": "What is Quarto?\nopen-source scientific and technical publishing system built on Pandoc\n\nQuarto is a command line interface (CLI) that renders plain text formats (.qmd, .rmd, .md) OR mixed formats (.ipynb/Jupyter notebook) into static documents (Word, PDF, HTML,…), websites, presentations, books and much more!\n\n“The concept is to make a major, long term investment in reproducible research, while keeping it compatible with existing formats and adaptable to the various environments users work in.”"
+  },
+  {
+    "objectID": "material/slides/01_introduction.html#working-with-quarto",
+    "href": "material/slides/01_introduction.html#working-with-quarto",
+    "title": "Introduction to literate programming and setting up Quarto",
+    "section": "Working with Quarto",
+    "text": "Working with Quarto\nQuarto is independent of R and RStudio\n\nYou can use your favorite editor:\n\nRStudio\nVS Code\nJupyter Lab\nNeovim\nany other text editor + terminal\n\n\n\nBest support for RStudio and VS Code"
+  },
+  {
+    "objectID": "material/slides/01_introduction.html#how-quarto-works",
+    "href": "material/slides/01_introduction.html#how-quarto-works",
+    "title": "Introduction to literate programming and setting up Quarto",
+    "section": "How Quarto works",
+    "text": "How Quarto works\n\n\nknitr or jupyter evaluate code and return an md file\nQuarto applies Lua filters + CSS/LaTeX and Pandoc converts to a final ouput format"
+  },
+  {
+    "objectID": "material/slides/01_introduction.html#quarto-vs-rmarkdown",
+    "href": "material/slides/01_introduction.html#quarto-vs-rmarkdown",
+    "title": "Introduction to literate programming and setting up Quarto",
+    "section": "Quarto vs RMarkdown",
+    "text": "Quarto vs RMarkdown\nRMarkdown grew into a large ecosystem, with varying syntax.\nBasic: html_document, pdf_document, word_document\nBeamer: beamer_presentation\nPowerPoint: powerpoint_presentation\nHTML Slides: xaringan, ioslides, revealjs\nAdvanced layouts: tufte\nWebsites: blogdown, distill, pagedown\nBooks: bookdown\nJournal Articles: rticles\n Quarto supports (most of) these out of the box"
+  },
+  {
+    "objectID": "material/slides/01_introduction.html#should-i-switch",
+    "href": "material/slides/01_introduction.html#should-i-switch",
+    "title": "Introduction to literate programming and setting up Quarto",
+    "section": "Should I switch?",
+    "text": "Should I switch?\nYes:\n\n“Batteries included”, shared syntax\nChoose your own editor and your preferred language\nBetter accessibility and richer features out of the box\nMore enhancements overtime\n\nNo:\n\nRMarkdown will still be maintained\nIf you cherish your workflow"
+  },
+  {
+    "objectID": "material/slides/01_introduction.html#need-convincing",
+    "href": "material/slides/01_introduction.html#need-convincing",
+    "title": "Introduction to literate programming and setting up Quarto",
+    "section": "need convincing?",
+    "text": "need convincing?\nInteractive Documents\nShiny, Observable JS, widgets\n\nExtensions\nshortcodes, filters, journal articles, custom formats, revealjs Examples\n\n\nPublishing\nquarto publish (e.g. Github pages) with continuous integration"
+  },
+  {
+    "objectID": "material/slides/04_exporting.html#getting-up",
+    "href": "material/slides/04_exporting.html#getting-up",
+    "title": "Exporting to different formats",
+    "section": "Getting up",
+    "text": "Getting up\n\nTurn off alarm\nGet out of bed"
+  },
+  {
+    "objectID": "material/slides/04_exporting.html#going-to-sleep",
+    "href": "material/slides/04_exporting.html#going-to-sleep",
+    "title": "Exporting to different formats",
+    "section": "Going to sleep",
+    "text": "Going to sleep\n\nGet in bed\nCount sheep\n\n\n\n\nAutomated Reports & Co with Quarto and Markdown"
+  },
+  {
     "objectID": "material/02_first_doc.html",
     "href": "material/02_first_doc.html",
     "title": "Markdown",
@@ -42,465 +497,94 @@
     "text": "Links / Images\n[Github](https://github.com/)\n![cat](https://upload.wikimedia.org/wikipedia/commons/1/15/Cat_August_2010-4.jpg)\n\nGood to know\nAdjusting the size (Quarto)\n![cat](https://upload.wikimedia.org/wikipedia/commons/1/15/Cat_August_2010-4.jpg){width=100}\nReference\nLocal file\n![cat](img/pic.png)\n\n\nExercises:\nProduce a list of websites (with links) you like to visit, e.g.\n\nGithub\nTagesschau\nSlashdot\n\nFind a dog picture on Wikipedia and link to it\nProduce a sourced quote (Optional)\n\nA Markdown-formatted document should be publishable as-is, as plain text, without looking like it’s been marked up with tags or formatting instructions. – John Gruber"
   },
   {
-    "objectID": "material/06_websites.html#websites-with-quarto",
-    "href": "material/06_websites.html#websites-with-quarto",
-    "title": "Let’s make a website with Quarto",
-    "section": "Websites with Quarto",
-    "text": "Websites with Quarto\n\nWebsites are essentially format: html + a Quarto Project\nWebsites and books are actually very similar (in the Quarto sense) since they assemble multiple pages into one resource"
-  },
-  {
-    "objectID": "material/06_websites.html#why-not-wordpress-tumblr-medium.com-blogger.com-etc",
-    "href": "material/06_websites.html#why-not-wordpress-tumblr-medium.com-blogger.com-etc",
-    "title": "Let’s make a website with Quarto",
-    "section": "Why not WordPress, Tumblr, Medium.com, Blogger.com, etc?",
-    "text": "Why not WordPress, Tumblr, Medium.com, Blogger.com, etc?\n\nNo R Markdown support (even math support is often nonexistent or awkward)\nHuge benefits of static websites compared to dynamic websites\n\nall static files, no PHP or databases, no login/password, work everywhere (even offline)\ntypically fast to visit (no computation needed on the server side), and easy to speed up via CDN\n\n\n\n\ntaken from https://slides.yihui.org/2017-rmarkdown-UNL-Yihui-Xie.html#36"
-  },
-  {
-    "objectID": "material/06_websites.html#create-a-website-project",
-    "href": "material/06_websites.html#create-a-website-project",
-    "title": "Let’s make a website with Quarto",
-    "section": "Create a website project",
-    "text": "Create a website project\nCreate a website:\nquarto create-project MySiteName --type website\n\nCreate a blog:\nquarto create-project MyBlogName --type website:blog\n\n\nCreate a book:\nquarto create-project mybook --type book\n\n\nIn RStudio: New Project &gt; [Quarto Website/Quarto Blog/Quarto Book]\nAlso support in VS Code"
-  },
-  {
-    "objectID": "material/06_websites.html#creating-a-website",
-    "href": "material/06_websites.html#creating-a-website",
-    "title": "Let’s make a website with Quarto",
-    "section": "Creating a website",
-    "text": "Creating a website\n$ quarto create-project MyWebsite --type website\nCreating project at /home/david/Documents/tmp/MyWebsite:\n  - Created _quarto.yml\n  - Created index.qmd\n  - Created about.qmd\n  - Created styles.css"
-  },
-  {
-    "objectID": "material/06_websites.html#navigation-structure",
-    "href": "material/06_websites.html#navigation-structure",
-    "title": "Let’s make a website with Quarto",
-    "section": "Navigation & Structure",
-    "text": "Navigation & Structure\n\n\n\nFile\nDescription\n\n\n\n\n_quarto.yml\nQuarto project file.\n\n\nindex.qmd\nlanding page.\n\n\nabout.qmd\nwebsite about page.\n\n\nstyles.css\nCustom CSS for website"
-  },
-  {
-    "objectID": "material/06_websites.html#the-project-file-_quarto.yml",
-    "href": "material/06_websites.html#the-project-file-_quarto.yml",
-    "title": "Let’s make a website with Quarto",
-    "section": "The project file _quarto.yml",
-    "text": "The project file _quarto.yml\nthis is where you customize the overall appearance and preferences\nproject:\n  type: website\n\nwebsite:\n  title: \"MyWebsite\"\n  navbar:\n    left:\n      - href: index.qmd\n        text: Home\n      - about.qmd\n\nformat:\n  html:\n    theme: cosmo\n    css: styles.css\n    toc: true"
-  },
-  {
-    "objectID": "material/06_websites.html#themes",
-    "href": "material/06_websites.html#themes",
-    "title": "Let’s make a website with Quarto",
-    "section": "Themes",
-    "text": "Themes\nhttps://quarto.org/docs/output-formats/html-themes.html\ndefault, cerulean, cosmo, cyborg, darkly, flatly, journal, litera, lumen, lux, materia, minty, morph, pulse, quartz, sandstone, simplex, sketchy, slate, solar, spacelab, superhero, united, vapor, yeti, zephyr\n\nor create your own\nformat:\n  html:\n    theme: custom.scss\n    css: styles.css\n    toc: true\nvery similar to customizing presentations!"
-  },
-  {
-    "objectID": "material/06_websites.html#possibilities-are-endless",
-    "href": "material/06_websites.html#possibilities-are-endless",
-    "title": "Let’s make a website with Quarto",
-    "section": "Possibilities are endless",
-    "text": "Possibilities are endless\n\nMy personal website\nThis Workshop\nA serious project\nA not so serious project"
-  },
-  {
-    "objectID": "material/06_websites.html#customize-customize-customize",
-    "href": "material/06_websites.html#customize-customize-customize",
-    "title": "Let’s make a website with Quarto",
-    "section": "customize, customize, customize",
-    "text": "customize, customize, customize\n_quarto.yml\nproject:\n  type: website\n\nwebsite:\n  site-url: \"https://mr.schochastics.net\"\n  title: \"schochastics\"\n  favicon: \"static/favicon.png\"\n  twitter-card:\n    creator: \"@schochastics\"\n    site: \"@schochastics\"\n    description: \"I’m the team lead for Transparent Social Analytics in the Department for Computational Social Science at GESIS and I develop tools in R.\"\n    image: \"static/img/avatar.png\"\n    card-style: \"summary\"\n  search: false\n  open-graph: \n    site-name: schochastics\n    description: \"I’m the team lead for Transparent Social Analytics in the Department for Computational Social Science at GESIS and I develop tools in R.\"\n    image: \"static/img/avatar.png\"\n  navbar:\n    logo: \"static/logo.png\"\n    title: false\n    background: primary\n    right:\n      - href: publications/index.qmd\n        text: Publications\n      - href: http://blog.schochastics.net\n        text: Blog\n      - href: project/index.qmd\n        text: Projects\n      - href: material/index.qmd\n        text: Material\n      - href: about/index.qmd\n        text: About me\n  page-footer:\n    left: \"© 2022 David Schoch\"\n    center: \"powered by [quarto](https://quarto.org)\"\n    right:\n      - icon: twitter\n        href: https://twitter.com/schochastics\n      - icon: github\n        href: https://github.com/schochastics\n      - text: &lt;i class=\"ai ai-google-scholar\" role=\"img\"&gt;&lt;/i&gt;\n        href: https://scholar.google.de/citations?user=MFlgHdcAAAAJ&hl=en\n      - text: &lt;i class=\"ai ai-orcid\" role=\"img\"&gt;&lt;/i&gt;\n        href: https://orcid.org/0000-0003-2952-4812\n      - text: &lt;i class=\"bi bi-mastodon\"&gt;&lt;/i&gt;\n        href: https://fosstodon.org/@schochastics\n\nformat:\n  html:\n    theme: \n      - cosmo\n      - custom.scss\n    css: \n      - styles.css\n      - academicons.css\n    toc: true\nexecute: \n  freeze: auto"
-  },
-  {
-    "objectID": "material/06_websites.html#customize-customize-customize-1",
-    "href": "material/06_websites.html#customize-customize-customize-1",
-    "title": "Let’s make a website with Quarto",
-    "section": "customize, customize, customize",
-    "text": "customize, customize, customize\ncustom.scss\n/*-- scss:defaults --*/\n$body-bg: #333333 !default;\n$body-color: #9EEBCF;\n$link-color: white;\n$font-family-sans-serif: 'IBM Plex Sans';\n$font-family-monospace: 'IBM Plex Sans';\n\n$navbar-bg: #333333;\n$navbar-fg: #9EEBCF;\n$navbar-hl: #9EEBCF;\n\n/*-- scss:rules --*/\n@font-face {\n    font-family: 'Nova Square';\n    src: url('static/fonts/novasquare-regular-webfont.woff2') format('woff2'),\n         url('static/fonts/novasquare-regular-webfont.woff') format('woff');\n    font-weight: normal;\n    font-style: normal;\n\n}\n\n@font-face {\n    font-family: 'IBM Plex Sans';\n    src: url('static/fonts/IBMPlexSans-Regular.woff2') format('woff2'),\n        url('static/fonts/IBMPlexSans-Regular.woff') format('woff');\n    font-weight: normal;\n    font-style: normal;\n}\n\n@media screen and (min-width: 56em) {\n  html {\n    font-size: 1.1em;\n  }\n}"
-  },
-  {
-    "objectID": "material/06_websites.html#customize-customize-customize-2",
-    "href": "material/06_websites.html#customize-customize-customize-2",
-    "title": "Let’s make a website with Quarto",
-    "section": "customize, customize, customize",
-    "text": "customize, customize, customize\nstyles.css\n/* css styles */\ndiv.sourceCode{\n  background-color: black;\n}\n\n\nh1,h2,h3,h4{\n  font-family: 'Nova Square';\n}\n\n.listing-title{\n  color: white;\n  text-decoration: underline;\n  font-weight: 700;\n}\n\npre{\n  border: 1px solid white;\n  color: var(--navbar-fg);\n  padding: 5px 5px 5px 5px;\n}\n\ncode{\n  color: var(--navbar-fg);\n}\n\n/* inline code */\n.post-body&gt;p&gt;code{\n  background-color: rgba(255,255,255,.1);\n}\n\na.btn-links:hover{\n  background-color: rgba(255,255,255,.1)!important;\n}\n\n.habout{\n  font-size: 3rem;\n  font-family: 'Nova Square';\n  font-weight: 700;\n}\n\nh1,h2,h4{\n  font-weight: 700;\n}\n\nh4.f4{\n  font-size: 1.75rem;\n}\n\nh1.f3{\n  font-weight: 700;\n}\n\n/* navbar kink */\n@media screen and (min-width: 999px) {\n  .navbar .navbar-nav .nav-link {\n    color: #9EEBCF;\n    font-size: 1rem;\n    text-transform: uppercase;\n  }\n  .navbar .navbar-nav .nav-link:hover {\n    color: #9EEBCF;\n  }\n  .navbar .navbar-nav .nav-item {\n    position: relative;\n  }\n  .navbar .navbar-nav .nav-item::after {\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    margin: auto;\n    background-color: #ffd700;\n    width: 0%;\n    content: \"\";\n    height: 1px;\n    transition: all 0.5s;\n  }\n  \n.navbar .navbar-nav .nav-item:hover::after {\n    width: 100%;\n  }\n}\n\n.navbar-brand&gt;img {\n    max-height: 48px;\n    width: auto;\n    padding-right: 6px;\n}\n\n.nav-footer a{\n  color: #9EEBCF;\n}\n\n.active {\n  border-bottom: 1px solid #ffd700;\n}\n\n.navbar-brand {\n    position: relative;\n    width: 170px;\n    left: 15px;\n    background-size: contain;\n}\n\n/*footer*/\n.nav-footer{\n  border-top: 0px !important;\n}\n\n/*buttons*/\n\n.btn-outline-success{\n  border-color: #9EEBCF;\n  background-color: transparent;\n}\n\n.btn-outline-success:hover{\n  border-color: white;\n  background-color: #666666;\n}\n\n.btn-outline-success a{\n  text-decoration: none;\n  text-transform: uppercase;\n}\n\n/* grid cards */\n.card-body{\n  background-color: #333333;\n}\n\n.card-img-top{\n  background-color: #333333;\n  width: 80%;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.borderless{\n  background-color: #333333;\n}\n\n.quarto-grid-item img.thumbnail-image {\n    object-fit: contain;\n}\n\n.thumbnail-image:hover{\n  opacity:75%;\n}\n\n.center{\n   text-align: center;\n}\n\ndiv.column.col-v-center{\n   vertical-align: middle;\n}\n\n.home-title{\n  font-size: 2em;\n}\n\n.socials{\n  padding-top: 0.5em;\n  padding-bottom: 1em;\n}\n\n.socials a{\n  color: #9EEBCF;\n  margin-left: 0.5em;\n}"
-  },
-  {
-    "objectID": "material/06_websites.html#adding-an-about-page",
-    "href": "material/06_websites.html#adding-an-about-page",
-    "title": "Let’s make a website with Quarto",
-    "section": "Adding an About page",
-    "text": "Adding an About page\n---\ntwitter-card:\n    image: images/profile-preview.png\n    creator: \"@schochastics\"\nopen-graph: true\ntitle: \"David Schoch\"\nimage: images/profile-preview.png\nabout:\n    template: trestles\n    links:\n    - icon: twitter\n        text: Twitter\n        href: https://twitter.com/schochastics\n    - icon: github\n        text: Github\n        href: https://github.com/schochastics\n---"
-  },
-  {
-    "objectID": "material/06_websites.html#about-page-templates",
-    "href": "material/06_websites.html#about-page-templates",
-    "title": "Let’s make a website with Quarto",
-    "section": "About page templates",
-    "text": "About page templates\nabout:\n  template: trestles\n\njollatrestlessolanamarqueebroadside"
-  },
-  {
-    "objectID": "material/06_websites.html#publishing",
-    "href": "material/06_websites.html#publishing",
-    "title": "Let’s make a website with Quarto",
-    "section": "Publishing",
-    "text": "Publishing\n(not limited to websites)\nThere are many ways to publish Quarto websites. Since rendered content uses standard formats (HTML, PDFs, etc.) it can be published anywhere. Additionally, there is a quarto publish command available for easy publishing to popular services (GitHub, Netlify, Posit Connect, etc.)\n\nas well as various tools to make it easy to publish from a Continuous Integration (CI) system."
-  },
-  {
-    "objectID": "material/06_websites.html#interlude-ci",
-    "href": "material/06_websites.html#interlude-ci",
-    "title": "Let’s make a website with Quarto",
-    "section": "Interlude: CI",
-    "text": "Interlude: CI\nContinuous integration is a DevOps software development practice where developers regularly merge their code changes into a central repository, after which automated builds and tests are run.\n\nIn simpler terms:\nInstead of rendering your website and uploading the new version, CI allows to simply “push” code to a repository and the website is automatically updated"
-  },
-  {
-    "objectID": "material/06_websites.html#publishing-with-github",
-    "href": "material/06_websites.html#publishing-with-github",
-    "title": "Let’s make a website with Quarto",
-    "section": "Publishing with GitHub",
-    "text": "Publishing with GitHub\nGitHub Pages enables you to publish websites based on a GitHub repository.\n\nThere are three publishing options from Quarto:\n\nRender sites on your local machine to the docs directory, check the rendered site into GitHub, and then configure your GitHub repo to publish from the docs directory.\nUse the quarto publish command to publish content rendered on your local machine.\nUse a GitHub Action to automatically render your files (a single Quarto document or a Quarto project) and publish the resulting content whenever you push a source code change to your repository."
-  },
-  {
-    "objectID": "material/06_websites.html#using-ci-with-ga",
-    "href": "material/06_websites.html#using-ci-with-ga",
-    "title": "Let’s make a website with Quarto",
-    "section": "Using CI with GA",
-    "text": "Using CI with GA\n(assuming your website source code is checked into GitHub)\n\nfreeze computations (add to _quarto.yml)\n\n\nexecute:\n  freeze: auto\n\n(re)render\n\n$ quarto render\n\npublish locally\n\n$ quarto publish gh-pages\n\nadd .github/workflows/publish.yml with this content\ncommit and push"
-  },
-  {
-    "objectID": "material/06_websites.html#section",
-    "href": "material/06_websites.html#section",
-    "title": "Let’s make a website with Quarto",
+    "objectID": "material/extra/git.html",
+    "href": "material/extra/git.html",
+    "title": "Let’s Git going",
     "section": "",
-    "text": "you only need to do this once\n\n(going forward, only step 5 is needed)"
+    "text": "Git is a version control system that helps you manage and track changes to files, typically used in software development but applicable to other projects as well.\nAt its core, Git allows you to keep a record of your project’s history and collaborate with others effectively. Here’s a breakdown of the key concepts:\n\nRepositories: Git operates within repositories, which can be thought of as containers for your project. A repository stores all the files, directories, and their entire history.\nCommits: A commit represents a snapshot of your project at a specific point in time. It’s like a saved version of your code. Each commit has a unique identifier and contains the changes made since the last commit.\nBranches: Git allows you to create branches, which are separate lines of development within a repository. Branches enable you to work on different features or bug fixes independently without affecting the main codebase. They also make it easier to merge changes later.\nWorking Directory: This refers to the current state of your project files on your local machine. You make changes to files in your working directory.\nStaging Area: The staging area, also known as the index, is where you prepare your changes before committing them. You add modified files or specific changes to the staging area to include them in the next commit.\nPush and Pull: When you want to share your changes or collaborate with others, you can push your local commits to a remote repository. On the other hand, pulling refers to fetching the latest changes from the remote repository to your local copy.\nMerge: Merging is the process of combining different branches or commits into one. It allows you to incorporate changes from one branch into another.\nConflict: Conflicts occur when Git can’t automatically merge changes because they conflict with each other. Resolving conflicts involves manually modifying the conflicting code to create a unified and correct version.\n\nGit provides a command-line interface (CLI) and various graphical user interfaces (GUIs) to interact with its functionality. Using Git, you can track changes, revert to previous versions, collaborate with others, and maintain a comprehensive history of your project."
   },
   {
-    "objectID": "material/05_presentations.html#quarto-presentation-formats",
-    "href": "material/05_presentations.html#quarto-presentation-formats",
-    "title": "Let’s make a presentation with Quarto",
-    "section": "Quarto presentation formats",
-    "text": "Quarto presentation formats\n\nrevealjs essentially the replacement for xaringan\nbeamer for LaTex slides\nPowerpoint for when you have no choice…"
-  },
-  {
-    "objectID": "material/05_presentations.html#what-is-revealjs",
-    "href": "material/05_presentations.html#what-is-revealjs",
-    "title": "Let’s make a presentation with Quarto",
-    "section": "What is revealjs?",
-    "text": "What is revealjs?\n\nreveal.js is an open source HTML presentation framework. It’s a tool that enables anyone with a web browser to create fully-featured and beautiful presentations for free.\n\n\nThere is an R package for RMarkdown\ninstall.packages(\"revealjs\")\nbut it is rarely used since xaringan (based on knitr and remark.js, no Pandoc) is more popular"
-  },
-  {
-    "objectID": "material/05_presentations.html#no-need-to-learn-new-syntax",
-    "href": "material/05_presentations.html#no-need-to-learn-new-syntax",
-    "title": "Let’s make a presentation with Quarto",
-    "section": "No need to learn new syntax",
-    "text": "No need to learn new syntax\n---\nformat: revealjs\n---\n\n## Slide 1\nAdd some content\n\n## Slide 2\n- and \n- maybe\n- a \n- list\nRender to pptx? set format: pptx\nRender to beamer? set format: beamer\n\n\nSwitching between formats is THAT easy as long as you do not have any “fancy” features included"
-  },
-  {
-    "objectID": "material/05_presentations.html#html-divs-and-spans-with-pandoc",
-    "href": "material/05_presentations.html#html-divs-and-spans-with-pandoc",
-    "title": "Let’s make a presentation with Quarto",
-    "section": "HTML divs and spans with Pandoc",
-    "text": "HTML divs and spans with Pandoc\n::: {.class}\nContent in a div with a class\n:::\n\nSome text with a specific [span]{.span-class}\nPandoc translates this to\n&lt;div class=\"class\"&gt;\n   Content in a div with a class\n&lt;/div&gt;\nSome text with a specific &lt;span class=\"span-class\"&gt;span&lt;/span&gt;"
-  },
-  {
-    "objectID": "material/05_presentations.html#incremental-lists",
-    "href": "material/05_presentations.html#incremental-lists",
-    "title": "Let’s make a presentation with Quarto",
-    "section": "Incremental lists",
-    "text": "Incremental lists\n:::{.incremental}\n- item 1\n- item 2\n- item 3\n:::\n\n\nitem 1\nitem 2\nitem 3"
-  },
-  {
-    "objectID": "material/05_presentations.html#incremental-slides",
-    "href": "material/05_presentations.html#incremental-slides",
-    "title": "Let’s make a presentation with Quarto",
-    "section": "Incremental Slides",
-    "text": "Incremental Slides\nUse . . . syntax\nThis appears first \n\n. . .\n\nThis second\n\n\nThis appears first\n\n\nThis second"
-  },
-  {
-    "objectID": "material/05_presentations.html#fragments-basics",
-    "href": "material/05_presentations.html#fragments-basics",
-    "title": "Let’s make a presentation with Quarto",
-    "section": "Fragments, Basics",
-    "text": "Fragments, Basics\n\n::: {.fragment}\nFade in\n:::\n\n::: {.fragment .fade-out}\nFade out\n:::\n\n::: {.fragment .highlight-red}\nHighlight red\n:::\n\n::: {.fragment .fade-in-then-out}\nFade in, then out\n:::\n\n::: {.fragment .fade-up}\nSlide up while fading in\n:::"
-  },
-  {
-    "objectID": "material/05_presentations.html#fragments-basics-1",
-    "href": "material/05_presentations.html#fragments-basics-1",
-    "title": "Let’s make a presentation with Quarto",
-    "section": "Fragments, Basics",
-    "text": "Fragments, Basics\n\nFade in\n\n\nFade out\n\n\nHighlight red\n\n\nFade in, then out\n\n\nSlide up while fading in"
-  },
-  {
-    "objectID": "material/05_presentations.html#fragments-more",
-    "href": "material/05_presentations.html#fragments-more",
-    "title": "Let’s make a presentation with Quarto",
-    "section": "Fragments, More",
-    "text": "Fragments, More\nThis is an important sentence!\nThis is an [important sentence!]{.fragment .highlight-red}\n\n\n\nFade in &gt; Turn red &gt; Semi fade out\n\n\n\n\n::: {.fragment .fade-in}\n::: {.fragment .highlight-red}\n::: {.fragment .semi-fade-out}\nFade in &gt; Turn red &gt; Semi fade out\n:::\n:::\n:::"
-  },
-  {
-    "objectID": "material/05_presentations.html#slide-transition",
-    "href": "material/05_presentations.html#slide-transition",
-    "title": "Let’s make a presentation with Quarto",
-    "section": "Slide Transition",
-    "text": "Slide Transition\n\nfade\n\n\n\n## Slide Transition {transition=\"fade\"}"
-  },
-  {
-    "objectID": "material/05_presentations.html#slide-transition-1",
-    "href": "material/05_presentations.html#slide-transition-1",
-    "title": "Let’s make a presentation with Quarto",
-    "section": "Slide Transition",
-    "text": "Slide Transition\n\nslide\n\n\n\n## Slide Transition {transition=\"slide\"}"
-  },
-  {
-    "objectID": "material/05_presentations.html#slide-transition-2",
-    "href": "material/05_presentations.html#slide-transition-2",
-    "title": "Let’s make a presentation with Quarto",
-    "section": "Slide Transition",
-    "text": "Slide Transition\n\nconvex\n\n\n\n## Slide Transition {transition=\"convex\"}"
-  },
-  {
-    "objectID": "material/05_presentations.html#slide-transition-3",
-    "href": "material/05_presentations.html#slide-transition-3",
-    "title": "Let’s make a presentation with Quarto",
-    "section": "Slide Transition",
-    "text": "Slide Transition\n\nconcave\n\n\n\n## Slide Transition {transition=\"concave\"}"
-  },
-  {
-    "objectID": "material/05_presentations.html#slide-transition-4",
-    "href": "material/05_presentations.html#slide-transition-4",
-    "title": "Let’s make a presentation with Quarto",
-    "section": "Slide Transition",
-    "text": "Slide Transition\n\nzoom\n\n\n\n## Slide Transition {transition=\"zoom\"}"
-  },
-  {
-    "objectID": "material/05_presentations.html#slide-transition-global",
-    "href": "material/05_presentations.html#slide-transition-global",
-    "title": "Let’s make a presentation with Quarto",
-    "section": "Slide Transition, global",
-    "text": "Slide Transition, global\n---\ntitle: \"Presentation\"\nformat:\n  revealjs:\n    transition: slide\n    background-transition: fade\n    transition-speed: fast\n---"
-  },
-  {
-    "objectID": "material/05_presentations.html#column-layout",
-    "href": "material/05_presentations.html#column-layout",
-    "title": "Let’s make a presentation with Quarto",
-    "section": "Column layout",
-    "text": "Column layout\n:::: {.columns}\n\n::: {.column width=\"40%\"}\nLeft column\n:::\n\n::: {.column width=\"60%\"}\nRight column\n:::\n\n::::\n\n\nLeft column\n\nRight column"
-  },
-  {
-    "objectID": "material/05_presentations.html#column-layout-1",
-    "href": "material/05_presentations.html#column-layout-1",
-    "title": "Let’s make a presentation with Quarto",
-    "section": "Column layout",
-    "text": "Column layout\n\n\n\n```{r}\n#| eval: false\ndplyr::glimpse(mtcars)\n```\n\n\n\n\nRows: 32\nColumns: 11\n$ mpg  &lt;dbl&gt; 21.0, 21.0, 22.8, 21.4, 18.7, 18.1, 14.3, 24.4, 22.8, 19.2, 17.8,…\n$ cyl  &lt;dbl&gt; 6, 6, 4, 6, 8, 6, 8, 4, 4, 6, 6, 8, 8, 8, 8, 8, 8, 4, 4, 4, 4, 8,…\n$ disp &lt;dbl&gt; 160.0, 160.0, 108.0, 258.0, 360.0, 225.0, 360.0, 146.7, 140.8, 16…\n$ hp   &lt;dbl&gt; 110, 110, 93, 110, 175, 105, 245, 62, 95, 123, 123, 180, 180, 180…\n$ drat &lt;dbl&gt; 3.90, 3.90, 3.85, 3.08, 3.15, 2.76, 3.21, 3.69, 3.92, 3.92, 3.92,…\n$ wt   &lt;dbl&gt; 2.620, 2.875, 2.320, 3.215, 3.440, 3.460, 3.570, 3.190, 3.150, 3.…\n$ qsec &lt;dbl&gt; 16.46, 17.02, 18.61, 19.44, 17.02, 20.22, 15.84, 20.00, 22.90, 18…\n$ vs   &lt;dbl&gt; 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0,…\n$ am   &lt;dbl&gt; 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0,…\n$ gear &lt;dbl&gt; 4, 4, 4, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 4, 4, 4, 3, 3,…\n$ carb &lt;dbl&gt; 4, 4, 1, 1, 2, 1, 4, 2, 2, 4, 4, 3, 3, 3, 4, 4, 4, 1, 2, 1, 1, 2,…"
-  },
-  {
-    "objectID": "material/05_presentations.html#output-location-column-fragment",
-    "href": "material/05_presentations.html#output-location-column-fragment",
-    "title": "Let’s make a presentation with Quarto",
-    "section": "Output location, column-fragment",
-    "text": "Output location, column-fragment\n\n\n```{r}\n#| output-location: column-fragment\n#| code-line-numbers: \"|2\"\n\nlibrary(ggplot2)\n\nmtcars |&gt; \n  ggplot(aes(x = disp, y = mpg)) +\n  geom_point() +\n  geom_smooth(method = \"loess\", formula = \"y~x\")\n```"
-  },
-  {
-    "objectID": "material/05_presentations.html#output-location-column",
-    "href": "material/05_presentations.html#output-location-column",
-    "title": "Let’s make a presentation with Quarto",
-    "section": "Output location, column",
-    "text": "Output location, column\n\n\n```{r}\n#| output-location: column\n#| code-line-numbers: \"|2\"\n\nlibrary(ggplot2)\n\nmtcars |&gt; \n  ggplot(aes(x = disp, y = mpg)) +\n  geom_point() +\n  geom_smooth(method = \"loess\", formula = \"y~x\")\n```"
-  },
-  {
-    "objectID": "material/05_presentations.html#output-location-fragment",
-    "href": "material/05_presentations.html#output-location-fragment",
-    "title": "Let’s make a presentation with Quarto",
-    "section": "Output location, fragment",
-    "text": "Output location, fragment\n\n```{r}\n#| output-location: fragment\n#| code-line-numbers: \"|2\"\n\nlibrary(ggplot2)\n\nmtcars |&gt; \n  ggplot(aes(x = disp, y = mpg)) +\n  geom_point() +\n  geom_smooth(method = \"loess\", formula = \"y~x\")\n```"
-  },
-  {
-    "objectID": "material/05_presentations.html#output-location-slide",
-    "href": "material/05_presentations.html#output-location-slide",
-    "title": "Let’s make a presentation with Quarto",
-    "section": "Output location, slide",
-    "text": "Output location, slide\n\n```{r}\n#| output-location: slide\n#| code-line-numbers: \"|2\"\n\nlibrary(ggplot2)\n\nmtcars |&gt; \n  ggplot(aes(x = disp, y = mpg)) +\n  geom_point() +\n  geom_smooth(method = \"loess\", formula = \"y~x\")\n```"
-  },
-  {
-    "objectID": "material/05_presentations.html#output-location-slide-output",
-    "href": "material/05_presentations.html#output-location-slide-output",
-    "title": "Let’s make a presentation with Quarto",
-    "section": "Output location, slide",
-    "text": "Output location, slide"
-  },
-  {
-    "objectID": "material/05_presentations.html#code-line-highlighting",
-    "href": "material/05_presentations.html#code-line-highlighting",
-    "title": "Let’s make a presentation with Quarto",
-    "section": "Code line-highlighting",
-    "text": "Code line-highlighting\nUse #| code-line-numbers: \"3\" syntax - will highlight line 3 and fade others\n\n\n```{r}\n#| output-location: column\n#| code-line-numbers: \"3\"\n\nlibrary(ggplot2)\n\nmtcars |&gt; \n  ggplot(aes(x = disp, y = mpg)) +\n  geom_point() +\n  geom_smooth(method = \"loess\", formula = \"y~x\")\n```"
-  },
-  {
-    "objectID": "material/05_presentations.html#code-line-highlighting-1",
-    "href": "material/05_presentations.html#code-line-highlighting-1",
-    "title": "Let’s make a presentation with Quarto",
-    "section": "Code line-highlighting",
-    "text": "Code line-highlighting\nwith a “fragment style”\n\n\n```{r}\n#| output-location: column\n#| code-line-numbers: \"|3\"\n\nlibrary(ggplot2)\n\nmtcars |&gt; \n  ggplot(aes(x = disp, y = mpg)) +\n  geom_point() +\n  geom_smooth(method = \"loess\", formula = \"y~x\")\n```"
-  },
-  {
-    "objectID": "material/05_presentations.html#code-line-highlighting-2",
-    "href": "material/05_presentations.html#code-line-highlighting-2",
-    "title": "Let’s make a presentation with Quarto",
-    "section": "Code line-highlighting",
-    "text": "Code line-highlighting\nhighlight different line ranges progressively\n\n\n```{r}\n#| output-location: column\n#| code-line-numbers: \"|3|5|8|10\"\n\nlibrary(ggplot2)\n\nmtcars |&gt; \n  ggplot(aes(x = disp, y = mpg)) +\n  geom_point() +\n  geom_smooth(method = \"loess\", formula = \"y~x\")\n```"
-  },
-  {
-    "objectID": "material/05_presentations.html#stack-images",
-    "href": "material/05_presentations.html#stack-images",
-    "title": "Let’s make a presentation with Quarto",
-    "section": "Stack images",
-    "text": "Stack images"
-  },
-  {
-    "objectID": "material/05_presentations.html#stack-images-1",
-    "href": "material/05_presentations.html#stack-images-1",
-    "title": "Let’s make a presentation with Quarto",
-    "section": "Stack images",
-    "text": "Stack images\n::: {.r-stack}\n![](img/kitten1.jpeg){.fragment width=\"450\"}\n\n![](img/kitten2.jpeg){.fragment width=\"400\"}\n\n![](img/kitten3.jpeg){.fragment width=\"300\"}\n:::"
-  },
-  {
-    "objectID": "material/05_presentations.html#background-color-and-image",
-    "href": "material/05_presentations.html#background-color-and-image",
-    "title": "Let’s make a presentation with Quarto",
-    "section": "Background color and image",
-    "text": "Background color and image\nBackground color:\n## Background color and image  {background-color=\"red\"} \n\n\nBackground image:\n## Background color and image  {background-image=\"&lt;link-to-image&gt;\"}"
-  },
-  {
-    "objectID": "material/05_presentations.html#themes",
-    "href": "material/05_presentations.html#themes",
-    "title": "Let’s make a presentation with Quarto",
-    "section": "Themes",
-    "text": "Themes\nsee https://quarto.org/docs/presentations/revealjs/themes.html\n---\ntitle: \"Presentation\"\nformat:\n  revealjs: \n    theme: dark\n---\n\n---\ntitle: \"Presentation\"\nformat:\n  revealjs: \n    theme: beige\n---\n\n\n---\ntitle: \"Presentation\"\nformat:\n  revealjs: \n    theme: simple\n---"
-  },
-  {
-    "objectID": "material/05_presentations.html#themes-via-custom-sass",
-    "href": "material/05_presentations.html#themes-via-custom-sass",
-    "title": "Let’s make a presentation with Quarto",
-    "section": "Themes via custom SASS",
-    "text": "Themes via custom SASS\n---\ntitle: \"Presentation\"\nformat:\n  revealjs: \n    theme: [default,custom.scss]\n---\ncustom.scss:\n/*-- scss:defaults --*/\n\n$body-bg: #191919;\n$body-color: #fff;\n$link-color: #42affa;\n\n/*-- scss:rules --*/\n\n.reveal .slide blockquote {\n  border-left: 3px solid $text-muted;\n  padding-left: 0.5em;\n}"
-  },
-  {
-    "objectID": "material/05_presentations.html#themes-via-extensions",
-    "href": "material/05_presentations.html#themes-via-extensions",
-    "title": "Let’s make a presentation with Quarto",
-    "section": "Themes via Extensions",
-    "text": "Themes via Extensions\nInstall Extension (in the folder of your presentation):\nquarto use template gesiscss/quarto-revealjs-fakegesis\n\n\nuse in yaml header:\n---\ntitle: \"Let's make a presentation with Quarto\"\nauthor: \"David Schoch\"\nlesson: 5\ninstitute: GESIS\ndate: \"2023-06-20\"\ndate-format: \"YYYY-MM-DD\"\nfooter: \"[Automated Reports & Co with Quarto and Markdown](https://gesiscss.github.io/quarto-workshop/)\"\nformat: fakegesis-revealjs\n---\n\n\nVery creative themes can be found here"
-  },
-  {
-    "objectID": "material/05_presentations.html#examples",
-    "href": "material/05_presentations.html#examples",
-    "title": "Let’s make a presentation with Quarto",
-    "section": "Examples",
-    "text": "Examples"
-  },
-  {
-    "objectID": "material/05_presentations.html#section",
-    "href": "material/05_presentations.html#section",
-    "title": "Let’s make a presentation with Quarto",
+    "objectID": "material/extra/git.html#what-is-git",
+    "href": "material/extra/git.html#what-is-git",
+    "title": "Let’s Git going",
     "section": "",
-    "text": "Give me more\n\n\n\n\n\nAutomated Reports & Co with Quarto and Markdown\n\n\nThese slides are based on an RStudio Workshop"
+    "text": "Git is a version control system that helps you manage and track changes to files, typically used in software development but applicable to other projects as well.\nAt its core, Git allows you to keep a record of your project’s history and collaborate with others effectively. Here’s a breakdown of the key concepts:\n\nRepositories: Git operates within repositories, which can be thought of as containers for your project. A repository stores all the files, directories, and their entire history.\nCommits: A commit represents a snapshot of your project at a specific point in time. It’s like a saved version of your code. Each commit has a unique identifier and contains the changes made since the last commit.\nBranches: Git allows you to create branches, which are separate lines of development within a repository. Branches enable you to work on different features or bug fixes independently without affecting the main codebase. They also make it easier to merge changes later.\nWorking Directory: This refers to the current state of your project files on your local machine. You make changes to files in your working directory.\nStaging Area: The staging area, also known as the index, is where you prepare your changes before committing them. You add modified files or specific changes to the staging area to include them in the next commit.\nPush and Pull: When you want to share your changes or collaborate with others, you can push your local commits to a remote repository. On the other hand, pulling refers to fetching the latest changes from the remote repository to your local copy.\nMerge: Merging is the process of combining different branches or commits into one. It allows you to incorporate changes from one branch into another.\nConflict: Conflicts occur when Git can’t automatically merge changes because they conflict with each other. Resolving conflicts involves manually modifying the conflicting code to create a unified and correct version.\n\nGit provides a command-line interface (CLI) and various graphical user interfaces (GUIs) to interact with its functionality. Using Git, you can track changes, revert to previous versions, collaborate with others, and maintain a comprehensive history of your project."
   },
   {
-    "objectID": "material/01_introduction.html#section",
-    "href": "material/01_introduction.html#section",
-    "title": "Introduction to literate programming and setting up Quarto",
-    "section": "",
-    "text": "“Let us change our traditional attitude to the construction of programs. Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to human beings what we want a computer to do.”  [Donald Knuth]\n\n\nLiterate Programming\nMixing a document formatting language and a programming language."
+    "objectID": "material/extra/git.html#what-is-github",
+    "href": "material/extra/git.html#what-is-github",
+    "title": "Let’s Git going",
+    "section": "What is GitHub?",
+    "text": "What is GitHub?\nGitHub is a web-based platform that utilizes the Git version control system. It provides a centralized location for developers to store, manage, collaborate on, and share their code repositories. In addition to the points mentioned above, GitHub also offers:\n\nRemote Hosting: GitHub acts as a remote hosting service for Git repositories. It provides a secure and accessible location where developers can store their code and collaborate with others.\nCollaboration: GitHub facilitates collaboration among developers by offering features like pull requests and code reviews. Multiple contributors can work together on the same project, propose changes, and discuss modifications before merging them into the main codebase.\nIssue Tracking: GitHub provides a built-in issue tracking system where users can report bugs, suggest enhancements, or create task lists. It allows for better project management and communication among team members."
   },
   {
-    "objectID": "material/01_introduction.html#why-use-literate-programming",
-    "href": "material/01_introduction.html#why-use-literate-programming",
-    "title": "Introduction to literate programming and setting up Quarto",
-    "section": "Why use literate programming?",
-    "text": "Why use literate programming?\n\n\nEnhanced Readability\nEmphasizes clear and coherent documentation alongside the code\nImproved Documentation\nDocumentation is an integral part of the program\nCode Reusability\nSimpler to extract and adapt code components for use in other projects\nEducation and Learning\ncan serve as an effective educational tool"
+    "objectID": "material/extra/git.html#install-git",
+    "href": "material/extra/git.html#install-git",
+    "title": "Let’s Git going",
+    "section": "Install Git",
+    "text": "Install Git\n\nWindowsmacOSLinux\n\n\n\nInstall Git from here: https://gitforwindows.org/\nWhen asked about “Adjusting your PATH environment”, make sure to select “Git from the command line and also from 3rd-party software”. Everything else can be left as default\n\n\n\n\nInstall Git from here: http://git-scm.com/downloads\n\n\n\nInstall Git via your distro’s package manager.\nUbuntu or Debian Linux:\nsudo apt-get install git\nFedora or RedHat Linux:\nsudo yum install git\nA comprehensive list for various Linux and Unix package managers: https://git-scm.com/download/linux"
   },
   {
-    "objectID": "material/01_introduction.html#why-use-literate-programming-as-an-academic",
-    "href": "material/01_introduction.html#why-use-literate-programming-as-an-academic",
-    "title": "Introduction to literate programming and setting up Quarto",
-    "section": "Why use literate programming as an academic?",
-    "text": "Why use literate programming as an academic?\n\n\nConvenience\n\n\n\n\nReproducibility"
+    "objectID": "material/extra/git.html#register-on-github",
+    "href": "material/extra/git.html#register-on-github",
+    "title": "Let’s Git going",
+    "section": "Register on GitHub",
+    "text": "Register on GitHub\nRegister an account at https://github.com and choose a username that you are comfortable sharing with your boss. There are several paid plans available, but for the majority of cases, the free plan is more than enough."
   },
   {
-    "objectID": "material/01_introduction.html#convenience",
-    "href": "material/01_introduction.html#convenience",
-    "title": "Introduction to literate programming and setting up Quarto",
-    "section": "Convenience",
-    "text": "Convenience\ncommon academic workflow:\n\nwrite paper in Word, LaTeX, …\n(changing format is tideous)\nanalysis with some software package, “copy” results to paper\n(changing data/code means manually changing tables/figures)\nmake presentation with PowerPoint, LaTeX, …\n\n\n\nliterate programing can unify writing and analysis\n(and Quarto also presenting!)"
+    "objectID": "material/extra/git.html#setup-git",
+    "href": "material/extra/git.html#setup-git",
+    "title": "Let’s Git going",
+    "section": "Setup Git",
+    "text": "Setup Git\nYou may have to do that via the shell (What is that?)\ngit config --global user.name 'Jane Doe'\ngit config --global user.email 'jane@example.com'\ngit config --global --list\nUse your name and the email associated with your GitHub account.\nOptionally, you can set it up via the R package usethis\n## install if needed (do this only once)\n## install.packages(\"usethis\")\n\nlibrary(usethis)\nuse_git_config(user.name = \"Jane Doe\", user.email = \"jane@example.org\")\n\n\n\n\n\n\nFor Windows Users\n\n\n\nWorking with the correct shell in Windows can be tricky. Probably the safest option is to open it in RStudio via Tools &gt; Terminal."
   },
   {
-    "objectID": "material/01_introduction.html#reproducibility",
-    "href": "material/01_introduction.html#reproducibility",
-    "title": "Introduction to literate programming and setting up Quarto",
-    "section": "Reproducibility",
-    "text": "Reproducibility\n(simplified view)\n\ncomplete and self-contained paper that includes both code and documentation\nno need to publish code and data separately"
+    "objectID": "material/extra/git.html#get-a-client",
+    "href": "material/extra/git.html#get-a-client",
+    "title": "Let’s Git going",
+    "section": "Get a Client",
+    "text": "Get a Client\n(This step is optional)\nGit is a command line tool and thus used via the shell which not everyone is comfortable using. If you want to instead use Git via a client (similar to using R via RStudio), you may find GitKraken a fantastic tool. Gitkraken is a free and powerful Git(Hub) client that works on Windows, macOS, and Linux. The free version should be sufficient for most users.\nNote that RStudio also has a rudimentary git client built in, which is decent enough for many common git related tasks."
   },
   {
-    "objectID": "material/01_introduction.html#history",
-    "href": "material/01_introduction.html#history",
-    "title": "Introduction to literate programming and setting up Quarto",
-    "section": "History",
-    "text": "History\n(focusing on R/Python ecosystems)\nSweave - Early R and Latex integration (2002)\nPandoc - convert between different document formats (2006)\nknitr - convenient extension to Sweave (2012)\nRMarkdown - knitr extension based on Pandoc (~2014)\nJupyter Notebooks - anything with a jupyter kernel (~2014)\nQuarto - Next generation RMarkdown (~2022)"
+    "objectID": "material/extra/git.html#connecting-git-github-and-rstudio",
+    "href": "material/extra/git.html#connecting-git-github-and-rstudio",
+    "title": "Let’s Git going",
+    "section": "Connecting Git, GitHub, and RStudio",
+    "text": "Connecting Git, GitHub, and RStudio\nMaking all components communicate smoothly requires some more fiddly tasks. We need to setup a SSH connection between Rstudio (or rather your computer) and GitHub. We here only outline thenecessary steps to achieve a secure communcation channel. For more details on the technicalities see here.\n\nFrom Rstudio\n\nGo to Tools &gt; Global Options…&gt; Git/SVN &gt; Create RSA Key. RStudio prompts for a passphrase. This is optional (but considered best practice). You can skip it for now and implement it next time.\nAs SSH key type choose ED25519\nClick “Create” and RStudio will generate an SSH key pair, stored in the files ~/.ssh/id_ed25519 and ~/.ssh/id_ed25519.pub.\n\n\n\nFrom the shell\nssh-keygen -t ed25519 -C \"DESCRIPTIVE-COMMENT\"\nAccept the proposal to save the key in the default location by simply pressing Enter. You have the option to protect the key with a passphrase. This is optional (but considered best practice).\n\n\nAdd key to ssh-agent\nThis is very OS specific. If you find anything not working here, check the official GitHub documentation\n\nmacOSWindowsLinux\n\n\nCheck if ssh-agent is enabled. Here’s what success look like (with a varying pid):\n$ eval \"$(ssh-agent -s)\"\nAgent pid 14333\nif it fails like this:\n$ eval \"$(ssh-agent -s)\"\nmkdtemp: private socket dir: No such file or directory\ntry again as a super user.\n$ sudo su\nPassword:\n$ sh-3.2# eval \"$(ssh-agent -s)\"\nAgent pid 14333\n$ sh-3.2# exit\nexit\nAdd your key to the ssh agent. Give passphrase if necessary. The -K option stores your passphrase in the keychain.\nssh-add -K ~/.ssh/id_ed25519\nIf you’re on macOS Sierra 10.12.2 and higher, you need to create a file ~/.ssh/config with these contents:\nHost *\n  AddKeysToAgent yes\n  UseKeychain yes\n  IdentityFile ~/.ssh/id_ed25519\nYou can omit the line about UseKeychain if you didn’t use a passphrase. But if you did, this should store your passphrase persistently in the keychain. Otherwise, you will have to enter it every time you log in.\n\n\nIn a Git Bash shell, check if the ssh-agent is running:\n$ eval $(ssh-agent -s)\nAgent pid 14333\nAdd your key, substituting the correct name for your key.\n$ ssh-add ~/.ssh/id_ed25519\n\n\nIn a shell, check if the ssh-agent is running:\n$ eval \"$(ssh-agent -s)\"\nAgent pid 14333\nAdd your key, substituting the correct name for your key.\nssh-add ~/.ssh/id_ed25519\n\n\n\n\n\nProvide the public key to GitHub\nCopy from RStudio:\nGo to Tools &gt; Global Options…&gt; Git/SVN. click “View public key”. Accept the offer to copy to your clipboard.\nCopy via shell:\nOpen ~/.ssh/id_ed25519.pub in an editor and copy the contents to your clipboard. Or do one of the following at the command line:\nMac OS: pbcopy &lt; ~/.ssh/id_ed25519.pub\nWindows: clip &lt; ~/.ssh/id_ed25519.pub\nLinux: xclip -sel clip &lt; ~/.ssh/id_ed25519.pub\n(Linux: if needed, install xclip via apt-get or yum.)\nPaste on GitHub:\n- Click on your profile pic in upper right corner\n\nGo to Settings &gt; SSH and GPG keys\nClick “New SSH key”\nPaste your public key in the “Key” box. (Give it an informative title)\nClick “Add SSH key”\n\nTest:\nYou can use\nssh -T git@github.com\nto test your connection to GitHub. If you are unsure what is going on, check the GitHub docs. For more troubleshooting check here.\n\n\nMake a test repo\nTo test the connection to GitHub (and alos RStudio) we need to create a test repository on GitHub:\n\nMake sure you are logged into GitHub\nIn the upper right corner, click “+” and “New repository”\nUse the following setup: \nClick “Create repository”\nYou will end up here: \nClick the green “&lt;&gt; Code” Button\nChoose SSH and copy the URL\n\nTo clone the repository to your computer, you can either use your Git client, e.g. Gitkraken under File &gt; Open Repo:\n\nor via the shell:\n1. navigate to the directory you want to use via cd\n\ngit clone git@github.com:YOUR-USERNAME/YOUR-REPOSITORY.git which looks like this:\n\n$ git clone git@github.com:schochastics/mytestrepo.git\nCloning into 'mytestrepo'...\nremote: Enumerating objects: 3, done.\nremote: Counting objects: 100% (3/3), done.\nremote: Compressing objects: 100% (2/2), done.\nremote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0\nReceiving objects: 100% (3/3), done.\n\nadd a line to README.md and check if Git recognizes the change:\n\n$ echo \"A line I wrote on my local computer  \" &gt;&gt; README.md\n$ git status\nOn branch main\nYour branch is up-to-date with 'origin/main'.\n\nChanges not staged for commit:\n  (use \"git add &lt;file&gt;...\" to update what will be committed)\n  (use \"git restore &lt;file&gt;...\" to discard changes in working directory)\n    modified:   README.md\n\nno changes added to commit (use \"git add\" and/or \"git commit -a\")\n\nStage the changes and push it to GitHub with these commands:\n\ngit add README.md\ngit commit -m \"A commit from my local computer\"\ngit push\nthis will look something like this:\n$ git add README.md \n$ git commit -m \"A commit from my local computer\"\n[main 06162c1] A commit from my local computer\n 1 file changed, 1 insertion(+)\n$ git push\nEnumerating objects: 5, done.\nCounting objects: 100% (5/5), done.\nDelta compression using up to 8 threads\nCompressing objects: 100% (2/2), done.\nWriting objects: 100% (3/3), 329 bytes | 329.00 KiB/s, done.\nTotal 3 (delta 0), reused 0 (delta 0), pack-reused 0\nTo github.com:schochastics/mytestrepo.git\n   564049b..06162c1  main -&gt; main\n\n\n\n\n\n\nNote\n\n\n\nOn Windows, you might see a message about LF will be replaced by CRLF. This is normal and does not require any action on your part. Windows handles line endings differently from other operating systems, but the default setup for Git for Windows is appropriate for most people and situations.\n\n\n\nGo back to the browser, hit refresh and verify that see the new “A line I wrote on my local computer” in the README.\n\nIf everything went well, you have successfully setup everything you need to work with Git and Github\n(You can delete the test repo again: On GitHub, while viewing the repository, go to “Settings” and “Delete Repository”. Locally, you can simply delete the folder )\n\n\nConnecting RStudio and GitHub\nUsually this just works out of the box. To verify that RStudio detected Git you can use either of these options:\n\nClick File &gt; New Project…. You should see an option “Version Control”\nClick File &gt; New Project… &gt; New Directory &gt; New Project &gt; and check if you have an option “Create a git repository”\n\nIf neither works for you, go through the troubleshooting steps described here."
   },
   {
-    "objectID": "material/01_introduction.html#what-is-quarto",
-    "href": "material/01_introduction.html#what-is-quarto",
-    "title": "Introduction to literate programming and setting up Quarto",
-    "section": "What is Quarto?",
-    "text": "What is Quarto?\nopen-source scientific and technical publishing system built on Pandoc\n\nQuarto is a command line interface (CLI) that renders plain text formats (.qmd, .rmd, .md) OR mixed formats (.ipynb/Jupyter notebook) into static documents (Word, PDF, HTML,…), websites, presentations, books and much more!\n\n“The concept is to make a major, long term investment in reproducible research, while keeping it compatible with existing formats and adaptable to the various environments users work in.”"
-  },
-  {
-    "objectID": "material/01_introduction.html#working-with-quarto",
-    "href": "material/01_introduction.html#working-with-quarto",
-    "title": "Introduction to literate programming and setting up Quarto",
-    "section": "Working with Quarto",
-    "text": "Working with Quarto\nQuarto is independent of R and RStudio\n\nYou can use your favorite editor:\n\nRStudio\nVS Code\nJupyter Lab\nNeovim\nany other text editor + terminal\n\n\n\nBest support for RStudio and VS Code"
-  },
-  {
-    "objectID": "material/01_introduction.html#how-quarto-works",
-    "href": "material/01_introduction.html#how-quarto-works",
-    "title": "Introduction to literate programming and setting up Quarto",
-    "section": "How Quarto works",
-    "text": "How Quarto works\n\n\nknitr or jupyter evaluate code and return an md file\nQuarto applies Lua filters + CSS/LaTeX and Pandoc converts to a final ouput format"
-  },
-  {
-    "objectID": "material/01_introduction.html#quarto-vs-rmarkdown",
-    "href": "material/01_introduction.html#quarto-vs-rmarkdown",
-    "title": "Introduction to literate programming and setting up Quarto",
-    "section": "Quarto vs RMarkdown",
-    "text": "Quarto vs RMarkdown\nRMarkdown grew into a large ecosystem, with varying syntax.\nBasic: html_document, pdf_document, word_document\nBeamer: beamer_presentation\nPowerPoint: powerpoint_presentation\nHTML Slides: xaringan, ioslides, revealjs\nAdvanced layouts: tufte\nWebsites: blogdown, distill, pagedown\nBooks: bookdown\nJournal Articles: rticles\n Quarto supports (most of) these out of the box"
-  },
-  {
-    "objectID": "material/01_introduction.html#should-i-switch",
-    "href": "material/01_introduction.html#should-i-switch",
-    "title": "Introduction to literate programming and setting up Quarto",
-    "section": "Should I switch?",
-    "text": "Should I switch?\nYes:\n\n“Batteries included”, shared syntax\nChoose your own editor and your preferred language\nBetter accessibility and richer features out of the box\nMore enhancements overtime\n\nNo:\n\nRMarkdown will still be maintained\nIf you cherish your workflow"
-  },
-  {
-    "objectID": "material/01_introduction.html#need-convincing",
-    "href": "material/01_introduction.html#need-convincing",
-    "title": "Introduction to literate programming and setting up Quarto",
-    "section": "need convincing?",
-    "text": "need convincing?\nInteractive Documents\nShiny, Observable JS, widgets\n\nExtensions\nshortcodes, filters, journal articles, custom formats, revealjs Examples\n\n\nPublishing\nquarto publish (e.g. Github pages) with continuous integration"
-  },
-  {
-    "objectID": "material/04_exporting.html#getting-up",
-    "href": "material/04_exporting.html#getting-up",
-    "title": "Exporting to different formats",
-    "section": "Getting up",
-    "text": "Getting up\n\nTurn off alarm\nGet out of bed"
-  },
-  {
-    "objectID": "material/04_exporting.html#going-to-sleep",
-    "href": "material/04_exporting.html#going-to-sleep",
-    "title": "Exporting to different formats",
-    "section": "Going to sleep",
-    "text": "Going to sleep\n\nGet in bed\nCount sheep\n\n\n\n\nAutomated Reports & Co with Quarto and Markdown"
+    "objectID": "material/extra/git.html#further-material",
+    "href": "material/extra/git.html#further-material",
+    "title": "Let’s Git going",
+    "section": "Further Material",
+    "text": "Further Material\nThis document is a speedrun (and slightly updated) version of chapter 1-14 of happygitwithr"
   },
   {
     "objectID": "material.html",
     "href": "material.html",
     "title": "Quarto Workshop",
     "section": "",
-    "text": "Introduction to literate programming and setting up Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nJun 19, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\nMarkdown\n\n\n\n\n\n\n\n\n\n\n\n\nJun 19, 2023\n\n\nChung-hong Chan\n\n\n\n\n\n\n  \n\n\n\n\nExporting to different formats\n\n\n\n\n\n\n\n\n\n\n\n\nJun 19, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\nLet’s make a presentation with Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\nLet’s make a website with Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
+    "text": "Jun 19, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJun 19, 2023\n\n\nChung-hong Chan\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJun 19, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "material.html#material-for-sessions",
+    "href": "material.html#material-for-sessions",
+    "title": "Quarto Workshop",
+    "section": "",
+    "text": "Jun 19, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJun 19, 2023\n\n\nChung-hong Chan\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJun 19, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "material.html#slides",
+    "href": "material.html#slides",
+    "title": "Quarto Workshop",
+    "section": "Slides",
+    "text": "Slides\n\n\n\n\n  \n\n\n\n\nIntroduction to literate programming and setting up Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nJun 19, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\nExporting to different formats\n\n\n\n\n\n\n\n\n\n\n\n\nJun 19, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\nLet’s make a presentation with Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\nLet’s make a website with Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "material.html#extra-material",
+    "href": "material.html#extra-material",
+    "title": "Quarto Workshop",
+    "section": "Extra Material",
+    "text": "Extra Material\n\n\n\n\n  \n\n\n\n\nLet’s Git going\n\n\n\n\n\nA short introduction to Git(Hub)\n\n\n\n\n\n\nDavid Schoch\n\n\n\n\n\n\nNo matching items"
   }
 ]

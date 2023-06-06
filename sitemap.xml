@@ -2,38 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://gesiscss.github.io/quarto-workshop/index.html</loc>
-    <lastmod>2023-06-05T10:13:58.794Z</lastmod>
+    <lastmod>2023-06-06T11:30:01.337Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gesiscss.github.io/quarto-workshop/material/slides/06_websites.html</loc>
+    <lastmod>2023-06-06T11:30:03.073Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gesiscss.github.io/quarto-workshop/material/slides/05_presentations.html</loc>
+    <lastmod>2023-06-06T11:30:03.954Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gesiscss.github.io/quarto-workshop/material/slides/01_introduction.html</loc>
+    <lastmod>2023-06-06T11:30:04.358Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gesiscss.github.io/quarto-workshop/material/slides/04_exporting.html</loc>
+    <lastmod>2023-06-06T11:30:04.658Z</lastmod>
   </url>
   <url>
     <loc>https://gesiscss.github.io/quarto-workshop/material/02_first_doc.html</loc>
-    <lastmod>2023-06-05T10:13:59.782Z</lastmod>
+    <lastmod>2023-06-06T11:30:05.694Z</lastmod>
   </url>
   <url>
     <loc>https://gesiscss.github.io/quarto-workshop/material/06_websites.html</loc>
-    <lastmod>2023-06-05T10:14:01.478Z</lastmod>
+    <lastmod>2023-06-06T11:30:05.994Z</lastmod>
   </url>
   <url>
     <loc>https://gesiscss.github.io/quarto-workshop/material/05_presentations.html</loc>
-    <lastmod>2023-06-05T10:14:03.282Z</lastmod>
+    <lastmod>2023-06-06T11:30:06.286Z</lastmod>
   </url>
   <url>
     <loc>https://gesiscss.github.io/quarto-workshop/material/01_introduction.html</loc>
-    <lastmod>2023-06-05T10:14:03.690Z</lastmod>
+    <lastmod>2023-06-06T11:30:06.590Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gesiscss.github.io/quarto-workshop/material/extra/git.html</loc>
+    <lastmod>2023-06-06T11:30:07.574Z</lastmod>
   </url>
   <url>
     <loc>https://gesiscss.github.io/quarto-workshop/material/04_exporting.html</loc>
-    <lastmod>2023-06-05T10:14:03.950Z</lastmod>
+    <lastmod>2023-06-06T11:30:07.874Z</lastmod>
   </url>
   <url>
     <loc>https://gesiscss.github.io/quarto-workshop/material/03_combine_with_R.html</loc>
-    <lastmod>2023-06-05T10:14:04.558Z</lastmod>
+    <lastmod>2023-06-06T11:30:08.186Z</lastmod>
   </url>
   <url>
     <loc>https://gesiscss.github.io/quarto-workshop/material/07_paper.html</loc>
-    <lastmod>2023-06-05T10:14:04.814Z</lastmod>
+    <lastmod>2023-06-06T11:30:08.466Z</lastmod>
   </url>
   <url>
     <loc>https://gesiscss.github.io/quarto-workshop/material.html</loc>
-    <lastmod>2023-06-05T10:14:05.398Z</lastmod>
+    <lastmod>2023-06-06T11:30:09.378Z</lastmod>
   </url>
 </urlset>

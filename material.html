@@ -54,7 +54,7 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-material .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -67,7 +67,63 @@ ul.task-list li input[type="checkbox"] {
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+    window['quarto-listings']['listing-material'] = new List('listing-material', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-slides .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-slides'] = new List('listing-slides', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-extra .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-extra'] = new List('listing-extra', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -138,27 +194,33 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#material-for-sessions" id="toc-material-for-sessions" class="nav-link active" data-scroll-target="#material-for-sessions">Material for sessions</a></li>
+  <li><a href="#slides" id="toc-slides" class="nav-link" data-scroll-target="#slides">Slides</a></li>
+  <li><a href="#extra-material" id="toc-extra-material" class="nav-link" data-scroll-target="#extra-material">Extra Material</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
 
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<section id="material-for-sessions" class="level2">
+<h2 class="anchored" data-anchor-id="material-for-sessions">Material for sessions</h2>
+<div id="listing-material" class="quarto-listing quarto-listing-container-default">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1687132800000" data-listing-file-modified-sort="1685960024810" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1687132800000" data-listing-file-modified-sort="1686050987229" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
 <div class="thumbnail">
 <p><a href="./material/01_introduction.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
 <a href="./material/01_introduction.html">
 <h3 class="no-anchor listing-title">
-Introduction to literate programming and setting up Quarto
+Setup
 </h3>
 <div class="listing-subtitle">
 
@@ -179,7 +241,7 @@ David Schoch
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1687132800000" data-listing-file-modified-sort="1685960024810" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1687132800000" data-listing-file-modified-sort="1686050987229" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
 <div class="thumbnail">
 <p><a href="./material/02_first_doc.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
@@ -207,14 +269,14 @@ Chung-hong Chan
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1687132800000" data-listing-file-modified-sort="1685960024810" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1687132800000" data-listing-file-modified-sort="1686050987229" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
 <div class="thumbnail">
 <p><a href="./material/04_exporting.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
 <a href="./material/04_exporting.html">
 <h3 class="no-anchor listing-title">
-Exporting to different formats
+Yaml
 </h3>
 <div class="listing-subtitle">
 
@@ -235,14 +297,14 @@ David Schoch
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1687219200000" data-listing-file-modified-sort="1685960024810" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1687219200000" data-listing-file-modified-sort="1686050987229" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
 <div class="thumbnail">
 <p><a href="./material/05_presentations.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
 <a href="./material/05_presentations.html">
 <h3 class="no-anchor listing-title">
-Let’s make a presentation with Quarto
+Presentation
 </h3>
 <div class="listing-subtitle">
 
@@ -263,14 +325,14 @@ David Schoch
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1687219200000" data-listing-file-modified-sort="1685960024810" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8">
+<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1687219200000" data-listing-file-modified-sort="1686050987229" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
 <div class="thumbnail">
 <p><a href="./material/06_websites.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
 <a href="./material/06_websites.html">
 <h3 class="no-anchor listing-title">
-Let’s make a website with Quarto
+Website
 </h3>
 <div class="listing-subtitle">
 
@@ -291,7 +353,7 @@ David Schoch
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-listing-file-modified-sort="1685960024810" data-listing-reading-time-sort="0">
+<div class="quarto-post image-right" data-index="5" data-listing-file-modified-sort="1686050987229" data-listing-reading-time-sort="0">
 <div class="thumbnail">
 <p><a href="./material/03_combine_with_R.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
@@ -311,7 +373,7 @@ David Schoch
 <a href="./material/03_combine_with_R.html"> </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-listing-file-modified-sort="1685960024810" data-listing-reading-time-sort="0">
+<div class="quarto-post image-right" data-index="6" data-listing-file-modified-sort="1686050987229" data-listing-reading-time-sort="0">
 <div class="thumbnail">
 <p><a href="./material/07_paper.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
@@ -335,7 +397,170 @@ David Schoch
 <div class="listing-no-matching d-none">
 No matching items
 </div>
-</div></main> <!-- /main -->
+</div>
+</section>
+<section id="slides" class="level2">
+<h2 class="anchored" data-anchor-id="slides">Slides</h2>
+<div id="listing-slides" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1687132800000" data-listing-file-modified-sort="1686050987229" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="thumbnail">
+<p><a href="./material/slides/01_introduction.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+</div>
+<div class="body">
+<a href="./material/slides/01_introduction.html">
+<h3 class="no-anchor listing-title">
+Introduction to literate programming and setting up Quarto
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./material/slides/01_introduction.html">
+<div class="listing-date">
+Jun 19, 2023
+</div>
+<div class="listing-author">
+David Schoch
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1687132800000" data-listing-file-modified-sort="1686050987229" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="./material/slides/04_exporting.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+</div>
+<div class="body">
+<a href="./material/slides/04_exporting.html">
+<h3 class="no-anchor listing-title">
+Exporting to different formats
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./material/slides/04_exporting.html">
+<div class="listing-date">
+Jun 19, 2023
+</div>
+<div class="listing-author">
+David Schoch
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1687219200000" data-listing-file-modified-sort="1686050987229" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="thumbnail">
+<p><a href="./material/slides/05_presentations.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+</div>
+<div class="body">
+<a href="./material/slides/05_presentations.html">
+<h3 class="no-anchor listing-title">
+Let’s make a presentation with Quarto
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./material/slides/05_presentations.html">
+<div class="listing-date">
+Jun 20, 2023
+</div>
+<div class="listing-author">
+David Schoch
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1687219200000" data-listing-file-modified-sort="1686050987229" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8">
+<div class="thumbnail">
+<p><a href="./material/slides/06_websites.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+</div>
+<div class="body">
+<a href="./material/slides/06_websites.html">
+<h3 class="no-anchor listing-title">
+Let’s make a website with Quarto
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./material/slides/06_websites.html">
+<div class="listing-date">
+Jun 20, 2023
+</div>
+<div class="listing-author">
+David Schoch
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="extra-material" class="level2">
+<h2 class="anchored" data-anchor-id="extra-material">Extra Material</h2>
+<div id="listing-extra" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1686050987229" data-listing-reading-time-sort="9">
+<div class="thumbnail">
+<p><a href="./material/extra/git.html"> <p class="card-img-top"><img src="material/img/new_gh_repo1.png"  class="thumbnail-image card-img"/></p> </a></p>
+</div>
+<div class="body">
+<a href="./material/extra/git.html">
+<h3 class="no-anchor listing-title">
+Let’s Git going
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+<p>A short introduction to Git(Hub)</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./material/extra/git.html">
+<div class="listing-author">
+David Schoch
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
