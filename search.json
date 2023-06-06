@@ -497,6 +497,13 @@
     "text": "Links / Images\n[Github](https://github.com/)\n![cat](https://upload.wikimedia.org/wikipedia/commons/1/15/Cat_August_2010-4.jpg)\n\nGood to know\nAdjusting the size (Quarto)\n![cat](https://upload.wikimedia.org/wikipedia/commons/1/15/Cat_August_2010-4.jpg){width=100}\nReference\nLocal file\n![cat](img/pic.png)\n\n\nExercises:\nProduce a list of websites (with links) you like to visit, e.g.\n\nGithub\nTagesschau\nSlashdot\n\nFind a dog picture on Wikipedia and link to it\nProduce a sourced quote (Optional)\n\nA Markdown-formatted document should be publishable as-is, as plain text, without looking like it’s been marked up with tags or formatting instructions. – John Gruber"
   },
   {
+    "objectID": "material/01_introduction.html",
+    "href": "material/01_introduction.html",
+    "title": "Setup",
+    "section": "",
+    "text": "Exercise 0\nInstall RStudio Desktop\n\n\nExercise 1\n\nInstall Git\nGet a GitHub account\nMake them communicate\n\nUse the provided material as guidance.\n\n\nExercise 2\nInstall Quarto"
+  },
+  {
     "objectID": "material/extra/git.html",
     "href": "material/extra/git.html",
     "title": "Let’s Git going",
