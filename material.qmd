@@ -3,16 +3,22 @@ page-title: "Material"
 listing:
   - id: material
     contents: "material/*.qmd"
-    type: default
+    type: table
     sort: "lesson"
+    sort-ui: false
+    filter-ui: false
   - id: slides
     contents: "material/slides/*.qmd"
-    type: default
+    type: table
     sort: "lesson"
+    sort-ui: false
+    filter-ui: false
   - id: extra
     contents: "material/extra/*.qmd"
-    type: default
+    type: table
     sort: "lesson"
+    sort-ui: false
+    filter-ui: false
 ---
 
 ## Material for sessions

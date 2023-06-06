@@ -345,4 +345,5 @@ If neither works for you, go through the troubleshooting steps described [here](
  
 ## Further Material
 
-This document is a speedrun (and slightly updated) version of chapter 1-14 of [happygitwithr](https://happygitwithr.com)
+This document is a speedrun (and slightly updated) version of chapter 1-14 of [happygitwithr](https://happygitwithr.com)  
+Another good gentle introduction can be found [here](https://cosimameyer.com/post/git-the-perks-of-collaboration-and-version-control/)
