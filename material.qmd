@@ -1,7 +1,31 @@
 ---
 page-title: "Material"
 listing:
-  contents: material
-  type: default
-  sort: "lesson"
+  - id: material
+    contents: "material/*.qmd"
+    type: default
+    sort: "lesson"
+  - id: slides
+    contents: "material/slides/*.qmd"
+    type: default
+    sort: "lesson"
+  - id: extra
+    contents: "material/extra/*.qmd"
+    type: default
+    sort: "lesson"
 ---
+
+## Material for sessions
+
+:::{#material}
+:::
+
+## Slides
+
+:::{#slides}
+:::
+
+## Extra Material
+
+:::{#extra}
+:::
