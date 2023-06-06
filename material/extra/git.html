@@ -160,6 +160,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#make-a-test-repo" id="toc-make-a-test-repo" class="nav-link" data-scroll-target="#make-a-test-repo">Make a test repo</a></li>
   <li><a href="#connecting-rstudio-and-github" id="toc-connecting-rstudio-and-github" class="nav-link" data-scroll-target="#connecting-rstudio-and-github">Connecting RStudio and GitHub</a></li>
   </ul></li>
+  <li><a href="#github-repo-to-rstudio-project" id="toc-github-repo-to-rstudio-project" class="nav-link" data-scroll-target="#github-repo-to-rstudio-project">GitHub repo to Rstudio project</a></li>
   <li><a href="#further-material" id="toc-further-material" class="nav-link" data-scroll-target="#further-material">Further Material</a></li>
   </ul>
 </nav>
@@ -465,10 +466,24 @@ Note
 <p>If neither works for you, go through the troubleshooting steps described <a href="https://happygitwithr.com/rstudio-see-git.html">here</a>.</p>
 </section>
 </section>
+<section id="github-repo-to-rstudio-project" class="level2">
+<h2 class="anchored" data-anchor-id="github-repo-to-rstudio-project">GitHub repo to Rstudio project</h2>
+<p>Assuming you have created a GitHub repository as in Section <a href="#make-a-test-repo">“Make a GitHub repo”</a>, you can create an RStudio project out of it via the <code>usethis</code> package:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_from_github</span>(</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"git@github.com:YOUR-USERNAME/REPOSITORY.git"</span>,</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">destdir =</span> <span class="st">"~/path/to/where/you/want/the/local/repo/"</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>or via RStudio:</p>
+<p><em>File &gt; New Project &gt; Version Control &gt; Git</em>. In the “repository URL” paste the SSH URL (<code>git@github.com:YOUR-USERNAME/REPOSITORY.git</code>) of your new GitHub repository.</p>
+<p>If you open the Project via <em>File &gt; Open Project</em> you will find a pane called git: <img src="../img/rstudio_git_pane.png" class="img-fluid"></p>
+<p>This is the small Git client built into RStudio. It is very convenient for simple add/commit/push/pull tasks so you do not have to switch to the shell or another client to perform GitHub tasks.</p>
+</section>
 <section id="further-material" class="level2">
 <h2 class="anchored" data-anchor-id="further-material">Further Material</h2>
-<p>This document is a speedrun (and slightly updated) version of chapter 1-14 of <a href="https://happygitwithr.com">happygitwithr</a><br>
-Another good gentle introduction can be found <a href="https://cosimameyer.com/post/git-the-perks-of-collaboration-and-version-control/">here</a></p>
+<ul>
+<li><p>This document is a speedrun (and slightly updated) version of chapter 1-14 of <a href="https://happygitwithr.com">happygitwithr</a></p></li>
+<li><p>Another brilliant and gentle introduction to Git(Hub) was written by <a href="https://cosimameyer.com/post/git-the-perks-of-collaboration-and-version-control/">Cosima Meyer</a></p></li>
+</ul>
 
 
 </section>
