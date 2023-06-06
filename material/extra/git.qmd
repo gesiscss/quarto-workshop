@@ -342,8 +342,29 @@ Usually this just works out of the box. To verify that RStudio detected Git you 
 2. Click *File > New Project... > New Directory > New Project >* and check if you have an option "Create a git repository"
 
 If neither works for you, go through the troubleshooting steps described [here](https://happygitwithr.com/rstudio-see-git.html).
- 
+
+## GitHub repo to Rstudio project
+
+Assuming you have created a GitHub repository as in Section ["Make a GitHub repo"](#make-a-test-repo), you can create an RStudio project out of it via the `usethis` package:
+
+```r
+usethis::create_from_github(
+  "git@github.com:YOUR-USERNAME/REPOSITORY.git",
+  destdir = "~/path/to/where/you/want/the/local/repo/"
+)
+```
+
+or via RStudio:
+
+*File > New Project > Version Control > Git*. In the "repository URL" paste the SSH URL (`git@github.com:YOUR-USERNAME/REPOSITORY.git`) of your new GitHub repository.
+
+If you open the Project via *File > Open Project* you will find a pane called git:
+![](../img/rstudio_git_pane.png)
+
+This is the small Git client built into RStudio. It is very convenient for simple add/commit/push/pull tasks so you do not have to switch to the shell or another client to perform GitHub tasks.
+
 ## Further Material
 
-This document is a speedrun (and slightly updated) version of chapter 1-14 of [happygitwithr](https://happygitwithr.com)  
-Another good gentle introduction can be found [here](https://cosimameyer.com/post/git-the-perks-of-collaboration-and-version-control/)
+- This document is a speedrun (and slightly updated) version of chapter 1-14 of [happygitwithr](https://happygitwithr.com)  
+
+- Another brilliant and gentle introduction to Git(Hub) was written by [Cosima Meyer](https://cosimameyer.com/post/git-the-perks-of-collaboration-and-version-control/)
