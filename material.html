@@ -61,9 +61,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
+      searchColumns: ["listing-date","listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -89,9 +89,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
+      searchColumns: ["listing-date","listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -117,9 +117,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+      searchColumns: ["listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -211,189 +211,103 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="material-for-sessions" class="level2">
 <h2 class="anchored" data-anchor-id="material-for-sessions">Material for sessions</h2>
-<div id="listing-material" class="quarto-listing quarto-listing-container-default">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1687132800000" data-listing-file-modified-sort="1686050987229" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./material/01_introduction.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./material/01_introduction.html">
-<h3 class="no-anchor listing-title">
-Setup
-</h3>
-<div class="listing-subtitle">
+<div id="listing-material" class="quarto-listing quarto-listing-container-table">
 
-</div>
-<div class="listing-description">
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+Date
+</th>
+<th>
+Title
+</th>
+<th>
+Author
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-listing-date-sort="1687132800000" data-listing-file-modified-sort="1686052127510" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-title-sort="Setup" data-listing-filename-sort="01_introduction.qmd">
+<td>
+<span class="listing-date">Jun 19, 2023</span>
+</td>
+<td>
+<a href="./material/01_introduction.html" class="title listing-title">Setup</a>
+</td>
+<td>
+<span class="listing-author">David Schoch</span>
+</td>
+</tr>
+<tr data-index="1" data-listing-date-sort="1687132800000" data-listing-file-modified-sort="1686052127510" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-title-sort="Markdown" data-listing-filename-sort="02_first_doc.qmd">
+<td>
+<span class="listing-date">Jun 19, 2023</span>
+</td>
+<td>
+<a href="./material/02_first_doc.html" class="title listing-title">Markdown</a>
+</td>
+<td>
+<span class="listing-author">Chung-hong Chan</span>
+</td>
+</tr>
+<tr data-index="2" data-listing-date-sort="1687132800000" data-listing-file-modified-sort="1686052127510" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-title-sort="Yaml" data-listing-filename-sort="04_exporting.qmd">
+<td>
+<span class="listing-date">Jun 19, 2023</span>
+</td>
+<td>
+<a href="./material/04_exporting.html" class="title listing-title">Yaml</a>
+</td>
+<td>
+<span class="listing-author">David Schoch</span>
+</td>
+</tr>
+<tr data-index="3" data-listing-date-sort="1687219200000" data-listing-file-modified-sort="1686052127510" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-title-sort="Presentation" data-listing-filename-sort="05_presentations.qmd">
+<td>
+<span class="listing-date">Jun 20, 2023</span>
+</td>
+<td>
+<a href="./material/05_presentations.html" class="title listing-title">Presentation</a>
+</td>
+<td>
+<span class="listing-author">David Schoch</span>
+</td>
+</tr>
+<tr data-index="4" data-listing-date-sort="1687219200000" data-listing-file-modified-sort="1686052127510" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-title-sort="Website" data-listing-filename-sort="06_websites.qmd">
+<td>
+<span class="listing-date">Jun 20, 2023</span>
+</td>
+<td>
+<a href="./material/06_websites.html" class="title listing-title">Website</a>
+</td>
+<td>
+<span class="listing-author">David Schoch</span>
+</td>
+</tr>
+<tr data-index="5" data-listing-file-modified-sort="1686052127510" data-listing-reading-time-sort="0" data-listing-filename-sort="03_combine_with_R.qmd">
+<td>
+<span class="listing-date">undefined</span>
+</td>
+<td>
+<span class="listing-title">undefined</span>
+</td>
+<td>
+<span class="listing-author"></span>
+</td>
+</tr>
+<tr data-index="6" data-listing-file-modified-sort="1686052127510" data-listing-reading-time-sort="0" data-listing-filename-sort="07_paper.qmd">
+<td>
+<span class="listing-date">undefined</span>
+</td>
+<td>
+<span class="listing-title">undefined</span>
+</td>
+<td>
+<span class="listing-author"></span>
+</td>
+</tr>
+</tbody>
 
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./material/01_introduction.html">
-<div class="listing-date">
-Jun 19, 2023
-</div>
-<div class="listing-author">
-David Schoch
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1687132800000" data-listing-file-modified-sort="1686050987229" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<div class="thumbnail">
-<p><a href="./material/02_first_doc.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./material/02_first_doc.html">
-<h3 class="no-anchor listing-title">
-Markdown
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-Literate programming: mixing a <strong>document formatting language</strong> and a <strong>programming language</strong>.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./material/02_first_doc.html">
-<div class="listing-date">
-Jun 19, 2023
-</div>
-<div class="listing-author">
-Chung-hong Chan
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1687132800000" data-listing-file-modified-sort="1686050987229" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./material/04_exporting.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./material/04_exporting.html">
-<h3 class="no-anchor listing-title">
-Yaml
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./material/04_exporting.html">
-<div class="listing-date">
-Jun 19, 2023
-</div>
-<div class="listing-author">
-David Schoch
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1687219200000" data-listing-file-modified-sort="1686050987229" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./material/05_presentations.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./material/05_presentations.html">
-<h3 class="no-anchor listing-title">
-Presentation
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./material/05_presentations.html">
-<div class="listing-date">
-Jun 20, 2023
-</div>
-<div class="listing-author">
-David Schoch
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1687219200000" data-listing-file-modified-sort="1686050987229" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./material/06_websites.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./material/06_websites.html">
-<h3 class="no-anchor listing-title">
-Website
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./material/06_websites.html">
-<div class="listing-date">
-Jun 20, 2023
-</div>
-<div class="listing-author">
-David Schoch
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-listing-file-modified-sort="1686050987229" data-listing-reading-time-sort="0">
-<div class="thumbnail">
-<p><a href="./material/03_combine_with_R.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./material/03_combine_with_R.html">
-<h3 class="no-anchor listing-title">
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./material/03_combine_with_R.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-listing-file-modified-sort="1686050987229" data-listing-reading-time-sort="0">
-<div class="thumbnail">
-<p><a href="./material/07_paper.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./material/07_paper.html">
-<h3 class="no-anchor listing-title">
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./material/07_paper.html"> </a>
-</div>
-</div>
-</div>
+</table>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
@@ -401,121 +315,70 @@ No matching items
 </section>
 <section id="slides" class="level2">
 <h2 class="anchored" data-anchor-id="slides">Slides</h2>
-<div id="listing-slides" class="quarto-listing quarto-listing-container-default">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1687132800000" data-listing-file-modified-sort="1686050987229" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
-<div class="thumbnail">
-<p><a href="./material/slides/01_introduction.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./material/slides/01_introduction.html">
-<h3 class="no-anchor listing-title">
-Introduction to literate programming and setting up Quarto
-</h3>
-<div class="listing-subtitle">
+<div id="listing-slides" class="quarto-listing quarto-listing-container-table">
 
-</div>
-<div class="listing-description">
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+Date
+</th>
+<th>
+Title
+</th>
+<th>
+Author
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-listing-date-sort="1687132800000" data-listing-file-modified-sort="1686052127510" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-title-sort="Introduction to literate programming and setting up Quarto" data-listing-filename-sort="01_introduction.qmd">
+<td>
+<span class="listing-date">Jun 19, 2023</span>
+</td>
+<td>
+<a href="./material/slides/01_introduction.html" class="title listing-title">Introduction to literate programming and setting up Quarto</a>
+</td>
+<td>
+<span class="listing-author">David Schoch</span>
+</td>
+</tr>
+<tr data-index="1" data-listing-date-sort="1687132800000" data-listing-file-modified-sort="1686052127510" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-title-sort="Exporting to different formats" data-listing-filename-sort="04_exporting.qmd">
+<td>
+<span class="listing-date">Jun 19, 2023</span>
+</td>
+<td>
+<a href="./material/slides/04_exporting.html" class="title listing-title">Exporting to different formats</a>
+</td>
+<td>
+<span class="listing-author">David Schoch</span>
+</td>
+</tr>
+<tr data-index="2" data-listing-date-sort="1687219200000" data-listing-file-modified-sort="1686052127510" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-title-sort="Let's make a presentation with Quarto" data-listing-filename-sort="05_presentations.qmd">
+<td>
+<span class="listing-date">Jun 20, 2023</span>
+</td>
+<td>
+<a href="./material/slides/05_presentations.html" class="title listing-title">Let’s make a presentation with Quarto</a>
+</td>
+<td>
+<span class="listing-author">David Schoch</span>
+</td>
+</tr>
+<tr data-index="3" data-listing-date-sort="1687219200000" data-listing-file-modified-sort="1686052127510" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-title-sort="Let's make a website with Quarto" data-listing-filename-sort="06_websites.qmd">
+<td>
+<span class="listing-date">Jun 20, 2023</span>
+</td>
+<td>
+<a href="./material/slides/06_websites.html" class="title listing-title">Let’s make a website with Quarto</a>
+</td>
+<td>
+<span class="listing-author">David Schoch</span>
+</td>
+</tr>
+</tbody>
 
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./material/slides/01_introduction.html">
-<div class="listing-date">
-Jun 19, 2023
-</div>
-<div class="listing-author">
-David Schoch
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1687132800000" data-listing-file-modified-sort="1686050987229" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./material/slides/04_exporting.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./material/slides/04_exporting.html">
-<h3 class="no-anchor listing-title">
-Exporting to different formats
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./material/slides/04_exporting.html">
-<div class="listing-date">
-Jun 19, 2023
-</div>
-<div class="listing-author">
-David Schoch
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1687219200000" data-listing-file-modified-sort="1686050987229" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
-<div class="thumbnail">
-<p><a href="./material/slides/05_presentations.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./material/slides/05_presentations.html">
-<h3 class="no-anchor listing-title">
-Let’s make a presentation with Quarto
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./material/slides/05_presentations.html">
-<div class="listing-date">
-Jun 20, 2023
-</div>
-<div class="listing-author">
-David Schoch
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1687219200000" data-listing-file-modified-sort="1686050987229" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8">
-<div class="thumbnail">
-<p><a href="./material/slides/06_websites.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./material/slides/06_websites.html">
-<h3 class="no-anchor listing-title">
-Let’s make a website with Quarto
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./material/slides/06_websites.html">
-<div class="listing-date">
-Jun 20, 2023
-</div>
-<div class="listing-author">
-David Schoch
-</div>
-</a>
-</div>
-</div>
-</div>
+</table>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
@@ -523,34 +386,31 @@ No matching items
 </section>
 <section id="extra-material" class="level2">
 <h2 class="anchored" data-anchor-id="extra-material">Extra Material</h2>
-<div id="listing-extra" class="quarto-listing quarto-listing-container-default">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1686050987229" data-listing-reading-time-sort="9">
-<div class="thumbnail">
-<p><a href="./material/extra/git.html"> <p class="card-img-top"><img src="material/img/new_gh_repo1.png"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./material/extra/git.html">
-<h3 class="no-anchor listing-title">
-Let’s Git going
-</h3>
-<div class="listing-subtitle">
+<div id="listing-extra" class="quarto-listing quarto-listing-container-table">
 
-</div>
-<div class="listing-description">
-<p>A short introduction to Git(Hub)</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./material/extra/git.html">
-<div class="listing-author">
-David Schoch
-</div>
-</a>
-</div>
-</div>
-</div>
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+Title
+</th>
+<th>
+Author
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-listing-file-modified-sort="1686052127510" data-listing-reading-time-sort="10" data-listing-title-sort="Let's Git going" data-listing-filename-sort="git.qmd">
+<td>
+<a href="./material/extra/git.html" class="title listing-title">Let’s Git going</a>
+</td>
+<td>
+<span class="listing-author">David Schoch</span>
+</td>
+</tr>
+</tbody>
+
+</table>
 <div class="listing-no-matching d-none">
 No matching items
 </div>

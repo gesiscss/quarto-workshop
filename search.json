@@ -557,34 +557,34 @@
     "href": "material/extra/git.html#further-material",
     "title": "Let’s Git going",
     "section": "Further Material",
-    "text": "Further Material\nThis document is a speedrun (and slightly updated) version of chapter 1-14 of happygitwithr"
+    "text": "Further Material\nThis document is a speedrun (and slightly updated) version of chapter 1-14 of happygitwithr\nAnother good gentle introduction can be found here"
   },
   {
     "objectID": "material.html",
     "href": "material.html",
     "title": "Quarto Workshop",
     "section": "",
-    "text": "Jun 19, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJun 19, 2023\n\n\nChung-hong Chan\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJun 19, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
+    "text": "Date\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nJun 19, 2023\n\n\nSetup\n\n\nDavid Schoch\n\n\n\n\nJun 19, 2023\n\n\nMarkdown\n\n\nChung-hong Chan\n\n\n\n\nJun 19, 2023\n\n\nYaml\n\n\nDavid Schoch\n\n\n\n\nJun 20, 2023\n\n\nPresentation\n\n\nDavid Schoch\n\n\n\n\nJun 20, 2023\n\n\nWebsite\n\n\nDavid Schoch\n\n\n\n\nundefined\n\n\nundefined\n\n\n\n\n\n\n\nundefined\n\n\nundefined\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "material.html#material-for-sessions",
     "href": "material.html#material-for-sessions",
     "title": "Quarto Workshop",
     "section": "",
-    "text": "Jun 19, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJun 19, 2023\n\n\nChung-hong Chan\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJun 19, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
+    "text": "Date\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nJun 19, 2023\n\n\nSetup\n\n\nDavid Schoch\n\n\n\n\nJun 19, 2023\n\n\nMarkdown\n\n\nChung-hong Chan\n\n\n\n\nJun 19, 2023\n\n\nYaml\n\n\nDavid Schoch\n\n\n\n\nJun 20, 2023\n\n\nPresentation\n\n\nDavid Schoch\n\n\n\n\nJun 20, 2023\n\n\nWebsite\n\n\nDavid Schoch\n\n\n\n\nundefined\n\n\nundefined\n\n\n\n\n\n\n\nundefined\n\n\nundefined\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "material.html#slides",
     "href": "material.html#slides",
     "title": "Quarto Workshop",
     "section": "Slides",
-    "text": "Slides\n\n\n\n\n  \n\n\n\n\nIntroduction to literate programming and setting up Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nJun 19, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\nExporting to different formats\n\n\n\n\n\n\n\n\n\n\n\n\nJun 19, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\nLet’s make a presentation with Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\n  \n\n\n\n\nLet’s make a website with Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nDavid Schoch\n\n\n\n\n\n\nNo matching items"
+    "text": "Slides\n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nJun 19, 2023\n\n\nIntroduction to literate programming and setting up Quarto\n\n\nDavid Schoch\n\n\n\n\nJun 19, 2023\n\n\nExporting to different formats\n\n\nDavid Schoch\n\n\n\n\nJun 20, 2023\n\n\nLet’s make a presentation with Quarto\n\n\nDavid Schoch\n\n\n\n\nJun 20, 2023\n\n\nLet’s make a website with Quarto\n\n\nDavid Schoch\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "material.html#extra-material",
     "href": "material.html#extra-material",
     "title": "Quarto Workshop",
     "section": "Extra Material",
-    "text": "Extra Material\n\n\n\n\n  \n\n\n\n\nLet’s Git going\n\n\n\n\n\nA short introduction to Git(Hub)\n\n\n\n\n\n\nDavid Schoch\n\n\n\n\n\n\nNo matching items"
+    "text": "Extra Material\n\n\n\n\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nLet’s Git going\n\n\nDavid Schoch\n\n\n\n\n\n\nNo matching items"
   }
 ]
