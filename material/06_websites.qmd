@@ -10,3 +10,63 @@ format:
   html:
     toc: false
 ---
+
+The goal of this session is to build your own website and publish it on github via github actions
+
+# Exercise 1: Setup the pipeline
+
+Create a Quarto website project. If you want you can also create a blog project.
+Either via RStudio or from the shell
+
+```bash
+# website
+quarto create-project mywebsite --type website
+# blog
+quarto create-project mybwebsite --type website:blog
+```
+
+:::{.callout-tip}
+If you call the repository "GITHUB-USERNAME.github.io", then your website will be available via <https://GITHUB-USERNAME.github.io>.
+Otherwise, it will be <https://GITHUB-USERNAME.github.io/mywebsite>
+:::
+
+In RStudio, make sure to initialize it as a Git repository.
+In the shell, navigate to your project folder and
+
+Initialize a Git repository
+```bash
+git init
+```
+
+add everything
+```bash
+git add .
+```
+
+commit
+```bash
+git commit -m "first commit" .
+```
+
+Create a new repository on GitHub. Do not initialize it with anything.
+GitHub will tell you how to associate a local git repository with it. Do it.
+
+# Exercise 2: Explore `_quarto.yml`
+
+- Move the navbar menu to a different location
+- add a link to your institutional website (or any other personal website, e.g. google scholar citations)
+- add a simple page footer (maybe a copyright note and/or links to your socials)
+- try to remove the search function
+
+# Exercise 2: Theming
+
+- Change the theme to a supported [bootswatch](https://bootswatch.com/) theme
+
+# Exercise 3: Content
+
+- Add some content to `index.qmd`
+- try to integrate the cv you created in an earlier exercise into the page.
+
+# Exercise : Publish
+
+Setup the GitHub action to publish automatically to Github. Make sure to follow all necessary steps.
