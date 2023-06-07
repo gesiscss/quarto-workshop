@@ -9,6 +9,7 @@ footer: "[Automated Reports & Co with Quarto and Markdown](https://gesiscss.gith
 format:
   html:
     toc: false
+engine: knitr
 ---
 
 # Exercise 0
@@ -26,3 +27,107 @@ Use the [provided material](extra/git.qmd) as guidance.
 # Exercise 2
 
 Install [Quarto](https://quarto.org/docs/get-started/)
+
+# Explore the shell
+
+Open your shell[^1]
+
+[^1]: The terminology can become a bit confusing in this area. An extremely elaborate try to disentangle all terms can be found in this [askubuntu](https://askubuntu.com/questions/506510/what-is-the-difference-between-terminal-console-shell-and-command-line) thread.
+
+::: {.panel-tabset}
+## macOS
+
+The shell is often called the “terminal” on macOS, by which people mean Terminal.app. One way to launch is via Spotlight Search. Type Command + space and start typing “terminal”
+
+## Windows
+There are no fewer than 4 possible shells you can end up in. Unless you know better, you almost certainly want to be in a Git Bash shell, which you conveniently installed during the setup of Git. To open it, Open the Start menu and type "Git Bash" into the search bar. The icon for Git Bash and the words “Git Bash Desktop App” will appear. Click on the icon or the words “Git Bash Desktop App” to open Git Bash. 
+
+## Linux
+
+Might depend on the flavor, but I assume as a Linux user, you know how to at least open the shell.
+
+:::
+
+Some basic commands to try out:
+
+- `pwd` (print working directory). Shows directory or “folder” you are currently operating in.
+
+- `ls` (list files). Shows the files in the current working directory. This is equivalent to looking at the files in your Finder/Explorer/File Manager. 
+
+- `cd` (change directory). Allows you to navigate through your directories by changing the working directory of your shell. Examples:
+
+```bash 
+# show content
+$ ls
+a  b
+# navigate to folder a
+$ cd a
+# navigate back to parent
+$ cd ..
+# go to home directory
+$ cd ~
+```
+(*$ indicates an input line, # a comment and everything else shows an output*)
+
+- `echo` display a line of text. This is convenient if you need to write something quickly to a new file
+
+```bash
+$ ls
+a b
+$ echo "Hello Command Line" >> hello_cli.txt
+$ ls
+a b hello_cli.txt
+```
+
+# Explore Quarto cli
+
+Quarto by itself is a tool used in the shell. To get help, use `quarto --help`
+
+```{bash}
+quarto --help 
+```
+
+For each command, you can get additional help like so
+
+```{bash}
+quarto render --help
+```
+
+You can achieve the same in both cases by writing `help` instead of `--help`. We recommend you stick with the latter, since it is a standard way of obtaining help for a cli tool.
+
+## Exercise 3
+
+Find the right command to check if your Quarto installation is ok and run it to detect potential problems
+
+# Install TeX support
+
+It might be, that you do not have a TeX distribution installed, which is needed to create PDF documents.
+To check, run the following command.
+
+```bash
+quarto list tools
+```
+
+The output could look something like this:
+
+```md
+[✓] Inspecting tools
+
+Tool         Status            Installed     Latest  
+chromium     Not installed     ---           869685  
+tinytex      Not installed     ---           v2023.06
+```
+
+The output suggests, that [TinyTeX](https://yihui.org/tinytex/) is not installed, which is the recommended engine for Quarto.
+However, this does not necessarily mean, that you do not already have a TeX eninge on your computer. If you regularly work in LaTeX, 
+you should be fine. If not, or if you want to use TinyTex instead, run the following
+
+```bash
+quarto install tool tinytex
+```
+
+If you eventually find that you do not have the latest version of TinyTeX installed, you can update it like so
+
+```bash
+quarto update tinytex
+```
