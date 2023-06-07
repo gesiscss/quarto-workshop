@@ -501,7 +501,21 @@
     "href": "material/01_introduction.html",
     "title": "Setup",
     "section": "",
-    "text": "Exercise 0\nInstall RStudio Desktop\n\n\nExercise 1\n\nInstall Git\nGet a GitHub account\nMake them communicate\n\nUse the provided material as guidance.\n\n\nExercise 2\nInstall Quarto"
+    "text": "Install RStudio Desktop"
+  },
+  {
+    "objectID": "material/01_introduction.html#exercise-3",
+    "href": "material/01_introduction.html#exercise-3",
+    "title": "Setup",
+    "section": "Exercise 3",
+    "text": "Exercise 3\nFind the right command to check if your Quarto installation is ok and run it to detect potential problems"
+  },
+  {
+    "objectID": "material/01_introduction.html#footnotes",
+    "href": "material/01_introduction.html#footnotes",
+    "title": "Setup",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThe terminology can become a bit confusing in this area. An extremely elaborate try to disentangle all terms can be found in this askubuntu thread.↩︎"
   },
   {
     "objectID": "material/extra/git.html",
