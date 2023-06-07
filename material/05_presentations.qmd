@@ -10,3 +10,36 @@ format:
   html:
     toc: false
 ---
+
+
+# Basic Exercise
+
+- Using RStudio, create a new revealjs Quarto presentation
+- Change YAML:  
+    - author for your name
+    - titled “My first Quarto Presentation!”
+    - Add slide numbering (what do the different types mean?)
+- Write out what you did this morning (woke up, ate breakfast, walked to this room, etc) in sub-sections
+- Add a code chunk and try out different output locations
+- Link out to an image with markdown syntax
+- Render it!
+
+# More advanced features
+
+- Add 4 new slides
+  - Create a list of incremental reveal (`:::` + `.incremental`)
+  - Create at least two `:::` div fragments (`.fragment` + one of `.fade-out` + `.highlight-red` + `.fade-in-then-out`)
+  - Add one span fragment with `[text]{.fragment .type-of-fragment}` syntax
+  - One with a code highlighting walking through at least two lines
+
+# Theming
+
+- change the background color of one slide
+- add a background image to a slide
+- change the theme of the presentation
+- (*if you are comfortable with CSS*) add a `custom.scss` file and change a few variables
+
+# Project
+
+Take any old presentation of yours. Would you be able to recreate it with Quarto?
+If so, try. If not, what feature are you missing?

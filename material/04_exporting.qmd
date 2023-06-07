@@ -82,7 +82,8 @@ Observe the outcome when rendering and try to identify the source of error if th
 
 ## Project
 
-*(Projects will become important when discussing websites)*
+A Quarto projects is simply a set of documents put together into a single resource (like a book or a website). 
+In this case, the YAML configuration happens in a configuration file called `_quarto.yml`. We'll explore this in more detail in the session about [websites](06_websites.qmd), but in essence, most of what is discussed here for a single document also holds for `_quarto.yml`.
 
 # Exploring additional YAML options
 
