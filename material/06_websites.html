@@ -22,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -146,8 +180,64 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<p>The goal of this session is to build your own website and publish it on github via github actions</p>
+<section id="exercise-1-setup-the-pipeline" class="level1">
+<h1>Exercise 1: Setup the pipeline</h1>
+<p>Create a Quarto website project. If you want you can also create a blog project. Either via RStudio or from the shell</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># website</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> create-project mywebsite <span class="at">--type</span> website</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># blog</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> create-project mybwebsite <span class="at">--type</span> website:blog</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you call the repository “GITHUB-USERNAME.github.io”, then your website will be available via <a href="https://GITHUB-USERNAME.github.io" class="uri">https://GITHUB-USERNAME.github.io</a>. Otherwise, it will be <a href="https://GITHUB-USERNAME.github.io/mywebsite" class="uri">https://GITHUB-USERNAME.github.io/mywebsite</a></p>
+</div>
+</div>
+<p>In RStudio, make sure to initialize it as a Git repository. In the shell, navigate to your project folder and</p>
+<p>Initialize a Git repository</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>add everything</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>commit</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"first commit"</span> .</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Create a new repository on GitHub. Do not initialize it with anything. GitHub will tell you how to associate a local git repository with it. Do it.</p>
+</section>
+<section id="exercise-2-explore-_quarto.yml" class="level1">
+<h1>Exercise 2: Explore <code>_quarto.yml</code></h1>
+<ul>
+<li>Move the navbar menu to a different location</li>
+<li>add a link to your institutional website (or any other personal website, e.g.&nbsp;google scholar citations)</li>
+<li>add a simple page footer (maybe a copyright note and/or links to your socials)</li>
+<li>try to remove the search function</li>
+</ul>
+</section>
+<section id="exercise-2-theming" class="level1">
+<h1>Exercise 2: Theming</h1>
+<ul>
+<li>Change the theme to a supported <a href="https://bootswatch.com/">bootswatch</a> theme</li>
+</ul>
+</section>
+<section id="exercise-3-content" class="level1">
+<h1>Exercise 3: Content</h1>
+<ul>
+<li>Add some content to <code>index.qmd</code></li>
+<li>try to integrate the cv you created in an earlier exercise into the page.</li>
+</ul>
+</section>
+<section id="exercise-publish" class="level1">
+<h1>Exercise : Publish</h1>
+<p>Setup the GitHub action to publish automatically to Github. Make sure to follow all necessary steps.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
