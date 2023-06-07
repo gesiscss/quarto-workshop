@@ -588,6 +588,34 @@
     "text": "Further Material\n\nThis document is a speedrun (and slightly updated) version of chapter 1-14 of happygitwithr\nAnother brilliant and gentle introduction to Git(Hub) was written by Cosima Meyer"
   },
   {
+    "objectID": "material/04_exporting.html",
+    "href": "material/04_exporting.html",
+    "title": "YAML",
+    "section": "",
+    "text": "Quarto is a very versatile tool that can create documents in many different formats. Switching between formats does not mean that you need to switch programs. The only thing that needs to be changed is the documents “configuration”. Quarto documents are configured via a YAML header."
+  },
+  {
+    "objectID": "material/04_exporting.html#single-document",
+    "href": "material/04_exporting.html#single-document",
+    "title": "YAML",
+    "section": "Single Document",
+    "text": "Single Document\nA single .qmd document always starts with a YAML header. The minimum working header just includes the format of the document.1\n---\nformat: html\n---\nTo specify options for the output format use the scheme.\n---\nformat: \n  html:\n    toc: true\n    code-fold: true\n---\nYAML is very sensitive to malformed instructions. Create a default quarto document in RStudio (File &gt; New File &gt; Quarto Document…) and add a (random) title. Replace the YAML header with each of the following:\n---\nformat:html\n---\n---\nformat: \nhtml\n---\n---\nformat: \n  html:\n    toc: true\n---\nObserve the outcome when rendering and try to identify the source of error if there is one."
+  },
+  {
+    "objectID": "material/04_exporting.html#project",
+    "href": "material/04_exporting.html#project",
+    "title": "YAML",
+    "section": "Project",
+    "text": "Project\n(Projects will become important when discussing websites)"
+  },
+  {
+    "objectID": "material/04_exporting.html#footnotes",
+    "href": "material/04_exporting.html#footnotes",
+    "title": "YAML",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nIf you create a new document via RStudio (File &gt; New File &gt; Quarto Document…) then you are also required to add a title.↩︎"
+  },
+  {
     "objectID": "material/03_combine_with_R.html",
     "href": "material/03_combine_with_R.html",
     "title": "Computation",
@@ -690,14 +718,14 @@
     "href": "material.html",
     "title": "Quarto Workshop",
     "section": "",
-    "text": "Date\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nJun 19, 2023\n\n\nSetup\n\n\nDavid Schoch\n\n\n\n\nJun 19, 2023\n\n\nMarkdown\n\n\nChung-hong Chan\n\n\n\n\nJun 19, 2023\n\n\nComputation\n\n\nChung-hong Chan\n\n\n\n\nJun 19, 2023\n\n\nYaml\n\n\nDavid Schoch\n\n\n\n\nJun 20, 2023\n\n\nPresentation\n\n\nDavid Schoch\n\n\n\n\nJun 20, 2023\n\n\nWebsite\n\n\nDavid Schoch\n\n\n\n\nundefined\n\n\nundefined\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Date\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nJun 19, 2023\n\n\nSetup\n\n\nDavid Schoch\n\n\n\n\nJun 19, 2023\n\n\nMarkdown\n\n\nChung-hong Chan\n\n\n\n\nJun 19, 2023\n\n\nComputation\n\n\nChung-hong Chan\n\n\n\n\nJun 19, 2023\n\n\nYAML\n\n\nDavid Schoch\n\n\n\n\nJun 20, 2023\n\n\nPresentation\n\n\nDavid Schoch\n\n\n\n\nJun 20, 2023\n\n\nWebsite\n\n\nDavid Schoch\n\n\n\n\nundefined\n\n\nundefined\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "material.html#material-for-sessions",
     "href": "material.html#material-for-sessions",
     "title": "Quarto Workshop",
     "section": "",
-    "text": "Date\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nJun 19, 2023\n\n\nSetup\n\n\nDavid Schoch\n\n\n\n\nJun 19, 2023\n\n\nMarkdown\n\n\nChung-hong Chan\n\n\n\n\nJun 19, 2023\n\n\nComputation\n\n\nChung-hong Chan\n\n\n\n\nJun 19, 2023\n\n\nYaml\n\n\nDavid Schoch\n\n\n\n\nJun 20, 2023\n\n\nPresentation\n\n\nDavid Schoch\n\n\n\n\nJun 20, 2023\n\n\nWebsite\n\n\nDavid Schoch\n\n\n\n\nundefined\n\n\nundefined\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Date\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nJun 19, 2023\n\n\nSetup\n\n\nDavid Schoch\n\n\n\n\nJun 19, 2023\n\n\nMarkdown\n\n\nChung-hong Chan\n\n\n\n\nJun 19, 2023\n\n\nComputation\n\n\nChung-hong Chan\n\n\n\n\nJun 19, 2023\n\n\nYAML\n\n\nDavid Schoch\n\n\n\n\nJun 20, 2023\n\n\nPresentation\n\n\nDavid Schoch\n\n\n\n\nJun 20, 2023\n\n\nWebsite\n\n\nDavid Schoch\n\n\n\n\nundefined\n\n\nundefined\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "material.html#slides",
