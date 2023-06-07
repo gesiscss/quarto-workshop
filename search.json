@@ -714,18 +714,88 @@
     "text": "Debrief\nQ: How to display table caption?\nA:\nWith computation\n\n```{r}\n#| echo: false\n#| tbl-cap: \"Just a few rows\"\n#| tbl-cap-location: bottom\n#| label: headmtcars\nknitr::kable(head(mtcars))\n```\n\n\n\nJust a few rows \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\ndrat\nwt\nqsec\nvs\nam\ngear\ncarb\n\n\n\n\nMazda RX4\n21.0\n6\n160\n110\n3.90\n2.620\n16.46\n0\n1\n4\n4\n\n\nMazda RX4 Wag\n21.0\n6\n160\n110\n3.90\n2.875\n17.02\n0\n1\n4\n4\n\n\nDatsun 710\n22.8\n4\n108\n93\n3.85\n2.320\n18.61\n1\n1\n4\n1\n\n\nHornet 4 Drive\n21.4\n6\n258\n110\n3.08\n3.215\n19.44\n1\n0\n3\n1\n\n\nHornet Sportabout\n18.7\n8\n360\n175\n3.15\n3.440\n17.02\n0\n0\n3\n2\n\n\nValiant\n18.1\n6\n225\n105\n2.76\n3.460\n20.22\n1\n0\n3\n1\n\n\n\n\n\nWithout computation\n| City     | Country |\n|----------|---------|\n| Mannheim | Germany |\n| Paris    | France  |\n| Tokyo    | Japan   |\n\n: List of cities\n\n\nList of cities\n\n\nCity\nCountry\n\n\n\n\nMannheim\nGermany\n\n\nParis\nFrance\n\n\nTokyo\nJapan\n\n\n\nQ: I’ve heard that the knitr::kable call is not necessary.\nA: You are right. Quarto (or the rendering engine: knitr) can convert all data.frame objects to Markdown tables using the df-print document option. You will learn about document options a.k.a. YAML Front Matter in the next session.\nQ: Does interactive viz work?\nA: Oui.\n```{r}\n#| echo: false\n#| fig-height: 2\n#| fig-width: 5\n#| label: ggplotly_demo\nlibrary(ggplot2)\nlibrary(plotly)\nfig &lt;- ggplot(mtcars, aes(wt, mpg)) + geom_point()\nggplotly(fig, height = 600, width = 1000)\n```\nQ: Any fancy stuff I can do with the code listing?\nA: Many\nShowing the filename\n```{r}\n#| eval: false\n#| filename: \"whatever.R\"\nlibrary(ggplot2)\nlibrary(plotly)\nfig &lt;- ggplot(mtcars, aes(wt, mpg)) + geom_point()\nggplotly(fig, height = 600, width = 1000)\n```\n\n\n\nwhatever.R\n\nlibrary(ggplot2)\nlibrary(plotly)\nfig &lt;- ggplot(mtcars, aes(wt, mpg)) + geom_point()\nggplotly(fig, height = 600, width = 1000)\n\n\nCode folding\n```{r}\n#| eval: false\n#| code-fold: true\n#| code-summary: \"Demo ggplotly\"\nlibrary(ggplot2)\nlibrary(plotly)\nfig &lt;- ggplot(mtcars, aes(wt, mpg)) + geom_point()\nggplotly(fig, height = 600, width = 1000)\n```\n\n\nDemo ggplotly\nlibrary(ggplot2)\nlibrary(plotly)\nfig &lt;- ggplot(mtcars, aes(wt, mpg)) + geom_point()\nggplotly(fig, height = 600, width = 1000)\n\n\nLine-numbering\n```{r}\n#| eval: false\n#| code-line-numbers: true\nlibrary(ggplot2)\nlibrary(plotly)\nfig &lt;- ggplot(mtcars, aes(wt, mpg)) + geom_point()\nggplotly(fig, height = 600, width = 1000)\n```\n\nlibrary(ggplot2)\nlibrary(plotly)\nfig &lt;- ggplot(mtcars, aes(wt, mpg)) + geom_point()\nggplotly(fig, height = 600, width = 1000)\n\nAnd many more."
   },
   {
+    "objectID": "material/07_paper.html",
+    "href": "material/07_paper.html",
+    "title": "Academic paper",
+    "section": "",
+    "text": "Simply put, a (reproducible) academic paper is a single qmd file with the following:\n\nStandardized format (APA, PLOS, etc.)\nCitation / Bibliography (APA, Harvard, etc. Usually the same as the format)\nFigures and tables (hopefully generated from computation) and cross-referencing them (Table 1, Figure 1 etc.)\n\nThe major advantage of Quarto is to standardize all three (rather than doing them manually, when any of these things is to be changed).\nThe file format required is usually PDF or Microsoft Word."
+  },
+  {
+    "objectID": "material/07_paper.html#activity",
+    "href": "material/07_paper.html#activity",
+    "title": "Academic paper",
+    "section": "Activity",
+    "text": "Activity\nQ:Suppose you want to use the arXiv extension (mikemahoney218/quarto-arxiv), Applying your knowledge from Session 5 and Session 6, how to initialize a project?\nA:\n## suppose we want the paper to be in a directory `mypaper`\nquarto use template mikemahoney218/quarto-arxiv\ncd mypaper\nls"
+  },
+  {
+    "objectID": "material/07_paper.html#immediate-render",
+    "href": "material/07_paper.html#immediate-render",
+    "title": "Academic paper",
+    "section": "Immediate render",
+    "text": "Immediate render\nIn general, it is a good idea to immediate render the default article to check whether the template requires external R and/or LaTeX packages.\n## You might find that you don't have kableExtra, bloom; install them accordingly\nquarto render mypaper.qmd\nThe template (mypaper.qmd in this case) usually contains important information on how to write a paper with it. I usually keep it until a point I don’t need that information anymore.\nLet’s get our hands dirty"
+  },
+  {
+    "objectID": "material/07_paper.html#exercise",
+    "href": "material/07_paper.html#exercise",
+    "title": "Academic paper",
+    "section": "Exercise",
+    "text": "Exercise\nEdit the YAML Front Matter so that:\n\nYou and a person you’d like to collaborate with are the authors\nEdit the title to a paper you’d like to write\nWrite a few sentences in the abstract\nChange the keywords and running head\n\nAnd render. And now you have your own arXiv preprint… ish."
+  },
+  {
+    "objectID": "material/07_paper.html#exercise-1",
+    "href": "material/07_paper.html#exercise-1",
+    "title": "Academic paper",
+    "section": "Exercise 1",
+    "text": "Exercise 1\nTry out all four styles and explain to me what are the differences between the four."
+  },
+  {
+    "objectID": "material/07_paper.html#exercise-2",
+    "href": "material/07_paper.html#exercise-2",
+    "title": "Academic paper",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nFind this paper: “rtweet: Collecting and analyzing Twitter data” by Kearney, and cite it in the following sentence instead.\nMany R packages have been developed to collect social media data [e.g. @schoch2023software]."
+  },
+  {
+    "objectID": "material/07_paper.html#exercise-3",
+    "href": "material/07_paper.html#exercise-3",
+    "title": "Academic paper",
+    "section": "Exercise 3",
+    "text": "Exercise 3\nThe syntax for citing multiple papers is: [@citekey1;@citekey2]. Try to cite both Schoch & Chan and Kearney in the above sentence."
+  },
+  {
+    "objectID": "material/07_paper.html#exercise-1-1",
+    "href": "material/07_paper.html#exercise-1-1",
+    "title": "Academic paper",
+    "section": "Exercise 1",
+    "text": "Exercise 1\nCreate a code chunk to generate the histogram and cross-reference it."
+  },
+  {
+    "objectID": "material/07_paper.html#labeling-non-computational-parts",
+    "href": "material/07_paper.html#labeling-non-computational-parts",
+    "title": "Academic paper",
+    "section": "Labeling non-computational parts",
+    "text": "Labeling non-computational parts\nIt’s better to download the image file.\n*Felis catus* (@fig-cat) does not have nine lives. @tbl-cats shows the number of lives of three known cats.\n\n![A picture of Felis catus](Cat_August_2010-4.jpg){#fig-cat}\n\n| Cat           | Number of lives |\n|---------------|-----------------|\n| Hello Kitty   | 1               |\n| Felix the cat | 1               |\n| Garfield      | 1               |\n\n: List of known cats and their number of lives {#tbl-cats}"
+  },
+  {
+    "objectID": "material/07_paper.html#footnotes",
+    "href": "material/07_paper.html#footnotes",
+    "title": "Academic paper",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nUsing this method, the entry has no DOI. But again, this session is not about bibliography management. If you really want to have the DOI, the best way is to use crossref meta search. But that’s super sluggish. Also, you need to manually edit the obtained entries sometimes.↩︎"
+  },
+  {
     "objectID": "material.html",
     "href": "material.html",
     "title": "Quarto Workshop",
     "section": "",
-    "text": "Date\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nJun 19, 2023\n\n\nSetup\n\n\nDavid Schoch\n\n\n\n\nJun 19, 2023\n\n\nMarkdown\n\n\nChung-hong Chan\n\n\n\n\nJun 19, 2023\n\n\nComputation\n\n\nChung-hong Chan\n\n\n\n\nJun 19, 2023\n\n\nYAML\n\n\nDavid Schoch\n\n\n\n\nJun 20, 2023\n\n\nPresentation\n\n\nDavid Schoch\n\n\n\n\nJun 20, 2023\n\n\nWebsite\n\n\nDavid Schoch\n\n\n\n\nundefined\n\n\nundefined\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Date\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nJun 19, 2023\n\n\nSetup\n\n\nDavid Schoch\n\n\n\n\nJun 19, 2023\n\n\nMarkdown\n\n\nChung-hong Chan\n\n\n\n\nJun 19, 2023\n\n\nComputation\n\n\nChung-hong Chan\n\n\n\n\nJun 19, 2023\n\n\nYAML\n\n\nDavid Schoch\n\n\n\n\nJun 20, 2023\n\n\nPresentation\n\n\nDavid Schoch\n\n\n\n\nJun 20, 2023\n\n\nWebsite\n\n\nDavid Schoch\n\n\n\n\nJun 20, 2023\n\n\nAcademic paper\n\n\nChung-hong Chan\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "material.html#material-for-sessions",
     "href": "material.html#material-for-sessions",
     "title": "Quarto Workshop",
     "section": "",
-    "text": "Date\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nJun 19, 2023\n\n\nSetup\n\n\nDavid Schoch\n\n\n\n\nJun 19, 2023\n\n\nMarkdown\n\n\nChung-hong Chan\n\n\n\n\nJun 19, 2023\n\n\nComputation\n\n\nChung-hong Chan\n\n\n\n\nJun 19, 2023\n\n\nYAML\n\n\nDavid Schoch\n\n\n\n\nJun 20, 2023\n\n\nPresentation\n\n\nDavid Schoch\n\n\n\n\nJun 20, 2023\n\n\nWebsite\n\n\nDavid Schoch\n\n\n\n\nundefined\n\n\nundefined\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Date\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nJun 19, 2023\n\n\nSetup\n\n\nDavid Schoch\n\n\n\n\nJun 19, 2023\n\n\nMarkdown\n\n\nChung-hong Chan\n\n\n\n\nJun 19, 2023\n\n\nComputation\n\n\nChung-hong Chan\n\n\n\n\nJun 19, 2023\n\n\nYAML\n\n\nDavid Schoch\n\n\n\n\nJun 20, 2023\n\n\nPresentation\n\n\nDavid Schoch\n\n\n\n\nJun 20, 2023\n\n\nWebsite\n\n\nDavid Schoch\n\n\n\n\nJun 20, 2023\n\n\nAcademic paper\n\n\nChung-hong Chan\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "material.html#slides",

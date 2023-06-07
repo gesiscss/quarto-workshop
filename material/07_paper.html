@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Chung-hong Chan">
+<meta name="dcterms.date" content="2023-06-20">
 
-<title>Quarto Workshop – paper</title>
+<title>Quarto Workshop - Academic paper</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -54,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -104,18 +140,249 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Academic paper</h1>
+</div>
 
 
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Chung-hong Chan </p>
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            GESIS
+          </p>
+      </div>
+    </div>
+
+<div class="quarto-title-meta">
+
+      
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">2023-06-20</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="anatomy-of-an-academic-paper" class="level1">
+<h1>Anatomy of an academic paper</h1>
+<p>Simply put, a (reproducible) academic paper is a single <code>qmd</code> file with the following:</p>
+<ul>
+<li>Standardized format (APA, PLOS, etc.)</li>
+<li>Citation / Bibliography (APA, Harvard, etc. Usually the same as the format)</li>
+<li>Figures and tables (hopefully generated from computation) and cross-referencing them (Table 1, Figure 1 etc.)</li>
+</ul>
+<p>The major advantage of Quarto is to standardize all three (rather than doing them manually, when any of these things is to be changed).</p>
+<p>The file format required is usually PDF or Microsoft Word.</p>
+</section>
+<section id="standardized-format" class="level1">
+<h1>Standardized format</h1>
+<p>There are templates (as Quarto extensions) available (<a href="https://quarto.org/docs/journals/">Official list</a>, some other: <a href="https://github.com/wjschne/apaquarto">APA7</a>, <a href="https://github.com/mikemahoney218/quarto-arxiv">arXiv</a>, <a href="https://github.com/ccr-journal/ccr-quarto">CCR</a>).</p>
+<section id="activity" class="level2">
+<h2 class="anchored" data-anchor-id="activity">Activity</h2>
+<p><strong>Q:</strong>Suppose you want to use the arXiv extension (<code>mikemahoney218/quarto-arxiv</code>), Applying your knowledge from Session 5 and Session 6, how to initialize a project?</p>
+<p><strong>A:</strong></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">## suppose we want the paper to be in a directory `mypaper`</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> use template mikemahoney218/quarto-arxiv</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> mypaper</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="immediate-render" class="level2">
+<h2 class="anchored" data-anchor-id="immediate-render">Immediate render</h2>
+<p>In general, it is a good idea to immediate render the default article to check whether the template requires external R and/or LaTeX packages.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">## You might find that you don't have kableExtra, bloom; install them accordingly</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render mypaper.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The template (<code>mypaper.qmd</code> in this case) usually contains important information on how to write a paper with it. I usually keep it until a point I don’t need that information anymore.</p>
+<p>Let’s get our hands dirty</p>
+</section>
+<section id="exercise" class="level2">
+<h2 class="anchored" data-anchor-id="exercise">Exercise</h2>
+<p>Edit the YAML Front Matter so that:</p>
+<ol type="1">
+<li>You and a person you’d like to collaborate with are the authors</li>
+<li>Edit the title to a paper you’d like to write</li>
+<li>Write a few sentences in the abstract</li>
+<li>Change the keywords and running head</li>
+</ol>
+<p>And render. And now you have your own arXiv preprint… ish.</p>
+</section>
+</section>
+<section id="citation" class="level1">
+<h1>Citation</h1>
+<p>Quarto uses BibTeX to handle citation. By default, this arXiv template looks for <code>bibliography.bib</code>. But you can change that in the YAML.</p>
+<p>A BibTeX file is a plain-text file with BibTeX entries. You can keep track of your bibliographic library using external tools (Zotero or whatnot). This workshop is not about bibliography management, so we will manage the BibTeX file manually.</p>
+<p>Suppose you want to cite <a href="https://doi.org/10.1177/20501579231176678">this paper</a> (you should). You need to have the BibTeX entry of this paper. The BibTeX entry of the paper is like this:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bibtex code-with-copy"><code class="sourceCode bibtex"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="va">@article</span>{<span class="ot">schoch2023software</span>,</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span>={Software presentation: Rtoot: Collecting and Analyzing Mastodon Data},</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">author</span>={Schoch, David and Chan, Chung-hong},</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">journal</span>={Mobile Media <span class="ch">\&amp;</span> Communication},</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">pages</span>={20501579231176678},</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">year</span>={2023},</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">publisher</span>={SAGE Publications Sage UK: London, England}</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Of course, we can enter this information manually. But the speediest way to obtain this is to search for the title in Google Scholar, click “Cite”, and then “BibTeX” <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Copy and paste the entry into <code>bibliography.bib</code> and save.</p>
+<p>Now, you can cite the paper. In the BibTeX entry, the first element (<code>schoch2023software</code> in the above example) is the cite key of the entry. It is the identifier of an entry and should be unique in a BibTeX file.</p>
+<p>In the body, you can cite a paper using one of the following format:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Style 1 --&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>@schoch2023software develop an R package for collecting Mastodon data.</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Style 2 --&gt;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="in">`rtoot`</span> <span class="co">[</span><span class="ot">@schoch2023software</span><span class="co">]</span> is an R package for collecting Mastodon data.</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Style 3 --&gt;</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>Many R packages have been developed to collect social media data <span class="co">[</span><span class="ot">e.g. @schoch2023software</span><span class="co">]</span>.</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Style 4 --&gt;</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>@schoch2023software <span class="co">[</span><span class="ot">p.1</span><span class="co">]</span> state that "Mastodon will become increasingly more relevant for communication scholars."</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="exercise-1" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-1">Exercise 1</h2>
+<p>Try out all four styles and explain to me what are the differences between the four.</p>
+</section>
+<section id="exercise-2" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-2">Exercise 2</h2>
+<p>Find this paper: “rtweet: Collecting and analyzing Twitter data” by Kearney, and cite it in the following sentence instead.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>Many R packages have been developed to collect social media data <span class="co">[</span><span class="ot">e.g. @schoch2023software</span><span class="co">]</span>.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="exercise-3" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-3">Exercise 3</h2>
+<p>The syntax for citing multiple papers is: <code>[@citekey1;@citekey2]</code>. Try to cite both Schoch &amp; Chan and Kearney in the above sentence.</p>
+</section>
+</section>
+<section id="tables-figures-and-cross-referencing" class="level1">
+<h1>tables, figures and cross referencing</h1>
+<p>Recalling yesterday, we can create tables and figures with code chunk.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: Some outdated car data</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(mtcars)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We can do the same in your paper too. The tricky part is to cross-reference the generated content. You can cross-reference them manually (e.g.&nbsp;typing exactly “Table 2”), but there is a better way.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>@tbl-mtchars shows some outdated car data.</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-mtcars</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: Some outdated car data</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(mtcars)</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Quarto takes care of code chunks labeled with <code>tbl-</code> and <code>fig-</code>.</p>
+<section id="exercise-1-1" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-1-1">Exercise 1</h2>
+<p>Create a code chunk to generate the histogram and cross-reference it.</p>
+</section>
+<section id="labeling-non-computational-parts" class="level2">
+<h2 class="anchored" data-anchor-id="labeling-non-computational-parts">Labeling non-computational parts</h2>
+<p>It’s better to download the image file.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>*Felis catus* (@fig-cat) does not have nine lives. @tbl-cats shows the number of lives of three known cats.</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="al">![A picture of Felis catus](Cat_August_2010-4.jpg)</span>{#fig-cat}</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>| Cat           | Number of lives |</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>|---------------|-----------------|</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>| Hello Kitty   | 1               |</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>| Felix the cat | 1               |</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>| Garfield      | 1               |</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>: List of known cats and their number of lives {#tbl-cats}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="debrief" class="level1">
+<h1>Debrief</h1>
+<p><em>Q:</em> How to display <code>x</code> as a table?</p>
+<p><em>A:</em> The way to answer this kind of questions is to find a way to make <code>x</code> a data frame. Chances are, you can either use <code>as.data.frame()</code> or <code>broom::tidy()</code> for that. Whether or not it’s pretty is another issue.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>mod <span class="ot">&lt;-</span> <span class="fu">glm</span>(mpg <span class="sc">~</span> wt <span class="sc">+</span> cyl, <span class="at">data =</span> mtcars)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(broom<span class="sc">::</span><span class="fu">tidy</span>(mod))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">term</th>
+<th style="text-align: right;">estimate</th>
+<th style="text-align: right;">std.error</th>
+<th style="text-align: right;">statistic</th>
+<th style="text-align: right;">p.value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">(Intercept)</td>
+<td style="text-align: right;">39.686262</td>
+<td style="text-align: right;">1.7149840</td>
+<td style="text-align: right;">23.140893</td>
+<td style="text-align: right;">0.0000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">wt</td>
+<td style="text-align: right;">-3.190972</td>
+<td style="text-align: right;">0.7569065</td>
+<td style="text-align: right;">-4.215808</td>
+<td style="text-align: right;">0.0002220</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">cyl</td>
+<td style="text-align: right;">-1.507795</td>
+<td style="text-align: right;">0.4146883</td>
+<td style="text-align: right;">-3.635972</td>
+<td style="text-align: right;">0.0010643</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><em>Q:</em> I want to submit my preprint to arXiv.</p>
+<p><em>A:</em> Well, you must keep the LaTeX source code (default).</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">arxiv-pdf</span><span class="kw">:</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">keep-tex</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>But you can’t just upload the latex source code. You also need to upload the BibTeX file, and the two <code>.sty</code> files.</p>
+<p><em>Q:</em> I am tired of arXiv. I want to submit it to an Elsevier journal.</p>
+<p><em>A:</em> No!</p>
+<p><em>Q:</em> Okay. How about PLOS One? You did that too, right?</p>
+<p><em>A:</em> Okay… Changing a template can be dangerous. Please backup first (or use version control).</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> install extension quarto-journals/plos</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You can test that with</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render myarticle.qmd <span class="at">--to</span> plos-pdf</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You will need to edit the in-text citations (PLOS One does not use author names). You can change that permanently by changing the YAML.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">plos-pdf</span><span class="kw">:</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">keep-tex</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>Q:</em> I want to submit my paper to ICA. I need my paper in APA7.</p>
+<p><em>A:</em> An experimental <a href="https://github.com/wjschne/apaquarto">Quarto APA7 template</a> is available. But please make sure you read carefully how it works. In particular, it doesn’t use <code>tbl-</code> and <code>fig-</code> labels for cross-referencing.</p>
+<p><em>Q:</em> Why don’t you teach the visual editor of RStudio? It’s great!</p>
+<p><em>A:</em> I agree. It can even support citing papers from your Zotero library. But I want you to understand the mechanism.</p>
 
 
+</section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Using this method, the entry has no DOI. But again, this session is not about bibliography management. If you really want to have the DOI, the best way is to use <a href="https://search.crossref.org/">crossref meta search</a>. But that’s super sluggish. Also, you need to manually edit the obtained entries sometimes.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
