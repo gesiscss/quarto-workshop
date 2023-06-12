@@ -640,15 +640,22 @@
     "objectID": "material/03_combine_with_R.html#exercise-1",
     "href": "material/03_combine_with_R.html#exercise-1",
     "title": "Computation",
-    "section": "Exercise",
-    "text": "Exercise\nCopy and paste the R code chunk into a Quarto document and render it. Tell us what’s the output."
+    "section": "Exercise 1",
+    "text": "Exercise 1\nCopy and paste the R code chunk into a Quarto document and render it. Tell us what’s the output."
+  },
+  {
+    "objectID": "material/03_combine_with_R.html#exercise-2-optional",
+    "href": "material/03_combine_with_R.html#exercise-2-optional",
+    "title": "Computation",
+    "section": "Exercise 2 (Optional)",
+    "text": "Exercise 2 (Optional)\nThis workshop is really not about R, but we still need to use R. If you don’t know (enough) R, try to familiarize yourself with the following. If you know all of them, congratulations you know enough R to survive this session!\n1 + 2 - 3 * 4 / 3\n\nx &lt;- \"hello world\"\n\nx\n\n## message\n\nmessage(x)\n\n## mtcars is a built-in dataset. The data structure is called data frame\nmtcars\n\n## simple functions\nnrow(mtcars)\n\nhead(mtcars)\n\n## basic viz\n\nplot(mtcars$mpg, mtcars$hp)\n\nhist(mtcars$mpg)\n\n## installing external packages\n\ninstall.packages(\"knitr\")\n\n## You can either call the package by `library`\n\nlibrary(knitr)\nkable\n\n## or the namespace operator ::\n\nknitr::kable\n\n## read some data, if your csv file is called hello.csv\n\nx &lt;- read.csv(\"hello.csv\")\n\n## get help\n\n?read.csv"
   },
   {
     "objectID": "material/03_combine_with_R.html#exercise-1-1",
     "href": "material/03_combine_with_R.html#exercise-1-1",
     "title": "Computation",
     "section": "Exercise 1",
-    "text": "Exercise 1\nCopy and paste the R code chunk into a Quarto document and render it. Tell us what’s the output."
+    "text": "Exercise 1\nCopy and paste the R code chunk into a Quarto document and render it. Tell us what’s the output.\n\n```{r}\nx &lt;- \"Hello World!\"\nmessage(x)\n```"
   },
   {
     "objectID": "material/03_combine_with_R.html#exercise-2",
