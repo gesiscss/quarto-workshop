@@ -63,9 +63,61 @@ int main() {
 
 ````
 
-## Exercise
+## Exercise 1
 
 Copy and paste the R code chunk into a Quarto document and render it. Tell us what's the output.
+
+## Exercise 2 (Optional)
+
+This workshop is really not about R, but we still need to use R. If you don't know (enough) R, try to familiarize yourself with the following. If you know all of them, congratulations you know enough R to survive this session!
+
+```r
+1 + 2 - 3 * 4 / 3
+
+x <- "hello world"
+
+x
+
+## message
+
+message(x)
+
+## mtcars is a built-in dataset. The data structure is called data frame
+mtcars
+
+## simple functions
+nrow(mtcars)
+
+head(mtcars)
+
+## basic viz
+
+plot(mtcars$mpg, mtcars$hp)
+
+hist(mtcars$mpg)
+
+## installing external packages
+
+install.packages("knitr")
+
+## You can either call the package by `library`
+
+library(knitr)
+kable
+
+## or the namespace operator ::
+
+knitr::kable
+
+## read some data, if your csv file is called hello.csv
+
+x <- read.csv("hello.csv")
+
+## get help
+
+?read.csv
+
+```
 
 # Computation Option 1: Executable Code chunk
 
@@ -85,6 +137,15 @@ message(x)
 ## Exercise 1
 
 Copy and paste the R code chunk into a Quarto document and render it. Tell us what's the output.
+
+````
+
+```{{r}}
+x <- "Hello World!"
+message(x)
+```
+
+````
 
 ## Exercise 2
 
