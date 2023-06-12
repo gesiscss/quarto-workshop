@@ -85,6 +85,13 @@ There are several paid plans available, but for the majority of cases, the free 
 
 You may have to do that via the shell ([What is that?](https://happygitwithr.com/shell.html#shell))
 
+::: {.callout-tip}
+## For Windows Users
+Working with the **correct** shell in Windows can be tricky. Either open it in RStudio
+via *Tools > Terminal*, or open the Start menu and type "Git Bash" into the search bar. The icon for Git Bash and the words "Git Bash Desktop App" will appear. Click on the icon or the words "Git Bash Desktop App" to open Git Bash. 
+
+:::
+
 ```bash
 git config --global user.name 'Jane Doe'
 git config --global user.email 'jane@example.com'
@@ -102,12 +109,6 @@ Optionally, you can set it up via the R package `usethis`
 library(usethis)
 use_git_config(user.name = "Jane Doe", user.email = "jane@example.org")
 ```
-
-::: {.callout-tip}
-## For Windows Users
-Working with the **correct** shell in Windows can be tricky. Probably the safest option is to open it in RStudio
-via *Tools > Terminal*. 
-:::
 
 ## Get a Client
 
