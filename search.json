@@ -448,20 +448,6 @@
     "text": "need convincing?\nInteractive Documents\nShiny, Observable JS, widgets\n\nExtensions\nshortcodes, filters, journal articles, custom formats, revealjs Examples\n\n\nPublishing\nquarto publish (e.g. Github pages) with continuous integration"
   },
   {
-    "objectID": "material/slides/04_exporting.html#getting-up",
-    "href": "material/slides/04_exporting.html#getting-up",
-    "title": "Exporting to different formats",
-    "section": "Getting up",
-    "text": "Getting up\n\nTurn off alarm\nGet out of bed"
-  },
-  {
-    "objectID": "material/slides/04_exporting.html#going-to-sleep",
-    "href": "material/slides/04_exporting.html#going-to-sleep",
-    "title": "Exporting to different formats",
-    "section": "Going to sleep",
-    "text": "Going to sleep\n\nGet in bed\nCount sheep\n\n\n\n\nAutomated Reports & Co with Quarto and Markdown"
-  },
-  {
     "objectID": "material/02_first_doc.html",
     "href": "material/02_first_doc.html",
     "title": "Markdown",
@@ -571,7 +557,7 @@
     "href": "material/extra/git.html#setup-git",
     "title": "Let’s Git going",
     "section": "Setup Git",
-    "text": "Setup Git\nYou may have to do that via the shell (What is that?)\ngit config --global user.name 'Jane Doe'\ngit config --global user.email 'jane@example.com'\ngit config --global --list\nUse your name and the email associated with your GitHub account.\nOptionally, you can set it up via the R package usethis\n## install if needed (do this only once)\n## install.packages(\"usethis\")\n\nlibrary(usethis)\nuse_git_config(user.name = \"Jane Doe\", user.email = \"jane@example.org\")\n\n\n\n\n\n\nFor Windows Users\n\n\n\nWorking with the correct shell in Windows can be tricky. Probably the safest option is to open it in RStudio via Tools &gt; Terminal."
+    "text": "Setup Git\nYou may have to do that via the shell (What is that?)\n\n\n\n\n\n\nFor Windows Users\n\n\n\nWorking with the correct shell in Windows can be tricky. Either open it in RStudio via Tools &gt; Terminal, or open the Start menu and type “Git Bash” into the search bar. The icon for Git Bash and the words “Git Bash Desktop App” will appear. Click on the icon or the words “Git Bash Desktop App” to open Git Bash.\n\n\ngit config --global user.name 'Jane Doe'\ngit config --global user.email 'jane@example.com'\ngit config --global --list\nUse your name and the email associated with your GitHub account.\nOptionally, you can set it up via the R package usethis\n## install if needed (do this only once)\n## install.packages(\"usethis\")\n\nlibrary(usethis)\nuse_git_config(user.name = \"Jane Doe\", user.email = \"jane@example.org\")"
   },
   {
     "objectID": "material/extra/git.html#get-a-client",
@@ -823,7 +809,7 @@
     "href": "material.html#slides",
     "title": "Quarto Workshop",
     "section": "Slides",
-    "text": "Slides\n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nJun 19, 2023\n\n\nIntroduction to literate programming and setting up Quarto\n\n\nDavid Schoch\n\n\n\n\nJun 19, 2023\n\n\nExporting to different formats\n\n\nDavid Schoch\n\n\n\n\nJun 20, 2023\n\n\nLet’s make a presentation with Quarto\n\n\nDavid Schoch\n\n\n\n\nJun 20, 2023\n\n\nLet’s make a website with Quarto\n\n\nDavid Schoch\n\n\n\n\n\n\nNo matching items"
+    "text": "Slides\n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nJun 19, 2023\n\n\nIntroduction to literate programming and setting up Quarto\n\n\nDavid Schoch\n\n\n\n\nJun 20, 2023\n\n\nLet’s make a presentation with Quarto\n\n\nDavid Schoch\n\n\n\n\nJun 20, 2023\n\n\nLet’s make a website with Quarto\n\n\nDavid Schoch\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "material.html#extra-material",

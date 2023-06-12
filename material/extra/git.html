@@ -262,16 +262,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="setup-git" class="level2">
 <h2 class="anchored" data-anchor-id="setup-git">Setup Git</h2>
 <p>You may have to do that via the shell (<a href="https://happygitwithr.com/shell.html#shell">What is that?</a>)</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">'Jane Doe'</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">'jane@example.com'</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> <span class="at">--list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Use your name and the email associated with your GitHub account.</p>
-<p>Optionally, you can set it up via the R package <code>usethis</code></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="do">## install if needed (do this only once)</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="do">## install.packages("usethis")</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(usethis)</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">use_git_config</span>(<span class="at">user.name =</span> <span class="st">"Jane Doe"</span>, <span class="at">user.email =</span> <span class="st">"jane@example.org"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -282,9 +272,19 @@ For Windows Users
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Working with the <strong>correct</strong> shell in Windows can be tricky. Probably the safest option is to open it in RStudio via <em>Tools &gt; Terminal</em>.</p>
+<p>Working with the <strong>correct</strong> shell in Windows can be tricky. Either open it in RStudio via <em>Tools &gt; Terminal</em>, or open the Start menu and type “Git Bash” into the search bar. The icon for Git Bash and the words “Git Bash Desktop App” will appear. Click on the icon or the words “Git Bash Desktop App” to open Git Bash.</p>
 </div>
 </div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">'Jane Doe'</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">'jane@example.com'</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> <span class="at">--list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Use your name and the email associated with your GitHub account.</p>
+<p>Optionally, you can set it up via the R package <code>usethis</code></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="do">## install if needed (do this only once)</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="do">## install.packages("usethis")</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(usethis)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">use_git_config</span>(<span class="at">user.name =</span> <span class="st">"Jane Doe"</span>, <span class="at">user.email =</span> <span class="st">"jane@example.org"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="get-a-client" class="level2">
 <h2 class="anchored" data-anchor-id="get-a-client">Get a Client</h2>
