@@ -18,15 +18,16 @@ Install [RStudio Desktop](https://posit.co/downloads/)
 
 # Exercise 1
 
+Install [Quarto](https://quarto.org/docs/get-started/)
+
+
+# Exercise 2
+
 1. Install Git
 2. Get a GitHub account
 3. Make them communicate
 
 Use the [provided material](extra/git.qmd) as guidance.
-
-# Exercise 2
-
-Install [Quarto](https://quarto.org/docs/get-started/)
 
 # Explore the shell
 
