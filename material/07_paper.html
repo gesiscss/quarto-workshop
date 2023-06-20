@@ -196,20 +196,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>There are templates (as Quarto extensions) available (<a href="https://quarto.org/docs/journals/">Official list</a>, some other: <a href="https://github.com/wjschne/apaquarto">APA7</a>, <a href="https://github.com/mikemahoney218/quarto-arxiv">arXiv</a>, <a href="https://github.com/ccr-journal/ccr-quarto">CCR</a>).</p>
 <section id="activity" class="level2">
 <h2 class="anchored" data-anchor-id="activity">Activity</h2>
-<p><strong>Q:</strong>Suppose you want to use the arXiv extension (<code>mikemahoney218/quarto-arxiv</code>), Applying your knowledge from Session 5 and Session 6, how to initialize a project?</p>
+<p><strong>Q:</strong>Suppose you want to use the <em>Journal of Statistical Software</em> extension (<code>quarto-journals/jss</code>), Applying your knowledge from Session 5 and Session 6, how to initialize a project?</p>
 <p><strong>A:</strong></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">## suppose we want the paper to be in a directory `mypaper`</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> use template mikemahoney218/quarto-arxiv</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> use template quarto-journals/jss</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> mypaper</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="immediate-render" class="level2">
 <h2 class="anchored" data-anchor-id="immediate-render">Immediate render</h2>
 <p>In general, it is a good idea to immediate render the default article to check whether the template requires external R and/or LaTeX packages.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">## You might find that you don't have R packages: kableExtra, broom; install them accordingly</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render mypaper.qmd</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">## In R:</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">## install.packages(c("kableExtra", "broom"))</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render mypaper.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The template (<code>mypaper.qmd</code> in this case) usually contains important information on how to write a paper with it. I usually keep it until a point I don’t need that information anymore.</p>
 <p>Let’s get our hands dirty</p>
 </section>
@@ -222,12 +219,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Write a few sentences in the abstract</li>
 <li>Change the keywords and running head</li>
 </ol>
-<p>And render. And now you have your own arXiv preprint… ish.</p>
+<p>And render. And now you have your own JSS paper… ish.</p>
 </section>
 </section>
 <section id="citation" class="level1">
 <h1>Citation</h1>
-<p>Quarto uses BibTeX to handle citation. By default, this arXiv template looks for <code>bibliography.bib</code>. But you can change that in the YAML.</p>
+<p>Quarto uses BibTeX to handle citation. By default, this JSS template looks for <code>bibliography.bib</code>. But you can change that in the YAML.</p>
 <p>A BibTeX file is a plain-text file with BibTeX entries. You can keep track of your bibliographic library using external tools (Zotero or whatnot). This workshop is not about bibliography management, so we will manage the BibTeX file manually.</p>
 <p>Suppose you want to cite <a href="https://doi.org/10.1177/20501579231176678">this paper</a> (you should). You need to have the BibTeX entry of this paper. The BibTeX entry of the paper is like this:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bibtex code-with-copy"><code class="sourceCode bibtex"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="va">@article</span>{<span class="ot">schoch2023software</span>,</span>
@@ -353,23 +350,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 </div>
 </div>
-<p><em>Q:</em> I want to submit my preprint to arXiv.</p>
-<p><em>A:</em> Well, you must keep the LaTeX source code (default).</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">arxiv-pdf</span><span class="kw">:</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">keep-tex</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>But you can’t just upload the latex source code. You also need to upload the BibTeX file, and the two <code>.sty</code> files.</p>
-<p><em>Q:</em> I am tired of arXiv. I want to submit it to an Elsevier journal.</p>
+<!-- *Q:* I want to submit my preprint to arXiv. -->
+<!-- *A:* Well, you must keep the LaTeX source code (default). -->
+<!-- ```yaml -->
+<!-- format: -->
+<!--   arxiv-pdf: -->
+<!--     keep-tex: true -->
+<!-- ``` -->
+<!-- But you can't just upload the latex source code. You also need to upload the BibTeX file, and the two `.sty` files. -->
+<p><em>Q:</em> I am tired of JSS. I want to submit it to an Elsevier journal.</p>
 <p><em>A:</em> No!</p>
 <p><em>Q:</em> Okay. How about PLOS One? You did that too, right?</p>
 <p><em>A:</em> Okay… Changing a template can be dangerous. Please backup first (or use version control).</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> install extension quarto-journals/plos</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> install extension quarto-journals/plos</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>You can test that with</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render myarticle.qmd <span class="at">--to</span> plos-pdf</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render myarticle.qmd <span class="at">--to</span> plos-pdf</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>You will need to edit the in-text citations (PLOS One does not use author names). You can change that permanently by changing the YAML.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">plos-pdf</span><span class="kw">:</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">keep-tex</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">plos-pdf</span><span class="kw">:</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">keep-tex</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><em>Q:</em> I want to submit my paper to ICA. I need my paper in APA7.</p>
 <p><em>A:</em> An experimental <a href="https://github.com/wjschne/apaquarto">Quarto APA7 template</a> is available. But please make sure you read carefully how it works. In particular, it doesn’t use <code>tbl-</code> and <code>fig-</code> labels for cross-referencing.</p>
 <p><em>Q:</em> Why don’t you teach the visual editor of RStudio? It’s great!</p>
