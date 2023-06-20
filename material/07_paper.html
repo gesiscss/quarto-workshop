@@ -206,8 +206,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="immediate-render" class="level2">
 <h2 class="anchored" data-anchor-id="immediate-render">Immediate render</h2>
 <p>In general, it is a good idea to immediate render the default article to check whether the template requires external R and/or LaTeX packages.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">## You might find that you don't have kableExtra, bloom; install them accordingly</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render mypaper.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">## You might find that you don't have R packages: kableExtra, broom; install them accordingly</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render mypaper.qmd</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">## In R:</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">## install.packages(c("kableExtra", "broom"))</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The template (<code>mypaper.qmd</code> in this case) usually contains important information on how to write a paper with it. I usually keep it until a point I don’t need that information anymore.</p>
 <p>Let’s get our hands dirty</p>
 </section>
