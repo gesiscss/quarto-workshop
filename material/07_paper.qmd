@@ -29,14 +29,14 @@ There are templates (as Quarto extensions) available ([Official list](https://qu
 
 ## Activity
 
-**Q:**Suppose you want to use the arXiv extension (`mikemahoney218/quarto-arxiv`), Applying your knowledge from Session 5 and Session 6, how to initialize a project?
+**Q:**Suppose you want to use the *Journal of Statistical Software* extension (`quarto-journals/jss`), Applying your knowledge from Session 5 and Session 6, how to initialize a project?
 
 
 **A:**
 
 ```bash
 ## suppose we want the paper to be in a directory `mypaper`
-quarto use template mikemahoney218/quarto-arxiv
+quarto use template quarto-journals/jss
 cd mypaper
 ls
 ```
@@ -46,10 +46,7 @@ ls
 In general, it is a good idea to immediate render the default article to check whether the template requires external R and/or LaTeX packages.
 
 ```bash
-## You might find that you don't have R packages: kableExtra, broom; install them accordingly
 quarto render mypaper.qmd
-## In R:
-## install.packages(c("kableExtra", "broom"))
 ```
 
 The template (`mypaper.qmd` in this case) usually contains important information on how to write a paper with it. I usually keep it until a point I don't need that information anymore.
@@ -65,11 +62,11 @@ Edit the YAML Front Matter so that:
 3. Write a few sentences in the abstract
 4. Change the keywords and running head
 
-And render. And now you have your own arXiv preprint... ish.
+And render. And now you have your own JSS paper... ish.
 
 # Citation
 
-Quarto uses BibTeX to handle citation. By default, this arXiv template looks for `bibliography.bib`. But you can change that in the YAML.
+Quarto uses BibTeX to handle citation. By default, this JSS template looks for `bibliography.bib`. But you can change that in the YAML.
 
 A BibTeX file is a plain-text file with BibTeX entries. You can keep track of your bibliographic library using external tools (Zotero or whatnot). This workshop is not about bibliography management, so we will manage the BibTeX file manually.
 
@@ -189,19 +186,19 @@ mod <- glm(mpg ~ wt + cyl, data = mtcars)
 knitr::kable(broom::tidy(mod))
 ```
 
-*Q:* I want to submit my preprint to arXiv.
+<!-- *Q:* I want to submit my preprint to arXiv. -->
 
-*A:* Well, you must keep the LaTeX source code (default).
+<!-- *A:* Well, you must keep the LaTeX source code (default). -->
 
-```yaml
-format:
-  arxiv-pdf:
-    keep-tex: true
-```
+<!-- ```yaml -->
+<!-- format: -->
+<!--   arxiv-pdf: -->
+<!--     keep-tex: true -->
+<!-- ``` -->
 
-But you can't just upload the latex source code. You also need to upload the BibTeX file, and the two `.sty` files.
+<!-- But you can't just upload the latex source code. You also need to upload the BibTeX file, and the two `.sty` files. -->
 
-*Q:* I am tired of arXiv. I want to submit it to an Elsevier journal.
+*Q:* I am tired of JSS. I want to submit it to an Elsevier journal.
 
 *A:* No!
 
