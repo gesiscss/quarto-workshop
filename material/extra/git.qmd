@@ -205,6 +205,8 @@ Add your key, substituting the correct name for your key.
 $ ssh-add ~/.ssh/id_ed25519
 ```
 
+If it fails with a `command not found` error, go to *system setting > Apps & Features* and click on "optional features". Then click on "add features" and choose "OpenSSH-Server" from the list and hit install. Make sure to do this as a user with admin rights.
+
 #### Linux
 
 In a shell, check if the ssh-agent is running:
@@ -368,4 +370,6 @@ This is the small Git client built into RStudio. It is very convenient for simpl
 
 - This document is a speedrun (and slightly updated) version of chapter 1-14 of [happygitwithr](https://happygitwithr.com)  
 
-- Another brilliant and gentle introduction to Git(Hub) was written by [Cosima Meyer](https://cosimameyer.com/post/git-the-perks-of-collaboration-and-version-control/)
+- Another introduction to Git(Hub) concepts for complete beginners was written by [Chung-hong Chan](https://docs.google.com/document/d/1xrecszvJ8GqpKTJBqm7w9KhMuW8bMvtVpfTyDotuko4/edit?usp=sharing)
+
+- Yet another gentle introduction to Git(Hub) was written by [Cosima Meyer](https://cosimameyer.com/post/git-the-perks-of-collaboration-and-version-control/)
